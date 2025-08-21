@@ -1,0 +1,221 @@
+const bcrypt = require('bcryptjs');
+const { v4: uuidv4 } = require('uuid');
+
+// Test users
+const testUsers = [
+  {
+    id: uuidv4(),
+    phone: '+998901234567',
+    email: 'customer@test.com',
+    fullName: 'Test Customer',
+    password: '123456',
+    role: 'customer',
+    walletBalance: 100000,
+    isActive: true,
+    isVerified: true,
+  },
+  {
+    id: uuidv4(),
+    phone: '+998901234568',
+    email: 'merchant@test.com',
+    fullName: 'Test Merchant',
+    password: '123456',
+    role: 'merchant',
+    walletBalance: 500000,
+    isActive: true,
+    isVerified: true,
+  },
+  {
+    id: uuidv4(),
+    phone: '+998901234569',
+    email: 'courier@test.com',
+    fullName: 'Test Courier',
+    password: '123456',
+    role: 'courier',
+    walletBalance: 25000,
+    isActive: true,
+    isVerified: true,
+  },
+];
+
+// Test stores
+const testStores = [
+  {
+    id: uuidv4(),
+    ownerId: testUsers[1].id, // merchant
+    name: 'Магазин "Свежие продукты"',
+    description: 'Свежие овощи, фрукты и молочные продукты',
+    address: 'ул. Навои, 15, Ташкент',
+    location: { type: 'Point', coordinates: [69.2797, 41.3111] },
+    status: 'open',
+    rating: 4.5,
+    totalRatings: 127,
+    openHours: {
+      monday: { open: '08:00', close: '22:00' },
+      tuesday: { open: '08:00', close: '22:00' },
+      wednesday: { open: '08:00', close: '22:00' },
+      thursday: { open: '08:00', close: '22:00' },
+      friday: { open: '08:00', close: '22:00' },
+      saturday: { open: '09:00', close: '21:00' },
+      sunday: { open: '09:00', close: '20:00' },
+    },
+    minimumOrderAmount: 50000,
+    deliveryRadius: 5000,
+    preparationTime: 15,
+    contactPhone: '+998901234568',
+    contactEmail: 'store1@test.com',
+  },
+  {
+    id: uuidv4(),
+    ownerId: testUsers[1].id, // merchant
+    name: 'Супермаркет "Удобно"',
+    description: 'Широкий ассортимент товаров для дома',
+    address: 'ул. Амира Темура, 45, Ташкент',
+    location: { type: 'Point', coordinates: [69.2897, 41.3211] },
+    status: 'open',
+    rating: 4.2,
+    totalRatings: 89,
+    openHours: {
+      monday: { open: '07:00', close: '23:00' },
+      tuesday: { open: '07:00', close: '23:00' },
+      wednesday: { open: '07:00', close: '23:00' },
+      thursday: { open: '07:00', close: '23:00' },
+      friday: { open: '07:00', close: '23:00' },
+      saturday: { open: '08:00', close: '22:00' },
+      sunday: { open: '08:00', close: '22:00' },
+    },
+    minimumOrderAmount: 30000,
+    deliveryRadius: 3000,
+    preparationTime: 10,
+    contactPhone: '+998901234568',
+    contactEmail: 'store2@test.com',
+  },
+];
+
+// Test products
+const testProducts = [
+  // Store 1 products
+  {
+    id: uuidv4(),
+    storeId: testStores[0].id,
+    sku: 'APPLE001',
+    name: 'Яблоки Голден',
+    description: 'Свежие яблоки сорта Голден, 1 кг',
+    price: 25000,
+    unit: 'кг',
+    images: ['https://example.com/apple1.jpg', 'https://example.com/apple2.jpg'],
+    attributes: { weight: '1 кг', origin: 'Узбекистан' },
+    category: 'Фрукты',
+    inStock: true,
+    isActive: true,
+    isFeatured: true,
+  },
+  {
+    id: uuidv4(),
+    storeId: testStores[0].id,
+    sku: 'MILK001',
+    name: 'Молоко 3.2%',
+    description: 'Свежее молоко 3.2% жирности, 1 л',
+    price: 12000,
+    unit: 'л',
+    images: ['https://example.com/milk1.jpg'],
+    attributes: { fat: '3.2%', volume: '1 л' },
+    category: 'Молочные продукты',
+    inStock: true,
+    isActive: true,
+    isFeatured: false,
+  },
+  {
+    id: uuidv4(),
+    storeId: testStores[0].id,
+    sku: 'BREAD001',
+    name: 'Хлеб белый',
+    description: 'Свежий белый хлеб, 500 г',
+    price: 3000,
+    unit: 'шт',
+    images: ['https://example.com/bread1.jpg'],
+    attributes: { weight: '500 г', type: 'белый' },
+    category: 'Хлебобулочные изделия',
+    inStock: true,
+    isActive: true,
+    isFeatured: false,
+  },
+  // Store 2 products
+  {
+    id: uuidv4(),
+    storeId: testStores[1].id,
+    sku: 'WATER001',
+    name: 'Вода минеральная',
+    description: 'Минеральная вода, 1.5 л',
+    price: 5000,
+    unit: 'шт',
+    images: ['https://example.com/water1.jpg'],
+    attributes: { volume: '1.5 л', type: 'минеральная' },
+    category: 'Напитки',
+    inStock: true,
+    isActive: true,
+    isFeatured: true,
+  },
+  {
+    id: uuidv4(),
+    storeId: testStores[1].id,
+    sku: 'CHIPS001',
+    name: 'Чипсы картофельные',
+    description: 'Чипсы картофельные со вкусом сметаны и лука, 100 г',
+    price: 8000,
+    unit: 'шт',
+    images: ['https://example.com/chips1.jpg'],
+    attributes: { weight: '100 г', flavor: 'сметана и лук' },
+    category: 'Снеки',
+    inStock: true,
+    isActive: true,
+    isFeatured: false,
+  },
+];
+
+// Test orders
+const testOrders = [
+  {
+    id: uuidv4(),
+    userId: testUsers[0].id, // customer
+    storeId: testStores[0].id,
+    totalAmount: 40000,
+    subtotalAmount: 40000,
+    deliveryFee: 0,
+    paymentMethod: 'cash',
+    status: 'confirmed',
+    idempotencyKey: uuidv4(),
+    deliveryAddress: {
+      latitude: 41.3111,
+      longitude: 69.2797,
+      text: 'ул. Навои, 10, кв. 5, Ташкент',
+    },
+    items: [
+      {
+        productId: testProducts[0].id,
+        quantity: 1,
+        price: 25000,
+        finalPrice: 25000,
+        status: 'pending',
+      },
+      {
+        productId: testProducts[1].id,
+        quantity: 1,
+        price: 12000,
+        finalPrice: 12000,
+        status: 'pending',
+      },
+    ],
+    customerNotes: 'Пожалуйста, привезите свежие продукты',
+    deliveryInstructions: 'Позвонить перед доставкой',
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  },
+];
+
+module.exports = {
+  testUsers,
+  testStores,
+  testProducts,
+  testOrders,
+};
