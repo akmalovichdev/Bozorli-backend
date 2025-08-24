@@ -26,7 +26,7 @@ const OrderItem = sequelize.define('OrderItem', {
     type: DataTypes.DECIMAL(10, 2),
     allowNull: false
   },
-  finalPrice: {
+  final_price: {
     type: DataTypes.DECIMAL(10, 2),
     allowNull: false
   },

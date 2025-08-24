@@ -58,7 +58,7 @@ router.get('/', authenticateToken, async (req, res) => {
     const offset = (page - 1) * limit;
     const status = req.query.status ? String(req.query.status) : undefined;
 
-    const where = { userId: req.user.id };
+    const where = { user_id: req.user.id };
     if (status) Object.assign(where, { status });
 
     const { rows, count } = await Order.findAndCountAll({
@@ -72,7 +72,7 @@ router.get('/', authenticateToken, async (req, res) => {
         {
           model: Order.sequelize.models.User,
           as: 'courier',
-          attributes: ['id', 'fullName', 'phone']
+          attributes: ['id', 'full_name', 'phone']
         }
       ],
       offset,
@@ -207,7 +207,7 @@ router.post(
 
       // Load products and compute totals
       const productIds = items.map((i) => i.productId);
-      const products = await Product.findAll({ where: { id: productIds, storeId, isActive: true } });
+      const products = await Product.findAll({ where: { id: productIds, storeId, is_active: true } });
       if (products.length !== items.length) {
         return res.status(400).json({ success: false, error: 'Some products are not available' });
       }
@@ -235,7 +235,7 @@ router.post(
       const totalAmount = subtotal + deliveryFee;
 
       const order = await Order.create({
-        userId: req.user.id,
+        user_id: req.user.id,
         storeId,
         totalAmount,
         subtotalAmount: subtotal,
@@ -295,7 +295,7 @@ router.get('/:orderId', authenticateToken, async (req, res) => {
     const { orderId } = req.params;
     
     const order = await Order.findOne({
-      where: { id: orderId, userId: req.user.id },
+      where: { id: orderId, user_id: req.user.id },
       include: [
         {
           model: Store,
@@ -305,7 +305,7 @@ router.get('/:orderId', authenticateToken, async (req, res) => {
         {
           model: Order.sequelize.models.User,
           as: 'courier',
-          attributes: ['id', 'fullName', 'phone', 'avatar']
+          attributes: ['id', 'full_name', 'phone', 'avatar']
         }
       ]
     });
@@ -357,10 +357,10 @@ router.get('/:orderId/status', authenticateToken, async (req, res) => {
   try {
     const { orderId } = req.params;
     const order = await Order.findByPk(orderId, { 
-      where: { userId: req.user.id },
+      where: { user_id: req.user.id },
       include: ['store', 'courier'] 
     });
-    if (!order || order.userId !== req.user.id) {
+    if (!order || order.user_id !== req.user.id) {
       return res.status(404).json({ success: false, error: 'Order not found' });
     }
 
@@ -420,7 +420,7 @@ router.post('/:orderId/cancel', authenticateToken, async (req, res) => {
     const { reason } = req.body;
     
     const order = await Order.findByPk(orderId);
-    if (!order || order.userId !== req.user.id) {
+    if (!order || order.user_id !== req.user.id) {
       return res.status(404).json({ success: false, error: 'Order not found' });
     }
 
@@ -520,7 +520,7 @@ router.post('/:orderId/rate',
       const { rating, feedback } = req.body;
 
       const order = await Order.findOne({
-        where: { id: orderId, userId: req.user.id }
+        where: { id: orderId, user_id: req.user.id }
       });
 
       if (!order) {

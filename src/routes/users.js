@@ -120,9 +120,9 @@ router.put('/profile', [
     }
 
     // Update user fields
-    if (fullName) user.fullName = fullName;
+          if (fullName) user.full_name = fullName;
     if (email) user.email = email;
-    if (dateOfBirth) user.dateOfBirth = dateOfBirth;
+          if (dateOfBirth) user.date_of_birth = dateOfBirth;
     if (gender) user.gender = gender;
     if (avatar) user.avatar = avatar;
 
@@ -191,7 +191,7 @@ router.get('/orders', authenticateToken, async (req, res) => {
     const offset = (page - 1) * limit;
     const status = req.query.status ? String(req.query.status) : undefined;
 
-    const where = { userId: req.user.id };
+    const where = { user_id: req.user.id };
     if (status) Object.assign(where, { status });
 
     const { rows, count } = await Order.findAndCountAll({
@@ -205,7 +205,7 @@ router.get('/orders', authenticateToken, async (req, res) => {
         {
           model: Order.sequelize.models.User,
           as: 'courier',
-          attributes: ['id', 'fullName', 'phone', 'avatar']
+          attributes: ['id', 'full_name', 'phone', 'avatar']
         }
       ],
       offset,
@@ -263,7 +263,7 @@ router.get('/wallet', authenticateToken, async (req, res) => {
     res.json({
       success: true,
       data: {
-        balance: Number(req.user.walletBalance),
+        balance: Number(req.user.wallet_balance),
         currency: 'UZS'
       }
     });

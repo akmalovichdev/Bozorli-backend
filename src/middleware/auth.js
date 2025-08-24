@@ -7,21 +7,28 @@ const logger = require('../utils/logger');
  */
 const authenticateToken = async (req, res, next) => {
   try {
+    logger.info('AuthenticateToken middleware started');
     const authHeader = req.headers['authorization'];
     const token = authHeader && authHeader.split(' ')[1]; // Bearer TOKEN
 
     if (!token) {
+      logger.warn('No token provided');
       return res.status(401).json({
         success: false,
         error: 'Access token required'
       });
     }
 
+    logger.info('Token found, verifying...');
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    logger.info(`Token decoded, userId: ${decoded.userId}`);
     
     // Find user and check if active
     const user = await User.findByPk(decoded.userId);
-    if (!user || !user.isActive) {
+    logger.info(`User found: ${user ? 'yes' : 'no'}, is_active: ${user?.is_active}`);
+    
+    if (!user || !user.is_active) {
+      logger.warn(`User not found or inactive: userId=${decoded.userId}, user=${!!user}, is_active=${user?.is_active}`);
       return res.status(401).json({
         success: false,
         error: 'User not found or inactive'
@@ -29,6 +36,7 @@ const authenticateToken = async (req, res, next) => {
     }
 
     req.user = user;
+    logger.info(`User authenticated successfully: ${user.id}, role: ${user.role}`);
     next();
   } catch (error) {
     logger.error('Authentication error:', error);

@@ -79,7 +79,7 @@ router.post('/register', [
     .withMessage('Full name must be between 2 and 100 characters'),
   body('role')
     .optional()
-    .isIn(['customer', 'merchant', 'courier'])
+    .isIn(['customer', 'merchant', 'courier', 'admin', 'owner'])
     .withMessage('Invalid role')
 ], async (req, res) => {
   try {
@@ -120,9 +120,9 @@ router.post('/register', [
       phone,
       password,
       email,
-      fullName,
+      full_name: fullName,
       role,
-      isVerified: false
+      is_verified: false
     });
 
     // Generate OTP (in production, send via SMS)
@@ -152,9 +152,9 @@ router.post('/register', [
       data: {
         id: user.id,
         phone: user.phone,
-        fullName: user.fullName,
+        fullName: user.full_name,
         role: user.role,
-        isVerified: user.isVerified
+        isVerified: user.is_verified
       },
       // In production, don't send OTP in response
       otp: process.env.NODE_ENV === 'development' ? otp : undefined
@@ -245,7 +245,7 @@ router.post('/login', [
     }
 
     // Check if user is active
-    if (!user.isActive) {
+    if (!user.is_active) {
       return res.status(401).json({
         success: false,
         error: 'Account is deactivated'
@@ -449,14 +449,14 @@ router.post('/otp/verify', [
       // Create user if doesn't exist
       user = await User.create({
         phone,
-        fullName: `User ${phone.slice(-4)}`, // Temporary name
+        full_name: `User ${phone.slice(-4)}`, // Temporary name
         role: 'customer',
-        isVerified: true
+        is_verified: true
       });
     } else {
       // Mark user as verified
-      user.isVerified = true;
-      user.lastLoginAt = new Date();
+              user.is_verified = true;
+      user.last_login_at = new Date();
       await user.save();
     }
 
@@ -549,7 +549,7 @@ router.post('/refresh', [
 
     // Find user
     const user = await User.findByPk(decoded.userId);
-    if (!user || !user.isActive) {
+    if (!user || !user.is_active) {
       return res.status(401).json({
         success: false,
         error: 'User not found or inactive'

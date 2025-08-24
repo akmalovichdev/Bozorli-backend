@@ -1,0 +1,224 @@
+2025-08-24 21:22:43 [ERROR]: uncaughtException: listen EADDRINUSE: address already in use 0.0.0.0:3000
+Error: listen EADDRINUSE: address already in use 0.0.0.0:3000
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at node:net:2206:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+Error: listen EADDRINUSE: address already in use 0.0.0.0:3000
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at node:net:2206:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+{
+  "error": {
+    "code": "EADDRINUSE",
+    "errno": -98,
+    "syscall": "listen",
+    "address": "0.0.0.0",
+    "port": 3000
+  },
+  "exception": true,
+  "date": "Sun Aug 24 2025 21:22:43 GMT+0300 (Moscow Standard Time)",
+  "process": {
+    "pid": 206616,
+    "uid": 0,
+    "gid": 0,
+    "cwd": "/root/webApp/Bozorli/backend",
+    "execPath": "/root/.nvm/versions/node/v22.18.0/bin/node",
+    "version": "v22.18.0",
+    "argv": [
+      "/root/.nvm/versions/node/v22.18.0/bin/node",
+      "/root/webApp/Bozorli/backend/src/index.js"
+    ],
+    "memoryUsage": {
+      "rss": 128774144,
+      "heapTotal": 69193728,
+      "heapUsed": 46742168,
+      "external": 2461657,
+      "arrayBuffers": 126869
+    }
+  },
+  "os": {
+    "loadavg": [
+      16.55,
+      14.63,
+      13.15
+    ],
+    "uptime": 85057.26
+  },
+  "trace": [
+    {
+      "column": 16,
+      "file": "node:net",
+      "function": "Server.setupListenHandle [as _listen2]",
+      "line": 1940,
+      "method": "setupListenHandle [as _listen2]",
+      "native": false
+    },
+    {
+      "column": 12,
+      "file": "node:net",
+      "function": "listenInCluster",
+      "line": 1997,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 7,
+      "file": "node:net",
+      "function": null,
+      "line": 2206,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 21,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 90,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2025-08-24 21:24:16 [ERROR]: uncaughtException: EIO: i/o error, write
+Error: EIO: i/o error, write
+    at writeSync (node:fs:923:3)
+    at SyncWriteStream._write (node:internal/fs/sync_write_stream:27:5)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/root/webApp/Bozorli/backend/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/root/webApp/Bozorli/backend/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/root/webApp/Bozorli/backend/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+    at writeOrBuffer (/root/webApp/Bozorli/backend/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:381:5)
+    at Writable.write (/root/webApp/Bozorli/backend/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:302:11)
+Error: EIO: i/o error, write
+    at writeSync (node:fs:923:3)
+    at SyncWriteStream._write (node:internal/fs/sync_write_stream:27:5)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/root/webApp/Bozorli/backend/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/root/webApp/Bozorli/backend/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/root/webApp/Bozorli/backend/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+    at writeOrBuffer (/root/webApp/Bozorli/backend/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:381:5)
+    at Writable.write (/root/webApp/Bozorli/backend/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:302:11)
+{
+  "error": {
+    "errno": -5,
+    "syscall": "write",
+    "code": "EIO"
+  },
+  "exception": true,
+  "date": "Sun Aug 24 2025 21:24:16 GMT+0300 (Moscow Standard Time)",
+  "process": {
+    "pid": 208156,
+    "uid": 0,
+    "gid": 0,
+    "cwd": "/root/webApp/Bozorli/backend",
+    "execPath": "/root/.nvm/versions/node/v22.18.0/bin/node",
+    "version": "v22.18.0",
+    "argv": [
+      "/root/.nvm/versions/node/v22.18.0/bin/node",
+      "/root/webApp/Bozorli/backend/src/index.js"
+    ],
+    "memoryUsage": {
+      "rss": 119980032,
+      "heapTotal": 63074304,
+      "heapUsed": 38967432,
+      "external": 2337923,
+      "arrayBuffers": 20494
+    }
+  },
+  "os": {
+    "loadavg": [
+      15.65,
+      14.75,
+      13.33
+    ],
+    "uptime": 85150.74
+  },
+  "trace": [
+    {
+      "column": 3,
+      "file": "node:fs",
+      "function": "writeSync",
+      "line": 923,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/fs/sync_write_stream",
+      "function": "SyncWriteStream._write",
+      "line": 27,
+      "method": "_write",
+      "native": false
+    },
+    {
+      "column": 12,
+      "file": "node:internal/streams/writable",
+      "function": "writeOrBuffer",
+      "line": 572,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 10,
+      "file": "node:internal/streams/writable",
+      "function": "_write",
+      "line": 501,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 10,
+      "file": "node:internal/streams/writable",
+      "function": "Writable.write",
+      "line": 510,
+      "method": "write",
+      "native": false
+    },
+    {
+      "column": 23,
+      "file": "/root/webApp/Bozorli/backend/node_modules/winston/lib/winston/transports/console.js",
+      "function": "Console.log",
+      "line": 87,
+      "method": "log",
+      "native": false
+    },
+    {
+      "column": 17,
+      "file": "/root/webApp/Bozorli/backend/node_modules/winston-transport/modern.js",
+      "function": "Console._write",
+      "line": 103,
+      "method": "_write",
+      "native": false
+    },
+    {
+      "column": 139,
+      "file": "/root/webApp/Bozorli/backend/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js",
+      "function": "doWrite",
+      "line": 390,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "/root/webApp/Bozorli/backend/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js",
+      "function": "writeOrBuffer",
+      "line": 381,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 11,
+      "file": "/root/webApp/Bozorli/backend/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js",
+      "function": "Writable.write",
+      "line": 302,
+      "method": "write",
+      "native": false
+    }
+  ]
+}

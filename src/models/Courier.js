@@ -12,7 +12,7 @@ const Courier = sequelize.define('Courier', {
     allowNull: false,
     references: { model: 'users', key: 'id' }
   },
-  vehicleInfo: {
+  vehicle_info: {
     type: DataTypes.JSON,
     allowNull: true
   },
@@ -20,11 +20,11 @@ const Courier = sequelize.define('Courier', {
     type: DataTypes.ENUM('offline','idle','busy','suspended'),
     defaultValue: 'offline'
   },
-  currentLocation: {
+  current_location: {
     type: DataTypes.GEOMETRY('POINT'),
     allowNull: true
   },
-  lastSeen: {
+  last_seen: {
     type: DataTypes.DATE,
     allowNull: true
   }

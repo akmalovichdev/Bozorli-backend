@@ -68,7 +68,7 @@ router.get('/nearby', async (req, res) => {
         {
           model: User,
           as: 'user',
-          attributes: ['id', 'fullName', 'phone', 'avatar']
+          attributes: ['id', 'full_name', 'phone', 'avatar']
         }
       ],
       attributes: {
@@ -88,13 +88,13 @@ router.get('/nearby', async (req, res) => {
       id: courier.id,
       userId: courier.userId,
       user: courier.user,
-      vehicleInfo: courier.vehicleInfo,
+      vehicleInfo: courier.vehicle_info,
       status: courier.status,
-      currentLocation: courier.currentLocation ? {
-        latitude: courier.currentLocation.coordinates[1],
-        longitude: courier.currentLocation.coordinates[0]
+      currentLocation: courier.current_location ? {
+        latitude: courier.current_location.coordinates[1],
+        longitude: courier.current_location.coordinates[0]
       } : null,
-      lastSeen: courier.lastSeen,
+      lastSeen: courier.last_seen,
       distance: courier.get('distance') ? Number(courier.get('distance')) : undefined
     }));
 
@@ -179,8 +179,8 @@ router.put('/:courierId/location',
         return res.status(404).json({ success: false, error: 'Courier not found' });
       }
 
-      courier.currentLocation = { type: 'Point', coordinates: [longitude, latitude] };
-      courier.lastSeen = new Date();
+      courier.current_location = { type: 'Point', coordinates: [longitude, latitude] };
+      courier.last_seen = new Date();
       await courier.save();
 
       // Emit WebSocket event for real-time tracking
@@ -353,7 +353,7 @@ router.get('/:courierId/orders',
           {
             model: User,
             as: 'customer',
-            attributes: ['id', 'fullName', 'phone']
+            attributes: ['id', 'full_name', 'phone']
           }
         ],
         order: [['createdAt', 'DESC']]
@@ -404,7 +404,7 @@ router.get('/:courierId/profile', async (req, res) => {
         {
           model: User,
           as: 'user',
-          attributes: ['id', 'fullName', 'phone', 'avatar', 'rating']
+          attributes: ['id', 'full_name', 'phone', 'avatar', 'rating']
         }
       ]
     });
@@ -417,7 +417,7 @@ router.get('/:courierId/profile', async (req, res) => {
       id: courier.id,
       userId: courier.userId,
       user: courier.user,
-      vehicleInfo: courier.vehicleInfo,
+              vehicleInfo: courier.vehicle_info,
       status: courier.status,
       currentLocation: courier.currentLocation ? {
         latitude: courier.currentLocation.coordinates[1],

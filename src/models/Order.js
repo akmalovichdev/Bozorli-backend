@@ -81,29 +81,29 @@ const Order = sequelize.define('Order', {
       key: 'id'
     }
   },
-  totalAmount: {
+  total_amount: {
     type: DataTypes.DECIMAL(10, 2),
     allowNull: false,
     validate: {
       min: 0
     }
   },
-  subtotalAmount: {
+  subtotal_amount: {
     type: DataTypes.DECIMAL(10, 2),
     allowNull: false,
     defaultValue: 0.00
   },
-  deliveryFee: {
+  delivery_fee: {
     type: DataTypes.DECIMAL(10, 2),
     allowNull: false,
     defaultValue: 0.00
   },
-  commissionAmount: {
+  commission_amount: {
     type: DataTypes.DECIMAL(10, 2),
     allowNull: false,
     defaultValue: 0.00
   },
-  paymentMethod: {
+  payment_method: {
     type: DataTypes.ENUM('card', 'cash', 'wallet'),
     allowNull: false
   },
@@ -134,19 +134,19 @@ const Order = sequelize.define('Order', {
       key: 'id'
     }
   },
-  deliveryAddress: {
+  delivery_address: {
     type: DataTypes.JSON,
     allowNull: false
   },
-  estimatedDeliveryTime: {
+  estimated_delivery_time: {
     type: DataTypes.DATE,
     allowNull: true
   },
-  actualDeliveryTime: {
+  actual_delivery_time: {
     type: DataTypes.DATE,
     allowNull: true
   },
-  idempotencyKey: {
+  idempotency_key: {
     type: DataTypes.STRING(255),
     allowNull: false,
     unique: true
@@ -158,69 +158,69 @@ const Order = sequelize.define('Order', {
     defaultValue: []
   },
   // Customer information
-  customerPhone: {
+  customer_phone: {
     type: DataTypes.STRING(20),
     allowNull: true
   },
-  customerName: {
+  customer_name: {
     type: DataTypes.STRING(100),
     allowNull: true
   },
-  customerNotes: {
+  customer_notes: {
     type: DataTypes.TEXT,
     allowNull: true
   },
   // Delivery information
-  deliveryInstructions: {
+  delivery_instructions: {
     type: DataTypes.TEXT,
     allowNull: true
   },
   // Payment information
-  paymentStatus: {
+  payment_status: {
     type: DataTypes.ENUM('pending', 'paid', 'failed', 'refunded'),
     allowNull: false,
     defaultValue: 'pending'
   },
-  paymentProvider: {
+  payment_provider: {
     type: DataTypes.STRING(50),
     allowNull: true
   },
-  paymentTransactionId: {
+  payment_transaction_id: {
     type: DataTypes.STRING(255),
     allowNull: true
   },
   // Timestamps for different stages
-  confirmedAt: {
+  confirmed_at: {
     type: DataTypes.DATE,
     allowNull: true
   },
-  assignedAt: {
+  assigned_at: {
     type: DataTypes.DATE,
     allowNull: true
   },
-  pickedUpAt: {
+  picked_up_at: {
     type: DataTypes.DATE,
     allowNull: true
   },
-  deliveredAt: {
+  delivered_at: {
     type: DataTypes.DATE,
     allowNull: true
   },
-  cancelledAt: {
+  cancelled_at: {
     type: DataTypes.DATE,
     allowNull: true
   },
   // Cancellation information
-  cancellationReason: {
+  cancellation_reason: {
     type: DataTypes.STRING(500),
     allowNull: true
   },
-  cancelledBy: {
+  cancelled_by: {
     type: DataTypes.ENUM('customer', 'store', 'courier', 'admin'),
     allowNull: true
   },
   // Rating and feedback
-  customerRating: {
+  customer_rating: {
     type: DataTypes.INTEGER,
     allowNull: true,
     validate: {
@@ -228,12 +228,12 @@ const Order = sequelize.define('Order', {
       max: 5
     }
   },
-  customerFeedback: {
+  customer_feedback: {
     type: DataTypes.TEXT,
     allowNull: true
   },
   // Internal notes
-  internalNotes: {
+  internal_notes: {
     type: DataTypes.TEXT,
     allowNull: true
   }

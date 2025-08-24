@@ -16,7 +16,7 @@ const Payment = sequelize.define('Payment', {
     type: DataTypes.ENUM('click','payme','uzum','stripe'),
     allowNull: false
   },
-  providerPaymentId: {
+  provider_payment_id: {
     type: DataTypes.STRING(255),
     allowNull: true
   },
@@ -29,7 +29,7 @@ const Payment = sequelize.define('Payment', {
     allowNull: false,
     defaultValue: 'pending'
   },
-  capturedAt: {
+  captured_at: {
     type: DataTypes.DATE,
     allowNull: true
   },

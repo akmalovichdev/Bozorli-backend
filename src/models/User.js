@@ -28,7 +28,7 @@ const { sequelize } = require('../config/database');
  *           description: User's full name
  *         role:
  *           type: string
- *           enum: [customer, merchant, courier, admin]
+ *           enum: [customer, merchant, courier, admin, owner]
  *           description: User's role in the system
  *         walletBalance:
  *           type: number
@@ -68,7 +68,7 @@ const User = sequelize.define('User', {
       isEmail: true
     }
   },
-  fullName: {
+  full_name: {
     type: DataTypes.STRING(100),
     allowNull: false,
     validate: {
@@ -85,26 +85,26 @@ const User = sequelize.define('User', {
     }
   },
   role: {
-    type: DataTypes.ENUM('customer', 'merchant', 'courier', 'admin'),
+    type: DataTypes.ENUM('customer', 'merchant', 'courier', 'admin', 'owner'),
     allowNull: false,
     defaultValue: 'customer'
   },
-  walletBalance: {
+  wallet_balance: {
     type: DataTypes.DECIMAL(10, 2),
     allowNull: false,
     defaultValue: 0.00
   },
-  isActive: {
+  is_active: {
     type: DataTypes.BOOLEAN,
     allowNull: false,
     defaultValue: true
   },
-  isVerified: {
+  is_verified: {
     type: DataTypes.BOOLEAN,
     allowNull: false,
     defaultValue: false
   },
-  lastLoginAt: {
+  last_login_at: {
     type: DataTypes.DATE,
     allowNull: true
   },
@@ -113,7 +113,7 @@ const User = sequelize.define('User', {
     allowNull: true
   },
   // Additional fields for different roles
-  dateOfBirth: {
+  date_of_birth: {
     type: DataTypes.DATEONLY,
     allowNull: true
   },
@@ -122,7 +122,7 @@ const User = sequelize.define('User', {
     allowNull: true
   },
   // For couriers
-  vehicleInfo: {
+  vehicle_info: {
     type: DataTypes.JSON,
     allowNull: true
   },
@@ -131,11 +131,11 @@ const User = sequelize.define('User', {
     allowNull: true
   },
   // For merchants
-  businessInfo: {
+  business_info: {
     type: DataTypes.JSON,
     allowNull: true
   },
-  kycStatus: {
+  kyc_status: {
     type: DataTypes.ENUM('pending', 'approved', 'rejected'),
     allowNull: true
   }

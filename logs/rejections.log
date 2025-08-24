@@ -1,0 +1,198 @@
+2025-08-24 21:23:31 [ERROR]: unhandledRejection: Cannot set headers after they are sent to the client
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (node:_http_outgoing:700:11)
+    at ServerResponse.header (/root/webApp/Bozorli/backend/node_modules/express/lib/response.js:794:10)
+    at ServerResponse.send (/root/webApp/Bozorli/backend/node_modules/express/lib/response.js:174:12)
+    at ServerResponse.json (/root/webApp/Bozorli/backend/node_modules/express/lib/response.js:278:15)
+    at requireOwnerRole (/root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:32:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (node:_http_outgoing:700:11)
+    at ServerResponse.header (/root/webApp/Bozorli/backend/node_modules/express/lib/response.js:794:10)
+    at ServerResponse.send (/root/webApp/Bozorli/backend/node_modules/express/lib/response.js:174:12)
+    at ServerResponse.json (/root/webApp/Bozorli/backend/node_modules/express/lib/response.js:278:15)
+    at requireOwnerRole (/root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:32:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+{
+  "error": {
+    "code": "ERR_HTTP_HEADERS_SENT"
+  },
+  "rejection": true,
+  "date": "Sun Aug 24 2025 21:23:31 GMT+0300 (Moscow Standard Time)",
+  "process": {
+    "pid": 206808,
+    "uid": 0,
+    "gid": 0,
+    "cwd": "/root/webApp/Bozorli/backend",
+    "execPath": "/root/.nvm/versions/node/v22.18.0/bin/node",
+    "version": "v22.18.0",
+    "argv": [
+      "/root/.nvm/versions/node/v22.18.0/bin/node",
+      "/root/webApp/Bozorli/backend/src/index.js"
+    ],
+    "memoryUsage": {
+      "rss": 124325888,
+      "heapTotal": 63336448,
+      "heapUsed": 41479896,
+      "external": 2359617,
+      "arrayBuffers": 24829
+    }
+  },
+  "os": {
+    "loadavg": [
+      15.5,
+      14.64,
+      13.23
+    ],
+    "uptime": 85105.92
+  },
+  "trace": [
+    {
+      "column": 11,
+      "file": "node:_http_outgoing",
+      "function": "ServerResponse.setHeader",
+      "line": 700,
+      "method": "setHeader",
+      "native": false
+    },
+    {
+      "column": 10,
+      "file": "/root/webApp/Bozorli/backend/node_modules/express/lib/response.js",
+      "function": "ServerResponse.header",
+      "line": 794,
+      "method": "header",
+      "native": false
+    },
+    {
+      "column": 12,
+      "file": "/root/webApp/Bozorli/backend/node_modules/express/lib/response.js",
+      "function": "ServerResponse.send",
+      "line": 174,
+      "method": "send",
+      "native": false
+    },
+    {
+      "column": 15,
+      "file": "/root/webApp/Bozorli/backend/node_modules/express/lib/response.js",
+      "function": "ServerResponse.json",
+      "line": 278,
+      "method": "json",
+      "native": false
+    },
+    {
+      "column": 21,
+      "file": "/root/webApp/Bozorli/backend/src/middleware/ownerAuth.js",
+      "function": "requireOwnerRole",
+      "line": 32,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 105,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2025-08-24 21:26:32 [ERROR]: unhandledRejection: Cannot set headers after they are sent to the client
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (node:_http_outgoing:700:11)
+    at ServerResponse.header (/root/webApp/Bozorli/backend/node_modules/express/lib/response.js:794:10)
+    at ServerResponse.send (/root/webApp/Bozorli/backend/node_modules/express/lib/response.js:174:12)
+    at ServerResponse.json (/root/webApp/Bozorli/backend/node_modules/express/lib/response.js:278:15)
+    at requireOwnerRole (/root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:32:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (node:_http_outgoing:700:11)
+    at ServerResponse.header (/root/webApp/Bozorli/backend/node_modules/express/lib/response.js:794:10)
+    at ServerResponse.send (/root/webApp/Bozorli/backend/node_modules/express/lib/response.js:174:12)
+    at ServerResponse.json (/root/webApp/Bozorli/backend/node_modules/express/lib/response.js:278:15)
+    at requireOwnerRole (/root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:32:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+{
+  "error": {
+    "code": "ERR_HTTP_HEADERS_SENT"
+  },
+  "rejection": true,
+  "date": "Sun Aug 24 2025 21:26:32 GMT+0300 (Moscow Standard Time)",
+  "process": {
+    "pid": 209538,
+    "uid": 0,
+    "gid": 0,
+    "cwd": "/root/webApp/Bozorli/backend",
+    "execPath": "/root/.nvm/versions/node/v22.18.0/bin/node",
+    "version": "v22.18.0",
+    "argv": [
+      "/root/.nvm/versions/node/v22.18.0/bin/node",
+      "/root/webApp/Bozorli/backend/src/index.js"
+    ],
+    "memoryUsage": {
+      "rss": 130256896,
+      "heapTotal": 39833600,
+      "heapUsed": 37461040,
+      "external": 2368367,
+      "arrayBuffers": 32116
+    }
+  },
+  "os": {
+    "loadavg": [
+      15.28,
+      14.97,
+      13.62
+    ],
+    "uptime": 85286.94
+  },
+  "trace": [
+    {
+      "column": 11,
+      "file": "node:_http_outgoing",
+      "function": "ServerResponse.setHeader",
+      "line": 700,
+      "method": "setHeader",
+      "native": false
+    },
+    {
+      "column": 10,
+      "file": "/root/webApp/Bozorli/backend/node_modules/express/lib/response.js",
+      "function": "ServerResponse.header",
+      "line": 794,
+      "method": "header",
+      "native": false
+    },
+    {
+      "column": 12,
+      "file": "/root/webApp/Bozorli/backend/node_modules/express/lib/response.js",
+      "function": "ServerResponse.send",
+      "line": 174,
+      "method": "send",
+      "native": false
+    },
+    {
+      "column": 15,
+      "file": "/root/webApp/Bozorli/backend/node_modules/express/lib/response.js",
+      "function": "ServerResponse.json",
+      "line": 278,
+      "method": "json",
+      "native": false
+    },
+    {
+      "column": 21,
+      "file": "/root/webApp/Bozorli/backend/src/middleware/ownerAuth.js",
+      "function": "requireOwnerRole",
+      "line": 32,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 105,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}

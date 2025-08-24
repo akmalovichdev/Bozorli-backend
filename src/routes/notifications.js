@@ -62,7 +62,7 @@ router.get('/', authenticateToken, async (req, res) => {
     const mockNotifications = [
       {
         id: '1',
-        userId: req.user.id,
+        user_id: req.user.id,
         title: 'Заказ подтвержден',
         body: 'Ваш заказ #12345 подтвержден магазином',
         type: 'order_update',
@@ -72,7 +72,7 @@ router.get('/', authenticateToken, async (req, res) => {
       },
       {
         id: '2',
-        userId: req.user.id,
+        user_id: req.user.id,
         title: 'Курьер назначен',
         body: 'Курьер Ахмад назначен для доставки заказа #12345',
         type: 'order_update',

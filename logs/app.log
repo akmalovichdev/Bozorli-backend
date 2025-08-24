@@ -1,0 +1,1738 @@
+2025-08-21 21:12:16 [INFO]: User logged in: +998993890012
+2025-08-21 21:14:04 [INFO]: Development OTP for +998993890012: 123456 (fixed code)
+2025-08-21 21:14:17 [INFO]: OTP verified for user: +998993890012
+2025-08-21 21:15:27 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:15:27 [INFO]: Process terminated.
+2025-08-21 21:15:44 [INFO]: Database connection has been established successfully.
+2025-08-21 21:16:01 [INFO]: Database synchronized.
+2025-08-21 21:16:01 [INFO]: Server is running on port 3000
+2025-08-21 21:16:01 [INFO]: Environment: development
+2025-08-21 21:16:01 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-21 21:16:01 [INFO]: Health Check: http://localhost:3000/health
+2025-08-21 21:16:28 [INFO]: User logged in: +998993890012
+2025-08-21 21:16:36 [ERROR]: List orders error: Unknown column 'Order.userId' in 'where clause'
+Error
+    at Query.run (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/dialects/mysql/query.js:52:25)
+    at /root/webApp/Bozorli/backend/node_modules/sequelize/lib/sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async MySQLQueryInterface.rawSelect (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/dialects/abstract/query-interface.js:434:18)
+    at async Order.aggregate (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:1277:19)
+    at async Order.count (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:1306:20)
+    at async Promise.all (index 0)
+    at async Order.findAndCountAll (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:1322:27)
+    at async /root/webApp/Bozorli/backend/src/routes/orders.js:64:29
+{
+  "name": "SequelizeDatabaseError",
+  "parent": {
+    "code": "ER_BAD_FIELD_ERROR",
+    "errno": 1054,
+    "sqlState": "42S22",
+    "sqlMessage": "Unknown column 'Order.userId' in 'where clause'",
+    "sql": "SELECT count(`Order`.`id`) AS `count` FROM `orders` AS `Order` LEFT OUTER JOIN `stores` AS `store` ON `Order`.`store_id` = `store`.`id` LEFT OUTER JOIN `users` AS `courier` ON `Order`.`assigned_courier_id` = `courier`.`id` WHERE `Order`.`userId` = '91a36594-c9f7-4737-bb1b-3baa42541828';"
+  },
+  "original": {
+    "code": "ER_BAD_FIELD_ERROR",
+    "errno": 1054,
+    "sqlState": "42S22",
+    "sqlMessage": "Unknown column 'Order.userId' in 'where clause'",
+    "sql": "SELECT count(`Order`.`id`) AS `count` FROM `orders` AS `Order` LEFT OUTER JOIN `stores` AS `store` ON `Order`.`store_id` = `store`.`id` LEFT OUTER JOIN `users` AS `courier` ON `Order`.`assigned_courier_id` = `courier`.`id` WHERE `Order`.`userId` = '91a36594-c9f7-4737-bb1b-3baa42541828';"
+  },
+  "sql": "SELECT count(`Order`.`id`) AS `count` FROM `orders` AS `Order` LEFT OUTER JOIN `stores` AS `store` ON `Order`.`store_id` = `store`.`id` LEFT OUTER JOIN `users` AS `courier` ON `Order`.`assigned_courier_id` = `courier`.`id` WHERE `Order`.`userId` = '91a36594-c9f7-4737-bb1b-3baa42541828';",
+  "parameters": {}
+}
+2025-08-21 21:16:37 [ERROR]: List orders error: Unknown column 'Order.userId' in 'where clause'
+Error
+    at Query.run (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/dialects/mysql/query.js:52:25)
+    at /root/webApp/Bozorli/backend/node_modules/sequelize/lib/sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async MySQLQueryInterface.select (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/dialects/abstract/query-interface.js:407:12)
+    at async Order.findAll (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:1140:21)
+    at async Promise.all (index 1)
+    at async Order.findAndCountAll (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:1322:27)
+    at async /root/webApp/Bozorli/backend/src/routes/orders.js:64:29
+{
+  "name": "SequelizeDatabaseError",
+  "parent": {
+    "code": "ER_BAD_FIELD_ERROR",
+    "errno": 1054,
+    "sqlState": "42S22",
+    "sqlMessage": "Unknown column 'Order.userId' in 'where clause'",
+    "sql": "SELECT `Order`.`id`, `Order`.`user_id`, `Order`.`store_id`, `Order`.`total_amount` AS `totalAmount`, `Order`.`subtotal_amount` AS `subtotalAmount`, `Order`.`delivery_fee` AS `deliveryFee`, `Order`.`commission_amount` AS `commissionAmount`, `Order`.`payment_method` AS `paymentMethod`, `Order`.`status`, `Order`.`assigned_courier_id`, `Order`.`delivery_address` AS `deliveryAddress`, `Order`.`estimated_delivery_time` AS `estimatedDeliveryTime`, `Order`.`actual_delivery_time` AS `actualDeliveryTime`, `Order`.`idempotency_key` AS `idempotencyKey`, `Order`.`items`, `Order`.`customer_phone` AS `customerPhone`, `Order`.`customer_name` AS `customerName`, `Order`.`customer_notes` AS `customerNotes`, `Order`.`delivery_instructions` AS `deliveryInstructions`, `Order`.`payment_status` AS `paymentStatus`, `Order`.`payment_provider` AS `paymentProvider`, `Order`.`payment_transaction_id` AS `paymentTransactionId`, `Order`.`confirmed_at` AS `confirmedAt`, `Order`.`assigned_at` AS `assignedAt`, `Order`.`picked_up_at` AS `pickedUpAt`, `Order`.`delivered_at` AS `deliveredAt`, `Order`.`cancelled_at` AS `cancelledAt`, `Order`.`cancellation_reason` AS `cancellationReason`, `Order`.`cancelled_by` AS `cancelledBy`, `Order`.`customer_rating` AS `customerRating`, `Order`.`customer_feedback` AS `customerFeedback`, `Order`.`internal_notes` AS `internalNotes`, `Order`.`created_at` AS `createdAt`, `Order`.`updated_at` AS `updatedAt`, `store`.`id` AS `store.id`, `store`.`name` AS `store.name`, `store`.`address` AS `store.address`, `courier`.`id` AS `courier.id`, `courier`.`full_name` AS `courier.fullName`, `courier`.`phone` AS `courier.phone` FROM `orders` AS `Order` LEFT OUTER JOIN `stores` AS `store` ON `Order`.`store_id` = `store`.`id` LEFT OUTER JOIN `users` AS `courier` ON `Order`.`assigned_courier_id` = `courier`.`id` WHERE `Order`.`userId` = '91a36594-c9f7-4737-bb1b-3baa42541828' ORDER BY `createdAt` DESC LIMIT 0, 20;"
+  },
+  "original": {
+    "code": "ER_BAD_FIELD_ERROR",
+    "errno": 1054,
+    "sqlState": "42S22",
+    "sqlMessage": "Unknown column 'Order.userId' in 'where clause'",
+    "sql": "SELECT `Order`.`id`, `Order`.`user_id`, `Order`.`store_id`, `Order`.`total_amount` AS `totalAmount`, `Order`.`subtotal_amount` AS `subtotalAmount`, `Order`.`delivery_fee` AS `deliveryFee`, `Order`.`commission_amount` AS `commissionAmount`, `Order`.`payment_method` AS `paymentMethod`, `Order`.`status`, `Order`.`assigned_courier_id`, `Order`.`delivery_address` AS `deliveryAddress`, `Order`.`estimated_delivery_time` AS `estimatedDeliveryTime`, `Order`.`actual_delivery_time` AS `actualDeliveryTime`, `Order`.`idempotency_key` AS `idempotencyKey`, `Order`.`items`, `Order`.`customer_phone` AS `customerPhone`, `Order`.`customer_name` AS `customerName`, `Order`.`customer_notes` AS `customerNotes`, `Order`.`delivery_instructions` AS `deliveryInstructions`, `Order`.`payment_status` AS `paymentStatus`, `Order`.`payment_provider` AS `paymentProvider`, `Order`.`payment_transaction_id` AS `paymentTransactionId`, `Order`.`confirmed_at` AS `confirmedAt`, `Order`.`assigned_at` AS `assignedAt`, `Order`.`picked_up_at` AS `pickedUpAt`, `Order`.`delivered_at` AS `deliveredAt`, `Order`.`cancelled_at` AS `cancelledAt`, `Order`.`cancellation_reason` AS `cancellationReason`, `Order`.`cancelled_by` AS `cancelledBy`, `Order`.`customer_rating` AS `customerRating`, `Order`.`customer_feedback` AS `customerFeedback`, `Order`.`internal_notes` AS `internalNotes`, `Order`.`created_at` AS `createdAt`, `Order`.`updated_at` AS `updatedAt`, `store`.`id` AS `store.id`, `store`.`name` AS `store.name`, `store`.`address` AS `store.address`, `courier`.`id` AS `courier.id`, `courier`.`full_name` AS `courier.fullName`, `courier`.`phone` AS `courier.phone` FROM `orders` AS `Order` LEFT OUTER JOIN `stores` AS `store` ON `Order`.`store_id` = `store`.`id` LEFT OUTER JOIN `users` AS `courier` ON `Order`.`assigned_courier_id` = `courier`.`id` WHERE `Order`.`userId` = '91a36594-c9f7-4737-bb1b-3baa42541828' ORDER BY `createdAt` DESC LIMIT 0, 20;"
+  },
+  "sql": "SELECT `Order`.`id`, `Order`.`user_id`, `Order`.`store_id`, `Order`.`total_amount` AS `totalAmount`, `Order`.`subtotal_amount` AS `subtotalAmount`, `Order`.`delivery_fee` AS `deliveryFee`, `Order`.`commission_amount` AS `commissionAmount`, `Order`.`payment_method` AS `paymentMethod`, `Order`.`status`, `Order`.`assigned_courier_id`, `Order`.`delivery_address` AS `deliveryAddress`, `Order`.`estimated_delivery_time` AS `estimatedDeliveryTime`, `Order`.`actual_delivery_time` AS `actualDeliveryTime`, `Order`.`idempotency_key` AS `idempotencyKey`, `Order`.`items`, `Order`.`customer_phone` AS `customerPhone`, `Order`.`customer_name` AS `customerName`, `Order`.`customer_notes` AS `customerNotes`, `Order`.`delivery_instructions` AS `deliveryInstructions`, `Order`.`payment_status` AS `paymentStatus`, `Order`.`payment_provider` AS `paymentProvider`, `Order`.`payment_transaction_id` AS `paymentTransactionId`, `Order`.`confirmed_at` AS `confirmedAt`, `Order`.`assigned_at` AS `assignedAt`, `Order`.`picked_up_at` AS `pickedUpAt`, `Order`.`delivered_at` AS `deliveredAt`, `Order`.`cancelled_at` AS `cancelledAt`, `Order`.`cancellation_reason` AS `cancellationReason`, `Order`.`cancelled_by` AS `cancelledBy`, `Order`.`customer_rating` AS `customerRating`, `Order`.`customer_feedback` AS `customerFeedback`, `Order`.`internal_notes` AS `internalNotes`, `Order`.`created_at` AS `createdAt`, `Order`.`updated_at` AS `updatedAt`, `store`.`id` AS `store.id`, `store`.`name` AS `store.name`, `store`.`address` AS `store.address`, `courier`.`id` AS `courier.id`, `courier`.`full_name` AS `courier.fullName`, `courier`.`phone` AS `courier.phone` FROM `orders` AS `Order` LEFT OUTER JOIN `stores` AS `store` ON `Order`.`store_id` = `store`.`id` LEFT OUTER JOIN `users` AS `courier` ON `Order`.`assigned_courier_id` = `courier`.`id` WHERE `Order`.`userId` = '91a36594-c9f7-4737-bb1b-3baa42541828' ORDER BY `createdAt` DESC LIMIT 0, 20;",
+  "parameters": {}
+}
+2025-08-21 21:19:52 [INFO]: User logged in: +998993890012
+2025-08-21 21:20:05 [ERROR]: List orders error: Unknown column 'Order.userId' in 'where clause'
+Error
+    at Query.run (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/dialects/mysql/query.js:52:25)
+    at /root/webApp/Bozorli/backend/node_modules/sequelize/lib/sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async MySQLQueryInterface.rawSelect (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/dialects/abstract/query-interface.js:434:18)
+    at async Order.aggregate (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:1277:19)
+    at async Order.count (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:1306:20)
+    at async Promise.all (index 0)
+    at async Order.findAndCountAll (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:1322:27)
+    at async /root/webApp/Bozorli/backend/src/routes/orders.js:64:29
+{
+  "name": "SequelizeDatabaseError",
+  "parent": {
+    "code": "ER_BAD_FIELD_ERROR",
+    "errno": 1054,
+    "sqlState": "42S22",
+    "sqlMessage": "Unknown column 'Order.userId' in 'where clause'",
+    "sql": "SELECT count(`Order`.`id`) AS `count` FROM `orders` AS `Order` LEFT OUTER JOIN `stores` AS `store` ON `Order`.`store_id` = `store`.`id` LEFT OUTER JOIN `users` AS `courier` ON `Order`.`assigned_courier_id` = `courier`.`id` WHERE `Order`.`userId` = '91a36594-c9f7-4737-bb1b-3baa42541828';"
+  },
+  "original": {
+    "code": "ER_BAD_FIELD_ERROR",
+    "errno": 1054,
+    "sqlState": "42S22",
+    "sqlMessage": "Unknown column 'Order.userId' in 'where clause'",
+    "sql": "SELECT count(`Order`.`id`) AS `count` FROM `orders` AS `Order` LEFT OUTER JOIN `stores` AS `store` ON `Order`.`store_id` = `store`.`id` LEFT OUTER JOIN `users` AS `courier` ON `Order`.`assigned_courier_id` = `courier`.`id` WHERE `Order`.`userId` = '91a36594-c9f7-4737-bb1b-3baa42541828';"
+  },
+  "sql": "SELECT count(`Order`.`id`) AS `count` FROM `orders` AS `Order` LEFT OUTER JOIN `stores` AS `store` ON `Order`.`store_id` = `store`.`id` LEFT OUTER JOIN `users` AS `courier` ON `Order`.`assigned_courier_id` = `courier`.`id` WHERE `Order`.`userId` = '91a36594-c9f7-4737-bb1b-3baa42541828';",
+  "parameters": {}
+}
+2025-08-21 21:20:23 [INFO]: Development OTP for +998993890011: 123456 (fixed code)
+2025-08-21 21:20:23 [INFO]: New user registered: +998993890011
+2025-08-21 21:20:43 [INFO]: OTP verified for user: +998993890011
+2025-08-21 21:20:57 [INFO]: User logged in: +998993890011
+2025-08-21 21:20:59 [ERROR]: List orders error: Unknown column 'Order.userId' in 'where clause'
+Error
+    at Query.run (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/dialects/mysql/query.js:52:25)
+    at /root/webApp/Bozorli/backend/node_modules/sequelize/lib/sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async MySQLQueryInterface.rawSelect (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/dialects/abstract/query-interface.js:434:18)
+    at async Order.aggregate (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:1277:19)
+    at async Order.count (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:1306:20)
+    at async Promise.all (index 0)
+    at async Order.findAndCountAll (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:1322:27)
+    at async /root/webApp/Bozorli/backend/src/routes/orders.js:64:29
+{
+  "name": "SequelizeDatabaseError",
+  "parent": {
+    "code": "ER_BAD_FIELD_ERROR",
+    "errno": 1054,
+    "sqlState": "42S22",
+    "sqlMessage": "Unknown column 'Order.userId' in 'where clause'",
+    "sql": "SELECT count(`Order`.`id`) AS `count` FROM `orders` AS `Order` LEFT OUTER JOIN `stores` AS `store` ON `Order`.`store_id` = `store`.`id` LEFT OUTER JOIN `users` AS `courier` ON `Order`.`assigned_courier_id` = `courier`.`id` WHERE `Order`.`userId` = 'c969d5d9-bc19-4ca2-984e-6536f7cae8b3';"
+  },
+  "original": {
+    "code": "ER_BAD_FIELD_ERROR",
+    "errno": 1054,
+    "sqlState": "42S22",
+    "sqlMessage": "Unknown column 'Order.userId' in 'where clause'",
+    "sql": "SELECT count(`Order`.`id`) AS `count` FROM `orders` AS `Order` LEFT OUTER JOIN `stores` AS `store` ON `Order`.`store_id` = `store`.`id` LEFT OUTER JOIN `users` AS `courier` ON `Order`.`assigned_courier_id` = `courier`.`id` WHERE `Order`.`userId` = 'c969d5d9-bc19-4ca2-984e-6536f7cae8b3';"
+  },
+  "sql": "SELECT count(`Order`.`id`) AS `count` FROM `orders` AS `Order` LEFT OUTER JOIN `stores` AS `store` ON `Order`.`store_id` = `store`.`id` LEFT OUTER JOIN `users` AS `courier` ON `Order`.`assigned_courier_id` = `courier`.`id` WHERE `Order`.`userId` = 'c969d5d9-bc19-4ca2-984e-6536f7cae8b3';",
+  "parameters": {}
+}
+2025-08-21 21:22:04 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:22:04 [INFO]: Process terminated.
+2025-08-21 21:22:22 [INFO]: Database connection has been established successfully.
+2025-08-21 21:22:48 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:22:48 [INFO]: Process terminated.
+2025-08-21 21:22:49 [WARN]: Database sync failed, but continuing with server startup:
+2025-08-21 21:22:50 [INFO]: Server is running on port 3000
+2025-08-21 21:22:50 [INFO]: Environment: development
+2025-08-21 21:22:51 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-21 21:22:51 [INFO]: Health Check: http://localhost:3000/health
+2025-08-21 21:22:51 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:22:51 [INFO]: Process terminated.
+2025-08-21 21:23:14 [INFO]: Database connection has been established successfully.
+2025-08-21 21:23:42 [INFO]: Database synchronized.
+2025-08-21 21:23:42 [INFO]: Server is running on port 3000
+2025-08-21 21:23:42 [INFO]: Environment: development
+2025-08-21 21:23:42 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-21 21:23:42 [INFO]: Health Check: http://localhost:3000/health
+2025-08-21 21:25:16 [INFO]: SIGTERM received. Shutting down gracefully...
+2025-08-21 21:25:16 [INFO]: Process terminated.
+2025-08-21 21:25:25 [INFO]: Database connection has been established successfully.
+2025-08-21 21:26:47 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:26:48 [INFO]: Process terminated.
+2025-08-21 21:26:49 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:26:49 [INFO]: Process terminated.
+2025-08-21 21:26:51 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:26:52 [INFO]: Process terminated.
+2025-08-21 21:26:52 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:26:53 [INFO]: Process terminated.
+2025-08-21 21:26:57 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:26:57 [INFO]: Process terminated.
+2025-08-21 21:26:58 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:26:58 [INFO]: Process terminated.
+2025-08-21 21:26:58 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:26:58 [INFO]: Process terminated.
+2025-08-21 21:26:58 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:26:58 [INFO]: Process terminated.
+2025-08-21 21:26:58 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:26:58 [INFO]: Process terminated.
+2025-08-21 21:26:59 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:26:59 [INFO]: Process terminated.
+2025-08-21 21:26:59 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:26:59 [INFO]: Process terminated.
+2025-08-21 21:26:59 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:26:59 [INFO]: Process terminated.
+2025-08-21 21:27:00 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:00 [INFO]: Process terminated.
+2025-08-21 21:27:00 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:01 [INFO]: Process terminated.
+2025-08-21 21:27:01 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:01 [INFO]: Process terminated.
+2025-08-21 21:27:01 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:01 [INFO]: Process terminated.
+2025-08-21 21:27:01 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:02 [INFO]: Process terminated.
+2025-08-21 21:27:02 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:02 [INFO]: Process terminated.
+2025-08-21 21:27:02 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:02 [INFO]: Process terminated.
+2025-08-21 21:27:02 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:03 [INFO]: Process terminated.
+2025-08-21 21:27:03 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:03 [INFO]: Process terminated.
+2025-08-21 21:27:03 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:03 [INFO]: Process terminated.
+2025-08-21 21:27:03 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:03 [INFO]: Process terminated.
+2025-08-21 21:27:03 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:03 [INFO]: Process terminated.
+2025-08-21 21:27:04 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:04 [INFO]: Process terminated.
+2025-08-21 21:27:04 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:04 [INFO]: Process terminated.
+2025-08-21 21:27:04 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:05 [INFO]: Process terminated.
+2025-08-21 21:27:06 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:06 [INFO]: Process terminated.
+2025-08-21 21:27:06 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:06 [INFO]: Process terminated.
+2025-08-21 21:27:06 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:06 [INFO]: Process terminated.
+2025-08-21 21:27:06 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:06 [INFO]: Process terminated.
+2025-08-21 21:27:06 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:06 [INFO]: Process terminated.
+2025-08-21 21:27:06 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:06 [INFO]: Process terminated.
+2025-08-21 21:27:06 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:06 [INFO]: Process terminated.
+2025-08-21 21:27:06 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:06 [INFO]: Process terminated.
+2025-08-21 21:27:07 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:07 [INFO]: Process terminated.
+2025-08-21 21:27:07 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:07 [INFO]: Process terminated.
+2025-08-21 21:27:07 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:07 [INFO]: Process terminated.
+2025-08-21 21:27:07 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:07 [INFO]: Process terminated.
+2025-08-21 21:27:07 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:07 [INFO]: Process terminated.
+2025-08-21 21:27:07 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:07 [INFO]: Process terminated.
+2025-08-21 21:27:07 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:07 [INFO]: Process terminated.
+2025-08-21 21:27:07 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:07 [INFO]: Process terminated.
+2025-08-21 21:27:07 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:07 [INFO]: Process terminated.
+2025-08-21 21:27:07 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:07 [INFO]: Process terminated.
+2025-08-21 21:27:07 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:07 [INFO]: Process terminated.
+2025-08-21 21:27:07 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:07 [INFO]: Process terminated.
+2025-08-21 21:27:07 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:07 [INFO]: Process terminated.
+2025-08-21 21:27:07 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:07 [INFO]: Process terminated.
+2025-08-21 21:27:07 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:07 [INFO]: Process terminated.
+2025-08-21 21:27:07 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:07 [INFO]: Process terminated.
+2025-08-21 21:27:07 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:07 [INFO]: Process terminated.
+2025-08-21 21:27:07 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:07 [INFO]: Process terminated.
+2025-08-21 21:27:07 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:07 [INFO]: Process terminated.
+2025-08-21 21:27:07 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:07 [INFO]: Process terminated.
+2025-08-21 21:27:07 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:07 [INFO]: Process terminated.
+2025-08-21 21:27:07 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:07 [INFO]: Process terminated.
+2025-08-21 21:27:07 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:07 [INFO]: Process terminated.
+2025-08-21 21:27:07 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:07 [INFO]: Process terminated.
+2025-08-21 21:27:07 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:07 [INFO]: Process terminated.
+2025-08-21 21:27:07 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:07 [INFO]: Process terminated.
+2025-08-21 21:27:07 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:07 [INFO]: Process terminated.
+2025-08-21 21:27:07 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:07 [INFO]: Process terminated.
+2025-08-21 21:27:07 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:07 [INFO]: Process terminated.
+2025-08-21 21:27:07 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:07 [INFO]: Process terminated.
+2025-08-21 21:27:07 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:07 [INFO]: Process terminated.
+2025-08-21 21:27:07 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:07 [INFO]: Process terminated.
+2025-08-21 21:27:07 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:07 [INFO]: Process terminated.
+2025-08-21 21:27:07 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:07 [INFO]: Process terminated.
+2025-08-21 21:27:07 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:07 [INFO]: Process terminated.
+2025-08-21 21:27:08 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:08 [INFO]: Process terminated.
+2025-08-21 21:27:08 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:08 [INFO]: Process terminated.
+2025-08-21 21:27:08 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:08 [INFO]: Process terminated.
+2025-08-21 21:27:08 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:08 [INFO]: Process terminated.
+2025-08-21 21:27:08 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:08 [INFO]: Process terminated.
+2025-08-21 21:27:08 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:08 [INFO]: Process terminated.
+2025-08-21 21:27:08 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:08 [INFO]: Process terminated.
+2025-08-21 21:27:08 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:08 [INFO]: Process terminated.
+2025-08-21 21:27:08 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:08 [INFO]: Process terminated.
+2025-08-21 21:27:08 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:08 [INFO]: Process terminated.
+2025-08-21 21:27:08 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:08 [INFO]: Process terminated.
+2025-08-21 21:27:08 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:08 [INFO]: Process terminated.
+2025-08-21 21:27:08 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:09 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:09 [INFO]: Process terminated.
+2025-08-21 21:27:10 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:10 [INFO]: Process terminated.
+2025-08-21 21:27:10 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:10 [INFO]: Process terminated.
+2025-08-21 21:27:10 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:10 [INFO]: Process terminated.
+2025-08-21 21:27:10 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:10 [INFO]: Process terminated.
+2025-08-21 21:27:10 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:10 [INFO]: Process terminated.
+2025-08-21 21:27:10 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:10 [INFO]: Process terminated.
+2025-08-21 21:27:10 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:10 [INFO]: Process terminated.
+2025-08-21 21:27:10 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:10 [INFO]: Process terminated.
+2025-08-21 21:27:10 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:10 [INFO]: Process terminated.
+2025-08-21 21:27:10 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:10 [INFO]: Process terminated.
+2025-08-21 21:27:10 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:10 [INFO]: Process terminated.
+2025-08-21 21:27:10 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:10 [INFO]: Process terminated.
+2025-08-21 21:27:10 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:10 [INFO]: Process terminated.
+2025-08-21 21:27:10 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:10 [INFO]: Process terminated.
+2025-08-21 21:27:10 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:10 [INFO]: Process terminated.
+2025-08-21 21:27:10 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:10 [INFO]: Process terminated.
+2025-08-21 21:27:10 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:10 [INFO]: Process terminated.
+2025-08-21 21:27:10 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:10 [INFO]: Process terminated.
+2025-08-21 21:27:10 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:10 [INFO]: Process terminated.
+2025-08-21 21:27:10 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:10 [INFO]: Process terminated.
+2025-08-21 21:27:10 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:10 [INFO]: Process terminated.
+2025-08-21 21:27:10 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:10 [INFO]: Process terminated.
+2025-08-21 21:27:10 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:10 [INFO]: Process terminated.
+2025-08-21 21:27:10 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:10 [INFO]: Process terminated.
+2025-08-21 21:27:10 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:10 [INFO]: Process terminated.
+2025-08-21 21:27:10 [WARN]: Database sync failed, but continuing with server startup:
+2025-08-21 21:27:10 [INFO]: Server is running on port 3000
+2025-08-21 21:27:10 [INFO]: Environment: development
+2025-08-21 21:27:10 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-21 21:27:10 [INFO]: Health Check: http://localhost:3000/health
+2025-08-21 21:27:11 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:11 [INFO]: Process terminated.
+2025-08-21 21:27:11 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:11 [INFO]: Process terminated.
+2025-08-21 21:27:11 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:11 [INFO]: Process terminated.
+2025-08-21 21:27:11 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:11 [INFO]: Process terminated.
+2025-08-21 21:27:11 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:11 [INFO]: Process terminated.
+2025-08-21 21:27:11 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:11 [INFO]: Process terminated.
+2025-08-21 21:27:11 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:11 [INFO]: Process terminated.
+2025-08-21 21:27:11 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:11 [INFO]: Process terminated.
+2025-08-21 21:27:11 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:11 [INFO]: Process terminated.
+2025-08-21 21:27:11 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:11 [INFO]: Process terminated.
+2025-08-21 21:27:11 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:11 [INFO]: Process terminated.
+2025-08-21 21:27:11 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:11 [INFO]: Process terminated.
+2025-08-21 21:27:11 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:12 [INFO]: Process terminated.
+2025-08-21 21:27:12 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:12 [INFO]: Process terminated.
+2025-08-21 21:27:12 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:12 [INFO]: Process terminated.
+2025-08-21 21:27:12 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:12 [INFO]: Process terminated.
+2025-08-21 21:27:12 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:12 [INFO]: Process terminated.
+2025-08-21 21:27:12 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:12 [INFO]: Process terminated.
+2025-08-21 21:27:12 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:12 [INFO]: Process terminated.
+2025-08-21 21:27:12 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:27:12 [INFO]: Process terminated.
+2025-08-21 21:27:16 [INFO]: Database connection has been established successfully.
+2025-08-21 21:27:31 [INFO]: Database synchronized.
+2025-08-21 21:27:31 [INFO]: Server is running on port 3000
+2025-08-21 21:27:31 [INFO]: Environment: development
+2025-08-21 21:27:31 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-21 21:27:31 [INFO]: Health Check: http://localhost:3000/health
+2025-08-21 21:31:46 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 21:31:46 [INFO]: Process terminated.
+2025-08-21 21:31:57 [INFO]: Database connection has been established successfully.
+2025-08-21 21:32:11 [INFO]: Database synchronized.
+2025-08-21 21:32:11 [INFO]: Server is running on port 3000
+2025-08-21 21:32:11 [INFO]: Environment: development
+2025-08-21 21:32:11 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-21 21:32:11 [INFO]: Health Check: http://localhost:3000/health
+2025-08-21 21:32:25 [INFO]: User logged in: +998993890012
+2025-08-21 21:34:04 [INFO]: SIGTERM received. Shutting down gracefully...
+2025-08-21 21:34:05 [INFO]: Process terminated.
+2025-08-21 21:34:13 [INFO]: Database connection has been established successfully.
+2025-08-21 21:34:29 [INFO]: Database synchronized.
+2025-08-21 21:34:29 [INFO]: Server is running on port 3000
+2025-08-21 21:34:29 [INFO]: Environment: development
+2025-08-21 21:34:29 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-21 21:34:29 [INFO]: Health Check: http://localhost:3000/health
+2025-08-21 21:34:29 [INFO]: External IP: http://89.110.74.24:3000
+2025-08-21 21:43:21 [INFO]: SIGTERM received. Shutting down gracefully...
+2025-08-21 21:43:21 [INFO]: Process terminated.
+2025-08-21 21:43:32 [INFO]: Database connection has been established successfully.
+2025-08-21 21:43:51 [INFO]: Database synchronized.
+2025-08-21 21:43:51 [INFO]: Server is running on port 3000
+2025-08-21 21:43:51 [INFO]: Environment: development
+2025-08-21 21:43:51 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-21 21:43:51 [INFO]: Health Check: http://localhost:3000/health
+2025-08-21 21:43:51 [INFO]: External IP: http://89.110.74.24:3000
+2025-08-21 22:05:43 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-21 22:05:43 [INFO]: Process terminated.
+2025-08-21 22:06:01 [INFO]: Database connection has been established successfully.
+2025-08-21 22:06:23 [INFO]: Database synchronized.
+2025-08-21 22:06:23 [INFO]: Server is running on port 3000
+2025-08-21 22:06:23 [INFO]: Environment: development
+2025-08-21 22:06:23 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-21 22:06:23 [INFO]: Health Check: http://localhost:3000/health
+2025-08-21 22:06:23 [INFO]: External IP: http://89.110.74.24:3000
+2025-08-23 13:00:48 [INFO]: Database connection has been established successfully.
+2025-08-23 13:01:10 [INFO]: Database synchronized.
+2025-08-23 13:01:10 [INFO]: Server is running on port 3000
+2025-08-23 13:01:10 [INFO]: Environment: development
+2025-08-23 13:01:10 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-23 13:01:10 [INFO]: Health Check: http://localhost:3000/health
+2025-08-23 13:01:10 [INFO]: External IP: http://89.110.74.24:3000
+2025-08-23 13:12:54 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-23 13:12:54 [INFO]: Process terminated.
+2025-08-23 13:13:02 [INFO]: Database connection has been established successfully.
+2025-08-23 13:13:27 [INFO]: Database synchronized.
+2025-08-23 13:13:27 [INFO]: Server is running on port 3000
+2025-08-23 13:13:27 [INFO]: Environment: development
+2025-08-23 13:13:27 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-23 13:13:27 [INFO]: Health Check: http://localhost:3000/health
+2025-08-23 13:13:27 [INFO]: External IP: http://89.110.74.24:3000
+2025-08-23 13:13:32 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-23 13:13:32 [INFO]: Process terminated.
+2025-08-23 13:13:36 [INFO]: Database connection has been established successfully.
+2025-08-23 13:14:02 [INFO]: Database synchronized.
+2025-08-23 13:14:02 [INFO]: Server is running on port 3000
+2025-08-23 13:14:02 [INFO]: Environment: development
+2025-08-23 13:14:02 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-23 13:14:02 [INFO]: Health Check: http://localhost:3000/health
+2025-08-23 13:14:02 [INFO]: External IP: http://89.110.74.24:3000
+2025-08-23 13:16:25 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-23 13:16:25 [INFO]: Process terminated.
+2025-08-23 13:16:39 [INFO]: Database connection has been established successfully.
+2025-08-23 13:17:07 [INFO]: Database synchronized.
+2025-08-23 13:17:07 [INFO]: Server is running on port 3000
+2025-08-23 13:17:07 [INFO]: Environment: development
+2025-08-23 13:17:07 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-23 13:17:07 [INFO]: Health Check: http://localhost:3000/health
+2025-08-23 13:17:07 [INFO]: External IP: https://89.110.74.24:3000
+2025-08-23 21:12:01 [INFO]: Database connection has been established successfully.
+2025-08-23 21:13:02 [INFO]: Database synchronized.
+2025-08-23 21:13:02 [INFO]: Server is running on port 3001
+2025-08-23 21:13:02 [INFO]: Environment: development
+2025-08-23 21:13:02 [INFO]: API Documentation: http://localhost:3001/api-docs
+2025-08-23 21:13:02 [INFO]: Health Check: http://localhost:3001/health
+2025-08-23 21:13:02 [INFO]: External IP: https://89.110.74.24:3001
+2025-08-23 21:15:57 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-23 21:15:57 [INFO]: Process terminated.
+2025-08-23 21:17:48 [INFO]: Database connection has been established successfully.
+2025-08-23 21:18:03 [INFO]: SIGTERM received. Shutting down gracefully...
+2025-08-23 21:18:03 [INFO]: Process terminated.
+2025-08-23 21:18:03 [WARN]: Database sync failed, but continuing with server startup:
+2025-08-23 21:18:03 [INFO]: Server is running on port 3001
+2025-08-23 21:18:03 [INFO]: Environment: development
+2025-08-23 21:18:03 [INFO]: API Documentation: http://localhost:3001/api-docs
+2025-08-23 21:18:03 [INFO]: Health Check: http://localhost:3001/health
+2025-08-23 21:18:03 [INFO]: External IP: https://89.110.74.24:3001
+2025-08-23 21:18:21 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-23 21:18:21 [INFO]: Process terminated.
+2025-08-23 21:18:29 [INFO]: Database connection has been established successfully.
+2025-08-23 21:18:53 [INFO]: Database synchronized.
+2025-08-23 21:18:53 [INFO]: Server is running on port 3001
+2025-08-23 21:18:53 [INFO]: Environment: development
+2025-08-23 21:18:53 [INFO]: API Documentation: http://localhost:3001/api-docs
+2025-08-23 21:18:53 [INFO]: Health Check: http://localhost:3001/health
+2025-08-23 21:18:53 [INFO]: External IP: https://89.110.74.24:3001
+2025-08-23 21:18:57 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-23 21:18:58 [INFO]: Process terminated.
+2025-08-23 21:19:19 [INFO]: SIGTERM received. Shutting down gracefully...
+2025-08-23 21:19:19 [INFO]: Process terminated.
+2025-08-23 21:23:31 [INFO]: Database connection has been established successfully.
+2025-08-23 21:23:36 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-23 21:23:36 [INFO]: Process terminated.
+2025-08-23 21:23:36 [WARN]: Database sync failed, but continuing with server startup:
+2025-08-23 21:23:36 [INFO]: Server is running on port 3000
+2025-08-23 21:23:36 [INFO]: Environment: development
+2025-08-23 21:23:36 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-23 21:23:36 [INFO]: Health Check: http://localhost:3000/health
+2025-08-23 21:23:36 [INFO]: External IP: https://89.110.74.24:3000
+2025-08-23 21:23:36 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-23 21:23:36 [INFO]: Process terminated.
+2025-08-23 21:23:36 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-23 21:23:36 [INFO]: Process terminated.
+2025-08-23 21:24:21 [INFO]: Database connection has been established successfully.
+2025-08-23 21:24:47 [INFO]: Database synchronized.
+2025-08-23 21:24:48 [INFO]: Server is running on port 3000
+2025-08-23 21:24:48 [INFO]: Environment: development
+2025-08-23 21:24:48 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-23 21:24:48 [INFO]: Health Check: http://localhost:3000/health
+2025-08-23 21:24:48 [INFO]: External IP: https://89.110.74.24:3000
+2025-08-23 21:39:43 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-23 21:39:48 [INFO]: Process terminated.
+2025-08-23 21:40:10 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-23 21:40:11 [INFO]: Process terminated.
+2025-08-23 21:40:11 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-23 21:40:11 [INFO]: Process terminated.
+2025-08-23 21:40:11 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-23 21:40:11 [INFO]: Process terminated.
+2025-08-23 21:40:12 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-23 21:40:12 [INFO]: Process terminated.
+2025-08-23 21:40:12 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-23 21:40:12 [INFO]: Process terminated.
+2025-08-23 22:06:21 [INFO]: Database connection has been established successfully.
+2025-08-23 22:06:35 [INFO]: Database synchronized.
+2025-08-23 22:06:35 [INFO]: Server is running on port 3000
+2025-08-23 22:06:35 [INFO]: Environment: development
+2025-08-23 22:06:35 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-23 22:06:35 [INFO]: Health Check: http://localhost:3000/health
+2025-08-23 22:06:35 [INFO]: External IP: https://89.110.74.24:3000
+2025-08-23 22:07:53 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-23 22:07:53 [INFO]: Process terminated.
+2025-08-23 22:08:10 [INFO]: Database connection has been established successfully.
+2025-08-23 22:08:26 [INFO]: Database synchronized.
+2025-08-23 22:08:26 [INFO]: Server is running on port 3000
+2025-08-23 22:08:26 [INFO]: Environment: development
+2025-08-23 22:08:26 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-23 22:08:26 [INFO]: Health Check: http://localhost:3000/health
+2025-08-23 22:08:26 [INFO]: External IP: https://89.110.74.24:3000
+2025-08-23 22:11:57 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-23 22:11:57 [INFO]: Process terminated.
+2025-08-23 22:20:33 [INFO]: Database connection has been established successfully.
+2025-08-23 22:20:46 [INFO]: Database synchronized.
+2025-08-23 22:20:46 [INFO]: Server is running on port 3000
+2025-08-23 22:20:46 [INFO]: Environment: development
+2025-08-23 22:20:46 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-23 22:20:46 [INFO]: Health Check: http://localhost:3000/health
+2025-08-23 22:20:46 [INFO]: External IP: https://89.110.74.24:3000
+2025-08-23 22:20:50 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-23 22:20:50 [INFO]: Process terminated.
+2025-08-23 22:21:26 [INFO]: Database connection has been established successfully.
+2025-08-23 22:21:44 [INFO]: Database synchronized.
+2025-08-23 22:21:44 [INFO]: Server is running on port 3000
+2025-08-23 22:21:44 [INFO]: Environment: development
+2025-08-23 22:21:44 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-23 22:21:44 [INFO]: Health Check: http://localhost:3000/health
+2025-08-23 22:21:44 [INFO]: External IP: https://89.110.74.24:3000
+2025-08-23 22:25:36 [INFO]: SIGTERM received. Shutting down gracefully...
+2025-08-23 22:25:36 [INFO]: Process terminated.
+2025-08-23 22:25:53 [INFO]: Database connection has been established successfully.
+2025-08-23 22:26:07 [INFO]: Database synchronized.
+2025-08-23 22:26:07 [INFO]: Server is running on port 3000
+2025-08-23 22:26:07 [INFO]: Environment: development
+2025-08-23 22:26:07 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-23 22:26:07 [INFO]: Health Check: http://localhost:3000/health
+2025-08-23 22:26:08 [INFO]: External IP: https://89.110.74.24:3000
+2025-08-23 22:32:05 [ERROR]: Registration error: notNull Violation: User.full_name cannot be null
+SequelizeValidationError: notNull Violation: User.full_name cannot be null
+    at InstanceValidator._validate (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/instance-validator.js:50:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async InstanceValidator._validateAndRunHooks (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/instance-validator.js:60:7)
+    at async InstanceValidator.validate (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/instance-validator.js:54:12)
+    at async model.save (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:2426:7)
+    at async User.create (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:1362:12)
+    at async /root/webApp/Bozorli/backend/src/routes/auth.js:119:18
+{
+  "name": "SequelizeValidationError",
+  "errors": [
+    {
+      "message": "User.full_name cannot be null",
+      "type": "notNull Violation",
+      "path": "full_name",
+      "value": null,
+      "origin": "CORE",
+      "instance": {
+        "id": "97ca9c26-4359-4076-a0cd-e297bd57a700",
+        "wallet_balance": 0,
+        "is_active": true,
+        "is_verified": false,
+        "phone": "+998993890010",
+        "email": "user@example.com",
+        "role": "customer",
+        "updatedAt": "2025-08-23T19:32:05.770Z",
+        "createdAt": "2025-08-23T19:32:05.770Z"
+      },
+      "validatorKey": "is_null",
+      "validatorName": null,
+      "validatorArgs": []
+    }
+  ]
+}
+2025-08-23 22:34:06 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-23 22:34:06 [INFO]: Process terminated.
+2025-08-23 22:34:22 [INFO]: Database connection has been established successfully.
+2025-08-23 22:34:27 [INFO]: Database synchronized.
+2025-08-23 22:34:27 [INFO]: Server is running on port 3000
+2025-08-23 22:34:27 [INFO]: Environment: development
+2025-08-23 22:34:27 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-23 22:34:27 [INFO]: Health Check: http://localhost:3000/health
+2025-08-23 22:34:27 [INFO]: External IP: https://89.110.74.24:3000
+2025-08-23 22:35:08 [ERROR]: Registration error: notNull Violation: User.full_name cannot be null
+SequelizeValidationError: notNull Violation: User.full_name cannot be null
+    at InstanceValidator._validate (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/instance-validator.js:50:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async InstanceValidator._validateAndRunHooks (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/instance-validator.js:60:7)
+    at async InstanceValidator.validate (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/instance-validator.js:54:12)
+    at async model.save (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:2426:7)
+    at async User.create (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:1362:12)
+    at async /root/webApp/Bozorli/backend/src/routes/auth.js:119:18
+{
+  "name": "SequelizeValidationError",
+  "errors": [
+    {
+      "message": "User.full_name cannot be null",
+      "type": "notNull Violation",
+      "path": "full_name",
+      "value": null,
+      "origin": "CORE",
+      "instance": {
+        "id": "25fbbcdf-89fb-4545-b0ff-a28c671659ac",
+        "wallet_balance": 0,
+        "is_active": true,
+        "is_verified": false,
+        "phone": "+998993890012",
+        "email": "akmalovichdev@yandex.com",
+        "role": "customer",
+        "updatedAt": "2025-08-23T19:35:08.018Z",
+        "createdAt": "2025-08-23T19:35:08.018Z"
+      },
+      "validatorKey": "is_null",
+      "validatorName": null,
+      "validatorArgs": []
+    }
+  ]
+}
+2025-08-23 23:10:59 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-23 23:10:59 [INFO]: Process terminated.
+2025-08-23 23:11:04 [INFO]: Database connection has been established successfully.
+2025-08-23 23:11:17 [INFO]: Database synchronized.
+2025-08-23 23:11:17 [INFO]: Server is running on port 3000
+2025-08-23 23:11:17 [INFO]: Environment: development
+2025-08-23 23:11:17 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-23 23:11:17 [INFO]: Health Check: http://localhost:3000/health
+2025-08-23 23:11:17 [INFO]: External IP: https://89.110.74.24:3000
+2025-08-23 23:11:29 [INFO]: Development OTP for +998993890012: 123456 (fixed code)
+2025-08-23 23:11:29 [INFO]: New user registered: +998993890012
+2025-08-23 23:11:48 [INFO]: User logged in: +998993890012
+2025-08-24 00:53:17 [ERROR]: Route / not found
+Error: Route / not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:807:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:691:5
+{
+  "url": "/",
+  "method": "GET",
+  "ip": "198.235.24.162",
+  "userAgent": "Hello from Palo Alto Networks, find out more about our scans in https://docs-cortex.paloaltonetworks.com/r/1/Cortex-Xpanse/Scanning-activity"
+}
+2025-08-24 03:54:30 [ERROR]: Route / not found
+Error: Route / not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:807:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:691:5
+{
+  "url": "/",
+  "method": "GET",
+  "ip": "199.45.154.135"
+}
+2025-08-24 03:54:35 [ERROR]: Route / not found
+Error: Route / not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:807:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:691:5
+{
+  "url": "/",
+  "method": "GET",
+  "ip": "199.45.154.135",
+  "userAgent": "Mozilla/5.0 (compatible; CensysInspect/1.1; +https://about.censys.io/)"
+}
+2025-08-24 03:54:40 [ERROR]: Route /favicon.ico not found
+Error: Route /favicon.ico not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:807:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:691:5
+{
+  "url": "/favicon.ico",
+  "method": "GET",
+  "ip": "199.45.154.135",
+  "userAgent": "Mozilla/5.0 (compatible; CensysInspect/1.1; +https://about.censys.io/)"
+}
+2025-08-24 03:54:44 [ERROR]: Route /sitemap.xml not found
+Error: Route /sitemap.xml not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:807:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:691:5
+{
+  "url": "/sitemap.xml",
+  "method": "GET",
+  "ip": "199.45.154.135",
+  "userAgent": "Mozilla/5.0 (compatible; CensysInspect/1.1; +https://about.censys.io/)"
+}
+2025-08-24 04:23:36 [ERROR]: Route / not found
+Error: Route / not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:807:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:691:5
+{
+  "url": "/",
+  "method": "GET",
+  "ip": "146.190.134.221",
+  "userAgent": "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:54.0) Gecko/20100101 Firefox/70.0"
+}
+2025-08-24 09:13:33 [ERROR]: Route / not found
+Error: Route / not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:807:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:691:5
+{
+  "url": "/",
+  "method": "GET",
+  "ip": "44.220.185.117",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+}
+2025-08-24 09:13:33 [ERROR]: Route / not found
+Error: Route / not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:807:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:691:5
+{
+  "url": "/",
+  "method": "GET",
+  "ip": "44.220.185.117",
+  "userAgent": "Mozilla/5.0 (Windows NT 6.2;en-US) AppleWebKit/537.32.36 (KHTML, live Gecko) Chrome/59.0.3072.59 Safari/537.32"
+}
+2025-08-24 20:07:35 [INFO]: Database connection has been established successfully.
+2025-08-24 20:07:45 [INFO]: Database synchronized.
+2025-08-24 20:07:45 [INFO]: Server is running on port 3000
+2025-08-24 20:07:45 [INFO]: Environment: development
+2025-08-24 20:07:45 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-24 20:07:45 [INFO]: Health Check: http://localhost:3000/health
+2025-08-24 20:07:45 [INFO]: External IP: https://89.110.74.24:3000
+2025-08-24 20:16:55 [ERROR]: Authentication error: jwt expired
+TokenExpiredError: jwt expired
+    at /root/webApp/Bozorli/backend/node_modules/jsonwebtoken/verify.js:190:21
+    at getSecret (/root/webApp/Bozorli/backend/node_modules/jsonwebtoken/verify.js:97:14)
+    at module.exports [as verify] (/root/webApp/Bozorli/backend/node_modules/jsonwebtoken/verify.js:101:10)
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:20:25)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/root/webApp/Bozorli/backend/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+{
+  "name": "TokenExpiredError",
+  "expiredAt": "2025-08-22T18:32:25.000Z"
+}
+2025-08-24 20:17:57 [ERROR]: Route / not found
+Error: Route / not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:807:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:691:5
+{
+  "url": "/",
+  "method": "GET",
+  "ip": "20.163.15.166",
+  "userAgent": "Mozilla/5.0 zgrab/0.x"
+}
+2025-08-24 20:18:15 [INFO]: User logged in: +998993890012
+2025-08-24 20:46:16 [ERROR]: Route /api/v1/admin/dashboard/stats not found
+Error: Route /api/v1/admin/dashboard/stats not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:807:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:691:5
+{
+  "url": "/api/v1/admin/dashboard/stats",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-24 20:46:16 [ERROR]: Route /api/v1/admin/dashboard/stats not found
+Error: Route /api/v1/admin/dashboard/stats not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:807:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:691:5
+{
+  "url": "/api/v1/admin/dashboard/stats",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-24 20:46:16 [ERROR]: Route /api/v1/admin/dashboard/stats not found
+Error: Route /api/v1/admin/dashboard/stats not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:807:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:691:5
+{
+  "url": "/api/v1/admin/dashboard/stats",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-24 20:46:21 [ERROR]: Route /api/v1/admin/dashboard/stats not found
+Error: Route /api/v1/admin/dashboard/stats not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:807:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:691:5
+{
+  "url": "/api/v1/admin/dashboard/stats",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-24 20:46:21 [ERROR]: Route /api/v1/admin/dashboard/stats not found
+Error: Route /api/v1/admin/dashboard/stats not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:807:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:691:5
+{
+  "url": "/api/v1/admin/dashboard/stats",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-24 20:46:21 [ERROR]: Route /api/v1/admin/dashboard/stats not found
+Error: Route /api/v1/admin/dashboard/stats not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:807:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:691:5
+{
+  "url": "/api/v1/admin/dashboard/stats",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-24 21:10:05 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-24 21:10:05 [INFO]: Process terminated.
+2025-08-24 21:10:11 [INFO]: Database connection has been established successfully.
+2025-08-24 21:10:25 [INFO]: Database synchronized.
+2025-08-24 21:10:25 [INFO]: Server is running on port 3000
+2025-08-24 21:10:25 [INFO]: Environment: development
+2025-08-24 21:10:25 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-24 21:10:25 [INFO]: Health Check: http://localhost:3000/health
+2025-08-24 21:10:25 [INFO]: External IP: https://89.110.74.24:3000
+2025-08-24 21:11:28 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-24 21:11:28 [INFO]: Process terminated.
+2025-08-24 21:11:34 [INFO]: Database connection has been established successfully.
+2025-08-24 21:11:44 [INFO]: Database synchronized.
+2025-08-24 21:11:44 [INFO]: Server is running on port 3000
+2025-08-24 21:11:44 [INFO]: Environment: development
+2025-08-24 21:11:44 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-24 21:11:44 [INFO]: Health Check: http://localhost:3000/health
+2025-08-24 21:11:44 [INFO]: External IP: https://89.110.74.24:3000
+2025-08-24 21:12:29 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-24 21:12:29 [INFO]: Process terminated.
+2025-08-24 21:12:49 [INFO]: Database connection has been established successfully.
+2025-08-24 21:13:02 [INFO]: Database synchronized.
+2025-08-24 21:13:02 [INFO]: Server is running on port 3000
+2025-08-24 21:13:02 [INFO]: Environment: development
+2025-08-24 21:13:02 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-24 21:13:02 [INFO]: Health Check: http://localhost:3000/health
+2025-08-24 21:13:02 [INFO]: External IP: https://89.110.74.24:3000
+2025-08-24 21:14:24 [ERROR]: Route / not found
+Error: Route / not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:807:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:691:5
+{
+  "url": "/",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "curl/7.81.0"
+}
+2025-08-24 21:19:28 [INFO]: Database connection has been established successfully.
+2025-08-24 21:19:31 [INFO]: Database connection has been established successfully.
+2025-08-24 21:19:42 [INFO]: Database connection has been established successfully.
+2025-08-24 21:19:58 [INFO]: Database connection has been established successfully.
+2025-08-24 21:20:08 [INFO]: Database synchronized.
+2025-08-24 21:20:08 [INFO]: Server is running on port 3000
+2025-08-24 21:20:08 [INFO]: Environment: development
+2025-08-24 21:20:08 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-24 21:20:08 [INFO]: Health Check: http://localhost:3000/health
+2025-08-24 21:20:08 [INFO]: External IP: https://89.110.74.24:3000
+2025-08-24 21:20:15 [INFO]: Database connection has been established successfully.
+2025-08-24 21:20:20 [INFO]: Database connection has been established successfully.
+2025-08-24 21:20:34 [INFO]: Database synchronized.
+2025-08-24 21:20:34 [INFO]: Server is running on port 3000
+2025-08-24 21:20:34 [INFO]: Environment: development
+2025-08-24 21:20:34 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-24 21:20:34 [INFO]: Health Check: http://localhost:3000/health
+2025-08-24 21:20:34 [INFO]: External IP: https://89.110.74.24:3000
+2025-08-24 21:20:50 [INFO]: Database connection has been established successfully.
+2025-08-24 21:21:02 [INFO]: Database synchronized.
+2025-08-24 21:21:02 [INFO]: Server is running on port 3000
+2025-08-24 21:21:02 [INFO]: Environment: development
+2025-08-24 21:21:02 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-24 21:21:02 [INFO]: Health Check: http://localhost:3000/health
+2025-08-24 21:21:02 [INFO]: External IP: https://89.110.74.24:3000
+2025-08-24 21:21:28 [INFO]: Database connection has been established successfully.
+2025-08-24 21:21:37 [INFO]: Database synchronized.
+2025-08-24 21:21:37 [INFO]: Server is running on port 3000
+2025-08-24 21:21:37 [INFO]: Environment: development
+2025-08-24 21:21:37 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-24 21:21:37 [INFO]: Health Check: http://localhost:3000/health
+2025-08-24 21:21:37 [INFO]: External IP: https://89.110.74.24:3000
+2025-08-24 21:21:46 [INFO]: Database connection has been established successfully.
+2025-08-24 21:22:00 [INFO]: Database synchronized.
+2025-08-24 21:22:00 [INFO]: Server is running on port 3000
+2025-08-24 21:22:00 [INFO]: Environment: development
+2025-08-24 21:22:00 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-24 21:22:00 [INFO]: Health Check: http://localhost:3000/health
+2025-08-24 21:22:00 [INFO]: External IP: https://89.110.74.24:3000
+2025-08-24 21:22:15 [INFO]: Database connection has been established successfully.
+2025-08-24 21:22:29 [INFO]: Database synchronized.
+2025-08-24 21:22:29 [INFO]: Server is running on port 3000
+2025-08-24 21:22:29 [INFO]: Environment: development
+2025-08-24 21:22:29 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-24 21:22:29 [INFO]: Health Check: http://localhost:3000/health
+2025-08-24 21:22:29 [INFO]: External IP: https://89.110.74.24:3000
+2025-08-24 21:22:33 [INFO]: Database connection has been established successfully.
+2025-08-24 21:22:43 [INFO]: Database synchronized.
+2025-08-24 21:23:01 [INFO]: Database connection has been established successfully.
+2025-08-24 21:23:01 [INFO]: Database connection has been established successfully.
+2025-08-24 21:23:02 [WARN]: Database sync failed, but continuing with server startup:
+2025-08-24 21:23:02 [INFO]: Server is running on port 3000
+2025-08-24 21:23:02 [INFO]: Environment: development
+2025-08-24 21:23:02 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-24 21:23:02 [INFO]: Health Check: http://localhost:3000/health
+2025-08-24 21:23:02 [INFO]: External IP: https://89.110.74.24:3000
+2025-08-24 21:23:13 [INFO]: Database connection has been established successfully.
+2025-08-24 21:23:31 [ERROR]: Owner authentication error: Cannot read properties of undefined (reading 'role')
+TypeError: Cannot read properties of undefined (reading 'role')
+    at requireOwnerRole (/root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:21:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-08-24 21:23:59 [INFO]: Database connection has been established successfully.
+2025-08-24 21:24:14 [INFO]: Database connection has been established successfully.
+2025-08-24 21:24:16 [INFO]: Database connection has been established successfully.
+2025-08-24 21:25:03 [INFO]: Database connection has been established successfully.
+2025-08-24 21:25:15 [INFO]: Database synchronized.
+2025-08-24 21:25:15 [INFO]: Server is running on port 3000
+2025-08-24 21:25:15 [INFO]: Environment: development
+2025-08-24 21:25:15 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-24 21:25:15 [INFO]: Health Check: http://localhost:3000/health
+2025-08-24 21:25:15 [INFO]: External IP: https://89.110.74.24:3000
+2025-08-24 21:25:27 [INFO]: User logged in: +998993890012
+2025-08-24 21:26:07 [INFO]: Database connection has been established successfully.
+2025-08-24 21:26:18 [INFO]: Database synchronized.
+2025-08-24 21:26:18 [INFO]: Server is running on port 3000
+2025-08-24 21:26:18 [INFO]: Environment: development
+2025-08-24 21:26:18 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-24 21:26:18 [INFO]: Health Check: http://localhost:3000/health
+2025-08-24 21:26:18 [INFO]: External IP: https://89.110.74.24:3000
+2025-08-24 21:26:26 [INFO]: User logged in: +998993890012
+2025-08-24 21:26:32 [ERROR]: Owner authentication error: Cannot read properties of undefined (reading 'role')
+TypeError: Cannot read properties of undefined (reading 'role')
+    at requireOwnerRole (/root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:21:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-08-24 21:28:43 [INFO]: Database connection has been established successfully.
+2025-08-24 21:28:53 [INFO]: Database synchronized.
+2025-08-24 21:28:53 [INFO]: Server is running on port 3000
+2025-08-24 21:28:53 [INFO]: Environment: development
+2025-08-24 21:28:53 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-24 21:28:53 [INFO]: Health Check: http://localhost:3000/health
+2025-08-24 21:28:53 [INFO]: External IP: https://89.110.74.24:3000
+2025-08-24 21:29:15 [INFO]: Database connection has been established successfully.
+2025-08-24 21:29:27 [INFO]: Database synchronized.
+2025-08-24 21:29:27 [INFO]: Server is running on port 3000
+2025-08-24 21:29:27 [INFO]: Environment: development
+2025-08-24 21:29:27 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-24 21:29:27 [INFO]: Health Check: http://localhost:3000/health
+2025-08-24 21:29:27 [INFO]: External IP: https://89.110.74.24:3000
+2025-08-24 21:33:17 [INFO]: User logged in: +998993890012
+2025-08-24 21:33:36 [INFO]: Database connection has been established successfully.
+2025-08-24 21:33:49 [INFO]: Database synchronized.
+2025-08-24 21:33:49 [INFO]: Server is running on port 3000
+2025-08-24 21:33:49 [INFO]: Environment: development
+2025-08-24 21:33:49 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-24 21:33:49 [INFO]: Health Check: http://localhost:3000/health
+2025-08-24 21:33:49 [INFO]: External IP: https://89.110.74.24:3000
+2025-08-24 21:34:01 [INFO]: User logged in: +998993890012
+2025-08-24 21:35:35 [INFO]: User logged in: +998993890012
+2025-08-24 21:37:42 [INFO]: SIGTERM received. Shutting down gracefully...
+2025-08-24 21:37:42 [INFO]: Process terminated.
+2025-08-24 21:38:02 [INFO]: Database connection has been established successfully.
+2025-08-24 21:38:15 [INFO]: Database connection has been established successfully.
+2025-08-24 21:38:29 [INFO]: Database synchronized.
+2025-08-24 21:38:29 [INFO]: Server is running on port 3000
+2025-08-24 21:38:29 [INFO]: Environment: development
+2025-08-24 21:38:29 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-24 21:38:29 [INFO]: Health Check: http://localhost:3000/health
+2025-08-24 21:38:29 [INFO]: External IP: https://89.110.74.24:3000
+2025-08-24 21:39:01 [INFO]: User logged in: +998993890012
+2025-08-24 21:39:11 [INFO]: User logged in: +998993890012
+2025-08-24 21:39:59 [INFO]: Database connection has been established successfully.
+2025-08-24 21:40:15 [INFO]: Database synchronized.
+2025-08-24 21:40:15 [INFO]: Server is running on port 3000
+2025-08-24 21:40:15 [INFO]: Environment: development
+2025-08-24 21:40:15 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-24 21:40:15 [INFO]: Health Check: http://localhost:3000/health
+2025-08-24 21:40:15 [INFO]: External IP: https://89.110.74.24:3000
+2025-08-24 21:40:55 [INFO]: Owner authentication started
+2025-08-24 21:41:03 [INFO]: User logged in: +998993890012
+2025-08-24 21:41:11 [INFO]: Owner authentication started
+2025-08-24 21:41:18 [INFO]: Owner authentication started
+2025-08-24 21:41:53 [INFO]: Database connection has been established successfully.
+2025-08-24 21:42:10 [INFO]: Database synchronized.
+2025-08-24 21:42:10 [INFO]: Server is running on port 3000
+2025-08-24 21:42:10 [INFO]: Environment: development
+2025-08-24 21:42:10 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-24 21:42:10 [INFO]: Health Check: http://localhost:3000/health
+2025-08-24 21:42:10 [INFO]: External IP: https://89.110.74.24:3000
+2025-08-24 21:42:23 [INFO]: User logged in: +998993890012
+2025-08-24 21:42:48 [INFO]: User logged in: +998993890012
+2025-08-24 21:42:58 [INFO]: User logged in: +998993890012
+2025-08-24 21:43:33 [INFO]: User logged in: +998993890012
+2025-08-24 21:43:41 [INFO]: Owner authentication started
+2025-08-24 21:43:48 [INFO]: Owner authentication started
+2025-08-24 21:44:35 [INFO]: Database connection has been established successfully.
+2025-08-24 21:44:50 [INFO]: Database synchronized.
+2025-08-24 21:44:50 [INFO]: Server is running on port 3000
+2025-08-24 21:44:50 [INFO]: Environment: development
+2025-08-24 21:44:50 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-24 21:44:50 [INFO]: Health Check: http://localhost:3000/health
+2025-08-24 21:44:50 [INFO]: External IP: https://89.110.74.24:3000
+2025-08-24 21:44:54 [INFO]: Owner authentication started
+2025-08-24 21:44:54 [INFO]: AuthenticateToken middleware started
+2025-08-24 21:44:54 [INFO]: Token found, verifying...
+2025-08-24 21:44:54 [INFO]: Token decoded, userId: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3
+2025-08-24 21:44:54 [INFO]: User found: yes, isActive: undefined
+2025-08-24 21:44:54 [WARN]: User not found or inactive: userId=e1297eb5-3cae-4904-86bd-8be6ccb1ccf3, user=true, isActive=undefined
+2025-08-24 21:46:26 [INFO]: Database connection has been established successfully.
+2025-08-24 21:46:41 [INFO]: Database synchronized.
+2025-08-24 21:46:41 [INFO]: Server is running on port 3000
+2025-08-24 21:46:41 [INFO]: Environment: development
+2025-08-24 21:46:41 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-24 21:46:41 [INFO]: Health Check: http://localhost:3000/health
+2025-08-24 21:46:41 [INFO]: External IP: https://89.110.74.24:3000
+2025-08-24 21:46:44 [INFO]: Owner authentication started
+2025-08-24 21:46:44 [INFO]: AuthenticateToken middleware started
+2025-08-24 21:46:44 [INFO]: Token found, verifying...
+2025-08-24 21:46:44 [INFO]: Token decoded, userId: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3
+2025-08-24 21:46:44 [INFO]: User found: yes, is_active: true
+2025-08-24 21:46:44 [INFO]: User authenticated successfully: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3, role: owner
+2025-08-24 21:46:44 [INFO]: Token authentication successful
+2025-08-24 21:46:44 [INFO]: User authenticated: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3, role: owner
+2025-08-24 21:46:44 [INFO]: Owner authentication successful
+2025-08-24 21:46:52 [INFO]: Owner authentication started
+2025-08-24 21:46:52 [INFO]: AuthenticateToken middleware started
+2025-08-24 21:46:52 [INFO]: Token found, verifying...
+2025-08-24 21:46:52 [INFO]: Token decoded, userId: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3
+2025-08-24 21:46:52 [INFO]: User found: yes, is_active: true
+2025-08-24 21:46:52 [INFO]: User authenticated successfully: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3, role: owner
+2025-08-24 21:46:52 [INFO]: Token authentication successful
+2025-08-24 21:46:52 [INFO]: User authenticated: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3, role: owner
+2025-08-24 21:46:52 [INFO]: Owner authentication successful
+2025-08-24 21:47:00 [INFO]: Owner authentication started
+2025-08-24 21:47:00 [INFO]: AuthenticateToken middleware started
+2025-08-24 21:47:00 [INFO]: Token found, verifying...
+2025-08-24 21:47:00 [INFO]: Token decoded, userId: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3
+2025-08-24 21:47:00 [INFO]: User found: yes, is_active: true
+2025-08-24 21:47:00 [INFO]: User authenticated successfully: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3, role: owner
+2025-08-24 21:47:00 [INFO]: Token authentication successful
+2025-08-24 21:47:00 [INFO]: User authenticated: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3, role: owner
+2025-08-24 21:47:00 [INFO]: Owner authentication successful
+2025-08-24 21:47:13 [INFO]: User logged in: +998993890012
+2025-08-24 21:49:41 [INFO]: User logged in: +998993890012
+2025-08-24 21:50:12 [INFO]: User logged in: +998993890012
+2025-08-24 21:50:58 [INFO]: SIGTERM received. Shutting down gracefully...
+2025-08-24 21:50:58 [INFO]: Process terminated.
+2025-08-24 21:51:04 [INFO]: Database connection has been established successfully.
+2025-08-24 21:51:20 [INFO]: Database synchronized.
+2025-08-24 21:51:20 [INFO]: Server is running on port 3000
+2025-08-24 21:51:20 [INFO]: Environment: development
+2025-08-24 21:51:20 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-24 21:51:20 [INFO]: Health Check: http://localhost:3000/health
+2025-08-24 21:51:20 [INFO]: External IP: https://89.110.74.24:3000
+2025-08-24 21:53:37 [INFO]: SIGTERM received. Shutting down gracefully...
+2025-08-24 21:53:37 [INFO]: Process terminated.
+2025-08-24 21:54:14 [INFO]: Database connection has been established successfully.
+2025-08-24 21:54:28 [INFO]: Database synchronized.
+2025-08-24 21:54:28 [INFO]: Server is running on port 3000
+2025-08-24 21:54:28 [INFO]: Environment: development
+2025-08-24 21:54:28 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-24 21:54:28 [INFO]: Health Check: http://localhost:3000/health
+2025-08-24 21:54:28 [INFO]: External IP: https://89.110.74.24:3000
+2025-08-24 21:56:29 [INFO]: User logged in: +998993890012
+2025-08-24 21:57:43 [INFO]: SIGTERM received. Shutting down gracefully...
+2025-08-24 21:57:43 [INFO]: Process terminated.
+2025-08-24 21:58:09 [INFO]: Database connection has been established successfully.
+2025-08-24 21:58:19 [INFO]: Database synchronized.
+2025-08-24 21:58:19 [INFO]: Server is running on port 3000
+2025-08-24 21:58:19 [INFO]: Environment: development
+2025-08-24 21:58:19 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-24 21:58:19 [INFO]: Health Check: http://localhost:3000/health
+2025-08-24 21:58:19 [INFO]: External IP: https://89.110.74.24:3000
+2025-08-24 21:59:19 [INFO]: User logged in: +998993890012
+2025-08-24 21:59:39 [INFO]: User logged in: +998993890012
+2025-08-24 22:00:25 [INFO]: User logged in: +998993890012
+2025-08-24 22:02:25 [INFO]: User logged in: +998993890012
+2025-08-24 22:03:28 [INFO]: User logged in: +998993890012
+2025-08-24 22:03:36 [INFO]: User logged in: +998993890012
+2025-08-24 22:04:57 [INFO]: User logged in: +998993890012
+2025-08-24 22:06:37 [INFO]: User logged in: +998993890012
+2025-08-24 22:06:37 [INFO]: Owner authentication started
+2025-08-24 22:06:37 [INFO]: AuthenticateToken middleware started
+2025-08-24 22:06:37 [INFO]: Token found, verifying...
+2025-08-24 22:06:37 [INFO]: Token decoded, userId: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3
+2025-08-24 22:06:37 [INFO]: User found: yes, is_active: true
+2025-08-24 22:06:37 [INFO]: User authenticated successfully: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3, role: owner
+2025-08-24 22:06:37 [INFO]: Token authentication successful
+2025-08-24 22:06:37 [INFO]: User authenticated: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3, role: owner
+2025-08-24 22:06:37 [INFO]: Owner authentication successful
+2025-08-24 22:06:37 [INFO]: Owner authentication started
+2025-08-24 22:06:37 [INFO]: AuthenticateToken middleware started
+2025-08-24 22:06:37 [INFO]: Token found, verifying...
+2025-08-24 22:06:37 [INFO]: Token decoded, userId: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3
+2025-08-24 22:06:37 [INFO]: User found: yes, is_active: true
+2025-08-24 22:06:37 [INFO]: User authenticated successfully: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3, role: owner
+2025-08-24 22:06:37 [INFO]: Token authentication successful
+2025-08-24 22:06:37 [INFO]: User authenticated: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3, role: owner
+2025-08-24 22:06:37 [INFO]: Owner authentication successful
+2025-08-24 22:06:41 [INFO]: Owner authentication started
+2025-08-24 22:06:41 [INFO]: AuthenticateToken middleware started
+2025-08-24 22:06:41 [INFO]: Token found, verifying...
+2025-08-24 22:06:41 [INFO]: Token decoded, userId: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3
+2025-08-24 22:06:41 [INFO]: User found: yes, is_active: true
+2025-08-24 22:06:41 [INFO]: User authenticated successfully: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3, role: owner
+2025-08-24 22:06:41 [INFO]: Token authentication successful
+2025-08-24 22:06:41 [INFO]: User authenticated: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3, role: owner
+2025-08-24 22:06:41 [INFO]: Owner authentication successful
+2025-08-24 22:06:42 [INFO]: Owner authentication started
+2025-08-24 22:06:42 [INFO]: AuthenticateToken middleware started
+2025-08-24 22:06:42 [INFO]: Token found, verifying...
+2025-08-24 22:06:42 [INFO]: Token decoded, userId: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3
+2025-08-24 22:06:42 [INFO]: User found: yes, is_active: true
+2025-08-24 22:06:42 [INFO]: User authenticated successfully: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3, role: owner
+2025-08-24 22:06:42 [INFO]: Token authentication successful
+2025-08-24 22:06:42 [INFO]: User authenticated: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3, role: owner
+2025-08-24 22:06:42 [INFO]: Owner authentication successful
+2025-08-24 22:06:46 [INFO]: Owner authentication started
+2025-08-24 22:06:46 [INFO]: AuthenticateToken middleware started
+2025-08-24 22:06:46 [INFO]: Token found, verifying...
+2025-08-24 22:06:46 [INFO]: Token decoded, userId: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3
+2025-08-24 22:06:46 [INFO]: User found: yes, is_active: true
+2025-08-24 22:06:46 [INFO]: User authenticated successfully: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3, role: owner
+2025-08-24 22:06:46 [INFO]: Token authentication successful
+2025-08-24 22:06:46 [INFO]: User authenticated: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3, role: owner
+2025-08-24 22:06:46 [INFO]: Owner authentication successful
+2025-08-24 22:06:46 [INFO]: Owner authentication started
+2025-08-24 22:06:46 [INFO]: AuthenticateToken middleware started
+2025-08-24 22:06:46 [INFO]: Token found, verifying...
+2025-08-24 22:06:46 [INFO]: Token decoded, userId: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3
+2025-08-24 22:06:46 [INFO]: User found: yes, is_active: true
+2025-08-24 22:06:46 [INFO]: User authenticated successfully: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3, role: owner
+2025-08-24 22:06:46 [INFO]: Token authentication successful
+2025-08-24 22:06:46 [INFO]: User authenticated: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3, role: owner
+2025-08-24 22:06:46 [INFO]: Owner authentication successful
+2025-08-24 22:08:24 [INFO]: Database connection has been established successfully.
+2025-08-24 22:08:38 [INFO]: Database synchronized.
+2025-08-24 22:08:38 [INFO]: Server is running on port 3000
+2025-08-24 22:08:38 [INFO]: Environment: development
+2025-08-24 22:08:38 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-24 22:08:38 [INFO]: Health Check: http://localhost:3000/health
+2025-08-24 22:08:38 [INFO]: External IP: https://89.110.74.24:3000
+2025-08-24 22:08:53 [INFO]: Database connection has been established successfully.
+2025-08-24 22:09:06 [INFO]: Database synchronized.
+2025-08-24 22:09:06 [INFO]: Server is running on port 3000
+2025-08-24 22:09:06 [INFO]: Environment: development
+2025-08-24 22:09:06 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-24 22:09:06 [INFO]: Health Check: http://localhost:3000/health
+2025-08-24 22:09:06 [INFO]: External IP: https://89.110.74.24:3000
+2025-08-24 22:09:13 [INFO]: Database connection has been established successfully.
+2025-08-24 22:09:26 [INFO]: Database synchronized.
+2025-08-24 22:09:26 [INFO]: Server is running on port 3000
+2025-08-24 22:09:26 [INFO]: Environment: development
+2025-08-24 22:09:26 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-24 22:09:26 [INFO]: Health Check: http://localhost:3000/health
+2025-08-24 22:09:26 [INFO]: External IP: https://89.110.74.24:3000
+2025-08-24 22:09:36 [INFO]: Database connection has been established successfully.
+2025-08-24 22:09:49 [INFO]: Database synchronized.
+2025-08-24 22:09:49 [INFO]: Server is running on port 3000
+2025-08-24 22:09:49 [INFO]: Environment: development
+2025-08-24 22:09:49 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-24 22:09:49 [INFO]: Health Check: http://localhost:3000/health
+2025-08-24 22:09:49 [INFO]: External IP: https://89.110.74.24:3000
+2025-08-24 22:10:03 [INFO]: Database connection has been established successfully.
+2025-08-24 22:10:23 [INFO]: Database connection has been established successfully.
+2025-08-24 22:10:39 [INFO]: Database synchronized.
+2025-08-24 22:10:39 [INFO]: Server is running on port 3000
+2025-08-24 22:10:39 [INFO]: Environment: development
+2025-08-24 22:10:39 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-24 22:10:39 [INFO]: Health Check: http://localhost:3000/health
+2025-08-24 22:10:39 [INFO]: External IP: https://89.110.74.24:3000
+2025-08-24 22:10:47 [INFO]: Database connection has been established successfully.
+2025-08-24 22:11:01 [INFO]: Database synchronized.
+2025-08-24 22:11:01 [INFO]: Server is running on port 3000
+2025-08-24 22:11:01 [INFO]: Environment: development
+2025-08-24 22:11:01 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-24 22:11:01 [INFO]: Health Check: http://localhost:3000/health
+2025-08-24 22:11:01 [INFO]: External IP: https://89.110.74.24:3000
+2025-08-24 22:14:22 [INFO]: Owner authentication started
+2025-08-24 22:14:22 [INFO]: AuthenticateToken middleware started
+2025-08-24 22:14:22 [INFO]: Token found, verifying...
+2025-08-24 22:14:22 [INFO]: Token decoded, userId: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3
+2025-08-24 22:14:22 [INFO]: User found: yes, is_active: true
+2025-08-24 22:14:22 [INFO]: User authenticated successfully: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3, role: owner
+2025-08-24 22:14:22 [INFO]: Token authentication successful
+2025-08-24 22:14:22 [INFO]: User authenticated: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3, role: owner
+2025-08-24 22:14:22 [INFO]: Owner authentication successful
+2025-08-24 22:14:22 [ERROR]: Dashboard stats error: Unknown column 'Store.is_active' in 'where clause'
+Error
+    at Query.run (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/dialects/mysql/query.js:52:25)
+    at /root/webApp/Bozorli/backend/node_modules/sequelize/lib/sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async MySQLQueryInterface.rawSelect (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/dialects/abstract/query-interface.js:434:18)
+    at async Store.aggregate (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:1277:19)
+    at async Store.count (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:1306:20)
+    at async /root/webApp/Bozorli/backend/src/routes/admin.js:54:26
+{
+  "name": "SequelizeDatabaseError",
+  "parent": {
+    "code": "ER_BAD_FIELD_ERROR",
+    "errno": 1054,
+    "sqlState": "42S22",
+    "sqlMessage": "Unknown column 'Store.is_active' in 'where clause'",
+    "sql": "SELECT count(*) AS `count` FROM `stores` AS `Store` WHERE `Store`.`is_active` = true;"
+  },
+  "original": {
+    "code": "ER_BAD_FIELD_ERROR",
+    "errno": 1054,
+    "sqlState": "42S22",
+    "sqlMessage": "Unknown column 'Store.is_active' in 'where clause'",
+    "sql": "SELECT count(*) AS `count` FROM `stores` AS `Store` WHERE `Store`.`is_active` = true;"
+  },
+  "sql": "SELECT count(*) AS `count` FROM `stores` AS `Store` WHERE `Store`.`is_active` = true;",
+  "parameters": {}
+}
+2025-08-24 22:14:52 [INFO]: Database connection has been established successfully.
+2025-08-24 22:15:07 [INFO]: Database synchronized.
+2025-08-24 22:15:07 [INFO]: Server is running on port 3000
+2025-08-24 22:15:07 [INFO]: Environment: development
+2025-08-24 22:15:07 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-24 22:15:07 [INFO]: Health Check: http://localhost:3000/health
+2025-08-24 22:15:07 [INFO]: External IP: https://89.110.74.24:3000
+2025-08-24 22:15:13 [INFO]: Database connection has been established successfully.
+2025-08-24 22:15:26 [INFO]: Database synchronized.
+2025-08-24 22:15:26 [INFO]: Server is running on port 3000
+2025-08-24 22:15:26 [INFO]: Environment: development
+2025-08-24 22:15:26 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-24 22:15:26 [INFO]: Health Check: http://localhost:3000/health
+2025-08-24 22:15:26 [INFO]: External IP: https://89.110.74.24:3000
+2025-08-24 22:15:33 [INFO]: User logged in: +998993890012
+2025-08-24 22:15:42 [INFO]: Owner authentication started
+2025-08-24 22:15:42 [INFO]: AuthenticateToken middleware started
+2025-08-24 22:15:42 [INFO]: Token found, verifying...
+2025-08-24 22:15:42 [INFO]: Token decoded, userId: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3
+2025-08-24 22:15:42 [INFO]: User found: yes, is_active: true
+2025-08-24 22:15:42 [INFO]: User authenticated successfully: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3, role: owner
+2025-08-24 22:15:42 [INFO]: Token authentication successful
+2025-08-24 22:15:42 [INFO]: User authenticated: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3, role: owner
+2025-08-24 22:15:42 [INFO]: Owner authentication successful
+2025-08-24 22:15:42 [ERROR]: Dashboard stats error: Cannot read properties of undefined (reading 'fn')
+TypeError: Cannot read properties of undefined (reading 'fn')
+    at /root/webApp/Bozorli/backend/src/routes/admin.js:93:20
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-08-24 22:16:09 [INFO]: Database connection has been established successfully.
+2025-08-24 22:16:25 [INFO]: Database synchronized.
+2025-08-24 22:16:25 [INFO]: Server is running on port 3000
+2025-08-24 22:16:25 [INFO]: Environment: development
+2025-08-24 22:16:25 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-24 22:16:25 [INFO]: Health Check: http://localhost:3000/health
+2025-08-24 22:16:25 [INFO]: External IP: https://89.110.74.24:3000
+2025-08-24 22:16:29 [INFO]: Owner authentication started
+2025-08-24 22:16:29 [INFO]: AuthenticateToken middleware started
+2025-08-24 22:16:29 [INFO]: Token found, verifying...
+2025-08-24 22:16:29 [INFO]: Token decoded, userId: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3
+2025-08-24 22:16:29 [INFO]: User found: yes, is_active: true
+2025-08-24 22:16:29 [INFO]: User authenticated successfully: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3, role: owner
+2025-08-24 22:16:29 [INFO]: Token authentication successful
+2025-08-24 22:16:29 [INFO]: User authenticated: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3, role: owner
+2025-08-24 22:16:29 [INFO]: Owner authentication successful
+2025-08-24 22:16:38 [INFO]: Owner authentication started
+2025-08-24 22:16:38 [INFO]: AuthenticateToken middleware started
+2025-08-24 22:16:38 [INFO]: Token found, verifying...
+2025-08-24 22:16:38 [INFO]: Token decoded, userId: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3
+2025-08-24 22:16:38 [INFO]: User found: yes, is_active: true
+2025-08-24 22:16:38 [INFO]: User authenticated successfully: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3, role: owner
+2025-08-24 22:16:38 [INFO]: Token authentication successful
+2025-08-24 22:16:38 [INFO]: User authenticated: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3, role: owner
+2025-08-24 22:16:38 [INFO]: Owner authentication successful
+2025-08-24 22:16:45 [INFO]: Owner authentication started
+2025-08-24 22:16:45 [INFO]: AuthenticateToken middleware started
+2025-08-24 22:16:45 [INFO]: Token found, verifying...
+2025-08-24 22:16:45 [INFO]: Token decoded, userId: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3
+2025-08-24 22:16:45 [INFO]: User found: yes, is_active: true
+2025-08-24 22:16:45 [INFO]: User authenticated successfully: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3, role: owner
+2025-08-24 22:16:45 [INFO]: Token authentication successful
+2025-08-24 22:16:45 [INFO]: User authenticated: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3, role: owner
+2025-08-24 22:16:45 [INFO]: Owner authentication successful
+2025-08-24 22:16:53 [INFO]: Owner authentication started
+2025-08-24 22:16:53 [INFO]: AuthenticateToken middleware started
+2025-08-24 22:16:53 [INFO]: Token found, verifying...
+2025-08-24 22:16:53 [INFO]: Token decoded, userId: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3
+2025-08-24 22:16:53 [INFO]: User found: yes, is_active: true
+2025-08-24 22:16:53 [INFO]: User authenticated successfully: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3, role: owner
+2025-08-24 22:16:53 [INFO]: Token authentication successful
+2025-08-24 22:16:53 [INFO]: User authenticated: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3, role: owner
+2025-08-24 22:16:53 [INFO]: Owner authentication successful
+2025-08-24 22:17:41 [INFO]: Database connection has been established successfully.
+2025-08-24 22:17:55 [INFO]: Database synchronized.
+2025-08-24 22:17:55 [INFO]: Server is running on port 3000
+2025-08-24 22:17:55 [INFO]: Environment: development
+2025-08-24 22:17:55 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-24 22:17:55 [INFO]: Health Check: http://localhost:3000/health
+2025-08-24 22:17:55 [INFO]: External IP: https://89.110.74.24:3000
+2025-08-24 22:18:21 [INFO]: Database connection has been established successfully.
+2025-08-24 22:18:35 [INFO]: Database synchronized.
+2025-08-24 22:18:35 [INFO]: Server is running on port 3000
+2025-08-24 22:18:35 [INFO]: Environment: development
+2025-08-24 22:18:35 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-24 22:18:35 [INFO]: Health Check: http://localhost:3000/health
+2025-08-24 22:18:35 [INFO]: External IP: https://89.110.74.24:3000
+2025-08-24 22:18:46 [INFO]: Database connection has been established successfully.
+2025-08-24 22:18:58 [INFO]: Database synchronized.
+2025-08-24 22:18:58 [INFO]: Server is running on port 3000
+2025-08-24 22:18:58 [INFO]: Environment: development
+2025-08-24 22:18:58 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-24 22:18:58 [INFO]: Health Check: http://localhost:3000/health
+2025-08-24 22:18:58 [INFO]: External IP: https://89.110.74.24:3000
+2025-08-24 22:19:08 [INFO]: Database connection has been established successfully.
+2025-08-24 22:19:21 [INFO]: Database synchronized.
+2025-08-24 22:19:21 [INFO]: Server is running on port 3000
+2025-08-24 22:19:21 [INFO]: Environment: development
+2025-08-24 22:19:21 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-24 22:19:21 [INFO]: Health Check: http://localhost:3000/health
+2025-08-24 22:19:21 [INFO]: External IP: https://89.110.74.24:3000
+2025-08-24 22:19:31 [INFO]: Database connection has been established successfully.
+2025-08-24 22:19:49 [INFO]: Database synchronized.
+2025-08-24 22:19:49 [INFO]: Server is running on port 3000
+2025-08-24 22:19:49 [INFO]: Environment: development
+2025-08-24 22:19:49 [INFO]: API Documentation: http://localhost:3000/api-docs
+2025-08-24 22:19:49 [INFO]: Health Check: http://localhost:3000/health
+2025-08-24 22:19:49 [INFO]: External IP: https://89.110.74.24:3000
+2025-08-24 22:28:16 [INFO]: User logged in: +998993890012
+2025-08-24 22:28:24 [INFO]: Owner authentication started
+2025-08-24 22:28:24 [INFO]: AuthenticateToken middleware started
+2025-08-24 22:28:24 [INFO]: Token found, verifying...
+2025-08-24 22:28:24 [INFO]: Token decoded, userId: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3
+2025-08-24 22:28:24 [INFO]: User found: yes, is_active: true
+2025-08-24 22:28:24 [INFO]: User authenticated successfully: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3, role: owner
+2025-08-24 22:28:24 [INFO]: Token authentication successful
+2025-08-24 22:28:24 [INFO]: User authenticated: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3, role: owner
+2025-08-24 22:28:24 [INFO]: Owner authentication successful
+2025-08-24 22:28:33 [INFO]: Owner authentication started
+2025-08-24 22:28:33 [INFO]: AuthenticateToken middleware started
+2025-08-24 22:28:33 [INFO]: Token found, verifying...
+2025-08-24 22:28:33 [INFO]: Token decoded, userId: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3
+2025-08-24 22:28:33 [INFO]: User found: yes, is_active: true
+2025-08-24 22:28:33 [INFO]: User authenticated successfully: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3, role: owner
+2025-08-24 22:28:33 [INFO]: Token authentication successful
+2025-08-24 22:28:33 [INFO]: User authenticated: e1297eb5-3cae-4904-86bd-8be6ccb1ccf3, role: owner
+2025-08-24 22:28:33 [INFO]: Owner authentication successful
+2025-08-24 22:29:22 [INFO]: SIGINT received. Shutting down gracefully...
+2025-08-24 22:29:22 [INFO]: Process terminated.

@@ -74,7 +74,7 @@ router.post('/create',
 
       // Verify order exists and belongs to user
       const order = await Order.findOne({
-        where: { id: orderId, userId: req.user.id }
+        where: { id: orderId, user_id: req.user.id }
       });
 
       if (!order) {
@@ -96,7 +96,7 @@ router.post('/create',
         amount: paymentAmount,
         status: 'pending',
         metadata: {
-          userId: req.user.id,
+          user_id: req.user.id,
           orderNumber: order.id,
           createdAt: new Date().toISOString()
         }
@@ -172,7 +172,7 @@ router.get('/:paymentId/status', authenticateToken, async (req, res) => {
         {
           model: Order,
           as: 'order',
-          where: { userId: req.user.id },
+          where: { user_id: req.user.id },
           attributes: ['id', 'totalAmount', 'status']
         }
       ]
@@ -356,7 +356,7 @@ router.post('/refund',
           {
             model: Order,
             as: 'order',
-            where: { userId: req.user.id }
+            where: { user_id: req.user.id }
           }
         ]
       });

@@ -221,7 +221,7 @@ router.get('/:storeId/catalog', optionalAuth, async (req, res) => {
     const maxPrice = req.query.maxPrice ? parseFloat(String(req.query.maxPrice)) : undefined;
     const inStock = req.query.inStock === 'true';
 
-    const where = { storeId, isActive: true };
+          const where = { storeId, is_active: true };
 
     if (q) {
       where[Op.or] = [
@@ -319,7 +319,7 @@ router.get('/:storeId', optionalAuth, async (req, res) => {
         {
           model: Store.sequelize.models.User,
           as: 'owner',
-          attributes: ['id', 'fullName', 'phone']
+          attributes: ['id', 'full_name', 'phone']
         }
       ]
     });
@@ -395,7 +395,7 @@ router.get('/:storeId/categories', async (req, res) => {
 
     const categories = await Product.findAll({
       attributes: [[literal('DISTINCT category'), 'category']],
-      where: { storeId, isActive: true },
+              where: { storeId, is_active: true },
       raw: true
     });
 

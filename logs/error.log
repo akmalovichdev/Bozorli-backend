@@ -1,0 +1,516 @@
+2025-08-21 21:16:36 [ERROR]: List orders error: Unknown column 'Order.userId' in 'where clause'
+Error
+    at Query.run (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/dialects/mysql/query.js:52:25)
+    at /root/webApp/Bozorli/backend/node_modules/sequelize/lib/sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async MySQLQueryInterface.rawSelect (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/dialects/abstract/query-interface.js:434:18)
+    at async Order.aggregate (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:1277:19)
+    at async Order.count (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:1306:20)
+    at async Promise.all (index 0)
+    at async Order.findAndCountAll (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:1322:27)
+    at async /root/webApp/Bozorli/backend/src/routes/orders.js:64:29
+{
+  "name": "SequelizeDatabaseError",
+  "parent": {
+    "code": "ER_BAD_FIELD_ERROR",
+    "errno": 1054,
+    "sqlState": "42S22",
+    "sqlMessage": "Unknown column 'Order.userId' in 'where clause'",
+    "sql": "SELECT count(`Order`.`id`) AS `count` FROM `orders` AS `Order` LEFT OUTER JOIN `stores` AS `store` ON `Order`.`store_id` = `store`.`id` LEFT OUTER JOIN `users` AS `courier` ON `Order`.`assigned_courier_id` = `courier`.`id` WHERE `Order`.`userId` = '91a36594-c9f7-4737-bb1b-3baa42541828';"
+  },
+  "original": {
+    "code": "ER_BAD_FIELD_ERROR",
+    "errno": 1054,
+    "sqlState": "42S22",
+    "sqlMessage": "Unknown column 'Order.userId' in 'where clause'",
+    "sql": "SELECT count(`Order`.`id`) AS `count` FROM `orders` AS `Order` LEFT OUTER JOIN `stores` AS `store` ON `Order`.`store_id` = `store`.`id` LEFT OUTER JOIN `users` AS `courier` ON `Order`.`assigned_courier_id` = `courier`.`id` WHERE `Order`.`userId` = '91a36594-c9f7-4737-bb1b-3baa42541828';"
+  },
+  "sql": "SELECT count(`Order`.`id`) AS `count` FROM `orders` AS `Order` LEFT OUTER JOIN `stores` AS `store` ON `Order`.`store_id` = `store`.`id` LEFT OUTER JOIN `users` AS `courier` ON `Order`.`assigned_courier_id` = `courier`.`id` WHERE `Order`.`userId` = '91a36594-c9f7-4737-bb1b-3baa42541828';",
+  "parameters": {}
+}
+2025-08-21 21:16:37 [ERROR]: List orders error: Unknown column 'Order.userId' in 'where clause'
+Error
+    at Query.run (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/dialects/mysql/query.js:52:25)
+    at /root/webApp/Bozorli/backend/node_modules/sequelize/lib/sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async MySQLQueryInterface.select (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/dialects/abstract/query-interface.js:407:12)
+    at async Order.findAll (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:1140:21)
+    at async Promise.all (index 1)
+    at async Order.findAndCountAll (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:1322:27)
+    at async /root/webApp/Bozorli/backend/src/routes/orders.js:64:29
+{
+  "name": "SequelizeDatabaseError",
+  "parent": {
+    "code": "ER_BAD_FIELD_ERROR",
+    "errno": 1054,
+    "sqlState": "42S22",
+    "sqlMessage": "Unknown column 'Order.userId' in 'where clause'",
+    "sql": "SELECT `Order`.`id`, `Order`.`user_id`, `Order`.`store_id`, `Order`.`total_amount` AS `totalAmount`, `Order`.`subtotal_amount` AS `subtotalAmount`, `Order`.`delivery_fee` AS `deliveryFee`, `Order`.`commission_amount` AS `commissionAmount`, `Order`.`payment_method` AS `paymentMethod`, `Order`.`status`, `Order`.`assigned_courier_id`, `Order`.`delivery_address` AS `deliveryAddress`, `Order`.`estimated_delivery_time` AS `estimatedDeliveryTime`, `Order`.`actual_delivery_time` AS `actualDeliveryTime`, `Order`.`idempotency_key` AS `idempotencyKey`, `Order`.`items`, `Order`.`customer_phone` AS `customerPhone`, `Order`.`customer_name` AS `customerName`, `Order`.`customer_notes` AS `customerNotes`, `Order`.`delivery_instructions` AS `deliveryInstructions`, `Order`.`payment_status` AS `paymentStatus`, `Order`.`payment_provider` AS `paymentProvider`, `Order`.`payment_transaction_id` AS `paymentTransactionId`, `Order`.`confirmed_at` AS `confirmedAt`, `Order`.`assigned_at` AS `assignedAt`, `Order`.`picked_up_at` AS `pickedUpAt`, `Order`.`delivered_at` AS `deliveredAt`, `Order`.`cancelled_at` AS `cancelledAt`, `Order`.`cancellation_reason` AS `cancellationReason`, `Order`.`cancelled_by` AS `cancelledBy`, `Order`.`customer_rating` AS `customerRating`, `Order`.`customer_feedback` AS `customerFeedback`, `Order`.`internal_notes` AS `internalNotes`, `Order`.`created_at` AS `createdAt`, `Order`.`updated_at` AS `updatedAt`, `store`.`id` AS `store.id`, `store`.`name` AS `store.name`, `store`.`address` AS `store.address`, `courier`.`id` AS `courier.id`, `courier`.`full_name` AS `courier.fullName`, `courier`.`phone` AS `courier.phone` FROM `orders` AS `Order` LEFT OUTER JOIN `stores` AS `store` ON `Order`.`store_id` = `store`.`id` LEFT OUTER JOIN `users` AS `courier` ON `Order`.`assigned_courier_id` = `courier`.`id` WHERE `Order`.`userId` = '91a36594-c9f7-4737-bb1b-3baa42541828' ORDER BY `createdAt` DESC LIMIT 0, 20;"
+  },
+  "original": {
+    "code": "ER_BAD_FIELD_ERROR",
+    "errno": 1054,
+    "sqlState": "42S22",
+    "sqlMessage": "Unknown column 'Order.userId' in 'where clause'",
+    "sql": "SELECT `Order`.`id`, `Order`.`user_id`, `Order`.`store_id`, `Order`.`total_amount` AS `totalAmount`, `Order`.`subtotal_amount` AS `subtotalAmount`, `Order`.`delivery_fee` AS `deliveryFee`, `Order`.`commission_amount` AS `commissionAmount`, `Order`.`payment_method` AS `paymentMethod`, `Order`.`status`, `Order`.`assigned_courier_id`, `Order`.`delivery_address` AS `deliveryAddress`, `Order`.`estimated_delivery_time` AS `estimatedDeliveryTime`, `Order`.`actual_delivery_time` AS `actualDeliveryTime`, `Order`.`idempotency_key` AS `idempotencyKey`, `Order`.`items`, `Order`.`customer_phone` AS `customerPhone`, `Order`.`customer_name` AS `customerName`, `Order`.`customer_notes` AS `customerNotes`, `Order`.`delivery_instructions` AS `deliveryInstructions`, `Order`.`payment_status` AS `paymentStatus`, `Order`.`payment_provider` AS `paymentProvider`, `Order`.`payment_transaction_id` AS `paymentTransactionId`, `Order`.`confirmed_at` AS `confirmedAt`, `Order`.`assigned_at` AS `assignedAt`, `Order`.`picked_up_at` AS `pickedUpAt`, `Order`.`delivered_at` AS `deliveredAt`, `Order`.`cancelled_at` AS `cancelledAt`, `Order`.`cancellation_reason` AS `cancellationReason`, `Order`.`cancelled_by` AS `cancelledBy`, `Order`.`customer_rating` AS `customerRating`, `Order`.`customer_feedback` AS `customerFeedback`, `Order`.`internal_notes` AS `internalNotes`, `Order`.`created_at` AS `createdAt`, `Order`.`updated_at` AS `updatedAt`, `store`.`id` AS `store.id`, `store`.`name` AS `store.name`, `store`.`address` AS `store.address`, `courier`.`id` AS `courier.id`, `courier`.`full_name` AS `courier.fullName`, `courier`.`phone` AS `courier.phone` FROM `orders` AS `Order` LEFT OUTER JOIN `stores` AS `store` ON `Order`.`store_id` = `store`.`id` LEFT OUTER JOIN `users` AS `courier` ON `Order`.`assigned_courier_id` = `courier`.`id` WHERE `Order`.`userId` = '91a36594-c9f7-4737-bb1b-3baa42541828' ORDER BY `createdAt` DESC LIMIT 0, 20;"
+  },
+  "sql": "SELECT `Order`.`id`, `Order`.`user_id`, `Order`.`store_id`, `Order`.`total_amount` AS `totalAmount`, `Order`.`subtotal_amount` AS `subtotalAmount`, `Order`.`delivery_fee` AS `deliveryFee`, `Order`.`commission_amount` AS `commissionAmount`, `Order`.`payment_method` AS `paymentMethod`, `Order`.`status`, `Order`.`assigned_courier_id`, `Order`.`delivery_address` AS `deliveryAddress`, `Order`.`estimated_delivery_time` AS `estimatedDeliveryTime`, `Order`.`actual_delivery_time` AS `actualDeliveryTime`, `Order`.`idempotency_key` AS `idempotencyKey`, `Order`.`items`, `Order`.`customer_phone` AS `customerPhone`, `Order`.`customer_name` AS `customerName`, `Order`.`customer_notes` AS `customerNotes`, `Order`.`delivery_instructions` AS `deliveryInstructions`, `Order`.`payment_status` AS `paymentStatus`, `Order`.`payment_provider` AS `paymentProvider`, `Order`.`payment_transaction_id` AS `paymentTransactionId`, `Order`.`confirmed_at` AS `confirmedAt`, `Order`.`assigned_at` AS `assignedAt`, `Order`.`picked_up_at` AS `pickedUpAt`, `Order`.`delivered_at` AS `deliveredAt`, `Order`.`cancelled_at` AS `cancelledAt`, `Order`.`cancellation_reason` AS `cancellationReason`, `Order`.`cancelled_by` AS `cancelledBy`, `Order`.`customer_rating` AS `customerRating`, `Order`.`customer_feedback` AS `customerFeedback`, `Order`.`internal_notes` AS `internalNotes`, `Order`.`created_at` AS `createdAt`, `Order`.`updated_at` AS `updatedAt`, `store`.`id` AS `store.id`, `store`.`name` AS `store.name`, `store`.`address` AS `store.address`, `courier`.`id` AS `courier.id`, `courier`.`full_name` AS `courier.fullName`, `courier`.`phone` AS `courier.phone` FROM `orders` AS `Order` LEFT OUTER JOIN `stores` AS `store` ON `Order`.`store_id` = `store`.`id` LEFT OUTER JOIN `users` AS `courier` ON `Order`.`assigned_courier_id` = `courier`.`id` WHERE `Order`.`userId` = '91a36594-c9f7-4737-bb1b-3baa42541828' ORDER BY `createdAt` DESC LIMIT 0, 20;",
+  "parameters": {}
+}
+2025-08-21 21:20:05 [ERROR]: List orders error: Unknown column 'Order.userId' in 'where clause'
+Error
+    at Query.run (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/dialects/mysql/query.js:52:25)
+    at /root/webApp/Bozorli/backend/node_modules/sequelize/lib/sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async MySQLQueryInterface.rawSelect (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/dialects/abstract/query-interface.js:434:18)
+    at async Order.aggregate (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:1277:19)
+    at async Order.count (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:1306:20)
+    at async Promise.all (index 0)
+    at async Order.findAndCountAll (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:1322:27)
+    at async /root/webApp/Bozorli/backend/src/routes/orders.js:64:29
+{
+  "name": "SequelizeDatabaseError",
+  "parent": {
+    "code": "ER_BAD_FIELD_ERROR",
+    "errno": 1054,
+    "sqlState": "42S22",
+    "sqlMessage": "Unknown column 'Order.userId' in 'where clause'",
+    "sql": "SELECT count(`Order`.`id`) AS `count` FROM `orders` AS `Order` LEFT OUTER JOIN `stores` AS `store` ON `Order`.`store_id` = `store`.`id` LEFT OUTER JOIN `users` AS `courier` ON `Order`.`assigned_courier_id` = `courier`.`id` WHERE `Order`.`userId` = '91a36594-c9f7-4737-bb1b-3baa42541828';"
+  },
+  "original": {
+    "code": "ER_BAD_FIELD_ERROR",
+    "errno": 1054,
+    "sqlState": "42S22",
+    "sqlMessage": "Unknown column 'Order.userId' in 'where clause'",
+    "sql": "SELECT count(`Order`.`id`) AS `count` FROM `orders` AS `Order` LEFT OUTER JOIN `stores` AS `store` ON `Order`.`store_id` = `store`.`id` LEFT OUTER JOIN `users` AS `courier` ON `Order`.`assigned_courier_id` = `courier`.`id` WHERE `Order`.`userId` = '91a36594-c9f7-4737-bb1b-3baa42541828';"
+  },
+  "sql": "SELECT count(`Order`.`id`) AS `count` FROM `orders` AS `Order` LEFT OUTER JOIN `stores` AS `store` ON `Order`.`store_id` = `store`.`id` LEFT OUTER JOIN `users` AS `courier` ON `Order`.`assigned_courier_id` = `courier`.`id` WHERE `Order`.`userId` = '91a36594-c9f7-4737-bb1b-3baa42541828';",
+  "parameters": {}
+}
+2025-08-21 21:20:59 [ERROR]: List orders error: Unknown column 'Order.userId' in 'where clause'
+Error
+    at Query.run (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/dialects/mysql/query.js:52:25)
+    at /root/webApp/Bozorli/backend/node_modules/sequelize/lib/sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async MySQLQueryInterface.rawSelect (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/dialects/abstract/query-interface.js:434:18)
+    at async Order.aggregate (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:1277:19)
+    at async Order.count (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:1306:20)
+    at async Promise.all (index 0)
+    at async Order.findAndCountAll (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:1322:27)
+    at async /root/webApp/Bozorli/backend/src/routes/orders.js:64:29
+{
+  "name": "SequelizeDatabaseError",
+  "parent": {
+    "code": "ER_BAD_FIELD_ERROR",
+    "errno": 1054,
+    "sqlState": "42S22",
+    "sqlMessage": "Unknown column 'Order.userId' in 'where clause'",
+    "sql": "SELECT count(`Order`.`id`) AS `count` FROM `orders` AS `Order` LEFT OUTER JOIN `stores` AS `store` ON `Order`.`store_id` = `store`.`id` LEFT OUTER JOIN `users` AS `courier` ON `Order`.`assigned_courier_id` = `courier`.`id` WHERE `Order`.`userId` = 'c969d5d9-bc19-4ca2-984e-6536f7cae8b3';"
+  },
+  "original": {
+    "code": "ER_BAD_FIELD_ERROR",
+    "errno": 1054,
+    "sqlState": "42S22",
+    "sqlMessage": "Unknown column 'Order.userId' in 'where clause'",
+    "sql": "SELECT count(`Order`.`id`) AS `count` FROM `orders` AS `Order` LEFT OUTER JOIN `stores` AS `store` ON `Order`.`store_id` = `store`.`id` LEFT OUTER JOIN `users` AS `courier` ON `Order`.`assigned_courier_id` = `courier`.`id` WHERE `Order`.`userId` = 'c969d5d9-bc19-4ca2-984e-6536f7cae8b3';"
+  },
+  "sql": "SELECT count(`Order`.`id`) AS `count` FROM `orders` AS `Order` LEFT OUTER JOIN `stores` AS `store` ON `Order`.`store_id` = `store`.`id` LEFT OUTER JOIN `users` AS `courier` ON `Order`.`assigned_courier_id` = `courier`.`id` WHERE `Order`.`userId` = 'c969d5d9-bc19-4ca2-984e-6536f7cae8b3';",
+  "parameters": {}
+}
+2025-08-23 22:32:05 [ERROR]: Registration error: notNull Violation: User.full_name cannot be null
+SequelizeValidationError: notNull Violation: User.full_name cannot be null
+    at InstanceValidator._validate (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/instance-validator.js:50:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async InstanceValidator._validateAndRunHooks (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/instance-validator.js:60:7)
+    at async InstanceValidator.validate (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/instance-validator.js:54:12)
+    at async model.save (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:2426:7)
+    at async User.create (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:1362:12)
+    at async /root/webApp/Bozorli/backend/src/routes/auth.js:119:18
+{
+  "name": "SequelizeValidationError",
+  "errors": [
+    {
+      "message": "User.full_name cannot be null",
+      "type": "notNull Violation",
+      "path": "full_name",
+      "value": null,
+      "origin": "CORE",
+      "instance": {
+        "id": "97ca9c26-4359-4076-a0cd-e297bd57a700",
+        "wallet_balance": 0,
+        "is_active": true,
+        "is_verified": false,
+        "phone": "+998993890010",
+        "email": "user@example.com",
+        "role": "customer",
+        "updatedAt": "2025-08-23T19:32:05.770Z",
+        "createdAt": "2025-08-23T19:32:05.770Z"
+      },
+      "validatorKey": "is_null",
+      "validatorName": null,
+      "validatorArgs": []
+    }
+  ]
+}
+2025-08-23 22:35:08 [ERROR]: Registration error: notNull Violation: User.full_name cannot be null
+SequelizeValidationError: notNull Violation: User.full_name cannot be null
+    at InstanceValidator._validate (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/instance-validator.js:50:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async InstanceValidator._validateAndRunHooks (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/instance-validator.js:60:7)
+    at async InstanceValidator.validate (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/instance-validator.js:54:12)
+    at async model.save (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:2426:7)
+    at async User.create (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:1362:12)
+    at async /root/webApp/Bozorli/backend/src/routes/auth.js:119:18
+{
+  "name": "SequelizeValidationError",
+  "errors": [
+    {
+      "message": "User.full_name cannot be null",
+      "type": "notNull Violation",
+      "path": "full_name",
+      "value": null,
+      "origin": "CORE",
+      "instance": {
+        "id": "25fbbcdf-89fb-4545-b0ff-a28c671659ac",
+        "wallet_balance": 0,
+        "is_active": true,
+        "is_verified": false,
+        "phone": "+998993890012",
+        "email": "akmalovichdev@yandex.com",
+        "role": "customer",
+        "updatedAt": "2025-08-23T19:35:08.018Z",
+        "createdAt": "2025-08-23T19:35:08.018Z"
+      },
+      "validatorKey": "is_null",
+      "validatorName": null,
+      "validatorArgs": []
+    }
+  ]
+}
+2025-08-24 00:53:17 [ERROR]: Route / not found
+Error: Route / not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:807:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:691:5
+{
+  "url": "/",
+  "method": "GET",
+  "ip": "198.235.24.162",
+  "userAgent": "Hello from Palo Alto Networks, find out more about our scans in https://docs-cortex.paloaltonetworks.com/r/1/Cortex-Xpanse/Scanning-activity"
+}
+2025-08-24 03:54:30 [ERROR]: Route / not found
+Error: Route / not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:807:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:691:5
+{
+  "url": "/",
+  "method": "GET",
+  "ip": "199.45.154.135"
+}
+2025-08-24 03:54:35 [ERROR]: Route / not found
+Error: Route / not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:807:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:691:5
+{
+  "url": "/",
+  "method": "GET",
+  "ip": "199.45.154.135",
+  "userAgent": "Mozilla/5.0 (compatible; CensysInspect/1.1; +https://about.censys.io/)"
+}
+2025-08-24 03:54:40 [ERROR]: Route /favicon.ico not found
+Error: Route /favicon.ico not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:807:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:691:5
+{
+  "url": "/favicon.ico",
+  "method": "GET",
+  "ip": "199.45.154.135",
+  "userAgent": "Mozilla/5.0 (compatible; CensysInspect/1.1; +https://about.censys.io/)"
+}
+2025-08-24 03:54:44 [ERROR]: Route /sitemap.xml not found
+Error: Route /sitemap.xml not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:807:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:691:5
+{
+  "url": "/sitemap.xml",
+  "method": "GET",
+  "ip": "199.45.154.135",
+  "userAgent": "Mozilla/5.0 (compatible; CensysInspect/1.1; +https://about.censys.io/)"
+}
+2025-08-24 04:23:36 [ERROR]: Route / not found
+Error: Route / not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:807:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:691:5
+{
+  "url": "/",
+  "method": "GET",
+  "ip": "146.190.134.221",
+  "userAgent": "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:54.0) Gecko/20100101 Firefox/70.0"
+}
+2025-08-24 09:13:33 [ERROR]: Route / not found
+Error: Route / not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:807:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:691:5
+{
+  "url": "/",
+  "method": "GET",
+  "ip": "44.220.185.117",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+}
+2025-08-24 09:13:33 [ERROR]: Route / not found
+Error: Route / not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:807:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:691:5
+{
+  "url": "/",
+  "method": "GET",
+  "ip": "44.220.185.117",
+  "userAgent": "Mozilla/5.0 (Windows NT 6.2;en-US) AppleWebKit/537.32.36 (KHTML, live Gecko) Chrome/59.0.3072.59 Safari/537.32"
+}
+2025-08-24 20:16:55 [ERROR]: Authentication error: jwt expired
+TokenExpiredError: jwt expired
+    at /root/webApp/Bozorli/backend/node_modules/jsonwebtoken/verify.js:190:21
+    at getSecret (/root/webApp/Bozorli/backend/node_modules/jsonwebtoken/verify.js:97:14)
+    at module.exports [as verify] (/root/webApp/Bozorli/backend/node_modules/jsonwebtoken/verify.js:101:10)
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:20:25)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/root/webApp/Bozorli/backend/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+{
+  "name": "TokenExpiredError",
+  "expiredAt": "2025-08-22T18:32:25.000Z"
+}
+2025-08-24 20:17:57 [ERROR]: Route / not found
+Error: Route / not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:807:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:691:5
+{
+  "url": "/",
+  "method": "GET",
+  "ip": "20.163.15.166",
+  "userAgent": "Mozilla/5.0 zgrab/0.x"
+}
+2025-08-24 20:46:16 [ERROR]: Route /api/v1/admin/dashboard/stats not found
+Error: Route /api/v1/admin/dashboard/stats not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:807:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:691:5
+{
+  "url": "/api/v1/admin/dashboard/stats",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-24 20:46:16 [ERROR]: Route /api/v1/admin/dashboard/stats not found
+Error: Route /api/v1/admin/dashboard/stats not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:807:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:691:5
+{
+  "url": "/api/v1/admin/dashboard/stats",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-24 20:46:16 [ERROR]: Route /api/v1/admin/dashboard/stats not found
+Error: Route /api/v1/admin/dashboard/stats not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:807:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:691:5
+{
+  "url": "/api/v1/admin/dashboard/stats",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-24 20:46:21 [ERROR]: Route /api/v1/admin/dashboard/stats not found
+Error: Route /api/v1/admin/dashboard/stats not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:807:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:691:5
+{
+  "url": "/api/v1/admin/dashboard/stats",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-24 20:46:21 [ERROR]: Route /api/v1/admin/dashboard/stats not found
+Error: Route /api/v1/admin/dashboard/stats not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:807:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:691:5
+{
+  "url": "/api/v1/admin/dashboard/stats",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-24 20:46:21 [ERROR]: Route /api/v1/admin/dashboard/stats not found
+Error: Route /api/v1/admin/dashboard/stats not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:807:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:691:5
+{
+  "url": "/api/v1/admin/dashboard/stats",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-24 21:14:24 [ERROR]: Route / not found
+Error: Route / not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:807:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:691:5
+{
+  "url": "/",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "curl/7.81.0"
+}
+2025-08-24 21:23:31 [ERROR]: Owner authentication error: Cannot read properties of undefined (reading 'role')
+TypeError: Cannot read properties of undefined (reading 'role')
+    at requireOwnerRole (/root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:21:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-08-24 21:26:32 [ERROR]: Owner authentication error: Cannot read properties of undefined (reading 'role')
+TypeError: Cannot read properties of undefined (reading 'role')
+    at requireOwnerRole (/root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:21:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-08-24 22:14:22 [ERROR]: Dashboard stats error: Unknown column 'Store.is_active' in 'where clause'
+Error
+    at Query.run (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/dialects/mysql/query.js:52:25)
+    at /root/webApp/Bozorli/backend/node_modules/sequelize/lib/sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async MySQLQueryInterface.rawSelect (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/dialects/abstract/query-interface.js:434:18)
+    at async Store.aggregate (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:1277:19)
+    at async Store.count (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:1306:20)
+    at async /root/webApp/Bozorli/backend/src/routes/admin.js:54:26
+{
+  "name": "SequelizeDatabaseError",
+  "parent": {
+    "code": "ER_BAD_FIELD_ERROR",
+    "errno": 1054,
+    "sqlState": "42S22",
+    "sqlMessage": "Unknown column 'Store.is_active' in 'where clause'",
+    "sql": "SELECT count(*) AS `count` FROM `stores` AS `Store` WHERE `Store`.`is_active` = true;"
+  },
+  "original": {
+    "code": "ER_BAD_FIELD_ERROR",
+    "errno": 1054,
+    "sqlState": "42S22",
+    "sqlMessage": "Unknown column 'Store.is_active' in 'where clause'",
+    "sql": "SELECT count(*) AS `count` FROM `stores` AS `Store` WHERE `Store`.`is_active` = true;"
+  },
+  "sql": "SELECT count(*) AS `count` FROM `stores` AS `Store` WHERE `Store`.`is_active` = true;",
+  "parameters": {}
+}
+2025-08-24 22:15:42 [ERROR]: Dashboard stats error: Cannot read properties of undefined (reading 'fn')
+TypeError: Cannot read properties of undefined (reading 'fn')
+    at /root/webApp/Bozorli/backend/src/routes/admin.js:93:20
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)

@@ -109,12 +109,12 @@ const Store = sequelize.define('Store', {
       max: 5
     }
   },
-  totalRatings: {
+  total_ratings: {
     type: DataTypes.INTEGER,
     allowNull: false,
     defaultValue: 0
   },
-  openHours: {
+  open_hours: {
     type: DataTypes.JSON,
     allowNull: false,
     defaultValue: {
@@ -127,22 +127,22 @@ const Store = sequelize.define('Store', {
       sunday: { open: '09:00', close: '21:00' }
     }
   },
-  minimumOrderAmount: {
+  minimum_order_amount: {
     type: DataTypes.DECIMAL(10, 2),
     allowNull: false,
     defaultValue: 0.00
   },
-  deliveryRadius: {
+  delivery_radius: {
     type: DataTypes.INTEGER, // in meters
     allowNull: false,
     defaultValue: 5000
   },
-  preparationTime: {
+  preparation_time: {
     type: DataTypes.INTEGER, // in minutes
     allowNull: false,
     defaultValue: 30
   },
-  commissionRate: {
+  commission_rate: {
     type: DataTypes.DECIMAL(5, 2), // percentage
     allowNull: false,
     defaultValue: 10.00
@@ -155,11 +155,11 @@ const Store = sequelize.define('Store', {
     type: DataTypes.STRING,
     allowNull: true
   },
-  contactPhone: {
+  contact_phone: {
     type: DataTypes.STRING(20),
     allowNull: true
   },
-  contactEmail: {
+  contact_email: {
     type: DataTypes.STRING,
     allowNull: true,
     validate: {
@@ -167,25 +167,25 @@ const Store = sequelize.define('Store', {
     }
   },
   // Business information
-  businessLicense: {
+  business_license: {
     type: DataTypes.STRING,
     allowNull: true
   },
-  taxId: {
+  tax_id: {
     type: DataTypes.STRING,
     allowNull: true
   },
-  bankAccount: {
+  bank_account: {
     type: DataTypes.JSON,
     allowNull: true
   },
   // Settings
-  autoAcceptOrders: {
+  auto_accept_orders: {
     type: DataTypes.BOOLEAN,
     allowNull: false,
     defaultValue: false
   },
-  notificationsEnabled: {
+  notifications_enabled: {
     type: DataTypes.BOOLEAN,
     allowNull: false,
     defaultValue: true
@@ -219,7 +219,7 @@ Store.prototype.isOpen = function() {
   const dayOfWeek = dayNames[now.getDay()];
   const currentTime = now.toTimeString().slice(0, 5);
 
-  const todayHours = this.openHours?.[dayOfWeek];
+  const todayHours = this.open_hours?.[dayOfWeek];
   if (!todayHours || !todayHours.open || !todayHours.close) return false;
 
   return currentTime >= todayHours.open && currentTime <= todayHours.close;

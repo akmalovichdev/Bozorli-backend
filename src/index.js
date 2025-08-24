@@ -26,6 +26,7 @@ const orderRoutes = require('./routes/orders');
 const courierRoutes = require('./routes/couriers');
 const paymentRoutes = require('./routes/payments');
 const notificationRoutes = require('./routes/notifications');
+const adminRoutes = require('./routes/admin');
 
 const app = express();
 const server = createServer(app);
@@ -34,8 +35,18 @@ const server = createServer(app);
 const io = new Server(server, {
   cors: {
     origin: process.env.NODE_ENV === 'production' 
-      ? ['https://yourdomain.com'] 
-      : ['http://localhost:3000', 'http://localhost:19006', 'http://89.110.74.24:3000'],
+      ? [process.env.PRODUCTION_URL] 
+      : [
+          process.env.ADMIN_PANEL_URL,
+          process.env.CUSTOMER_APP_URL,
+          process.env.EXPO_DEV_URL,
+          'http://localhost:3000',
+          'http://localhost:19006', 
+          'http://localhost:8081',
+          'https://89.110.74.24:8081',
+          'http://192.168.32.1:3000',
+          'http://172.17.0.1:3000'
+        ],
     methods: ['GET', 'POST']
   }
 });
@@ -93,8 +104,18 @@ app.use(helmet());
 app.use(compression());
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
-    ? ['https://yourdomain.com'] 
-    : ['http://localhost:3000', 'http://localhost:19006', 'http://89.110.74.24:3000'],
+    ? [process.env.PRODUCTION_URL] 
+    : [
+        process.env.ADMIN_PANEL_URL,
+        process.env.CUSTOMER_APP_URL,
+        process.env.EXPO_DEV_URL,
+        'http://localhost:3000',
+        'http://localhost:19006', 
+        'http://localhost:8081',
+        'https://89.110.74.24:8081',
+        'http://192.168.32.1:3000',
+        'http://172.17.0.1:3000'
+      ],
   credentials: true
 }));
 app.use(express.json({ limit: '10mb' }));
@@ -127,6 +148,7 @@ app.use(`/api/${apiVersion}/orders`, orderRoutes);
 app.use(`/api/${apiVersion}/couriers`, courierRoutes);
 app.use(`/api/${apiVersion}/payments`, paymentRoutes);
 app.use(`/api/${apiVersion}/notifications`, notificationRoutes);
+app.use(`/api/${apiVersion}/admin`, adminRoutes);
 
 // WebSocket connection handling
 io.on('connection', (socket) => {
@@ -162,7 +184,7 @@ app.use(notFoundHandler);
 app.use(errorHandler);
 
 // Database connection and server start
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 const startServer = async () => {
   try {
@@ -180,11 +202,12 @@ const startServer = async () => {
       }
     }
 
-    server.listen(PORT, () => {
+    server.listen(PORT, '0.0.0.0', () => {
       logger.info(`Server is running on port ${PORT}`);
       logger.info(`Environment: ${process.env.NODE_ENV}`);
       logger.info(`API Documentation: http://localhost:${PORT}/api-docs`);
       logger.info(`Health Check: http://localhost:${PORT}/health`);
+      logger.info(`External IP: https://89.110.74.24:${PORT}`);
     });
   } catch (error) {
     logger.error('Unable to start server:', error);

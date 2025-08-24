@@ -116,7 +116,7 @@ const Product = sequelize.define('Product', {
     allowNull: false,
     defaultValue: {}
   },
-  inStock: {
+  in_stock: {
     type: DataTypes.BOOLEAN,
     allowNull: false,
     defaultValue: true
@@ -129,7 +129,7 @@ const Product = sequelize.define('Product', {
       min: 0
     }
   },
-  reservedQuantity: {
+  reserved_quantity: {
     type: DataTypes.INTEGER,
     allowNull: false,
     defaultValue: 0,
@@ -138,12 +138,12 @@ const Product = sequelize.define('Product', {
     }
   },
   // Product status
-  isActive: {
+  is_active: {
     type: DataTypes.BOOLEAN,
     allowNull: false,
     defaultValue: true
   },
-  isFeatured: {
+  is_featured: {
     type: DataTypes.BOOLEAN,
     allowNull: false,
     defaultValue: false
@@ -154,16 +154,16 @@ const Product = sequelize.define('Product', {
     allowNull: false,
     defaultValue: []
   },
-  searchKeywords: {
+  search_keywords: {
     type: DataTypes.TEXT,
     allowNull: true
   },
   // Pricing
-  originalPrice: {
+  original_price: {
     type: DataTypes.DECIMAL(10, 2),
     allowNull: true
   },
-  discountPercentage: {
+  discount_percentage: {
     type: DataTypes.DECIMAL(5, 2),
     allowNull: false,
     defaultValue: 0.00,
@@ -182,16 +182,16 @@ const Product = sequelize.define('Product', {
     allowNull: true
   },
   // Nutritional information (for food products)
-  nutritionalInfo: {
+  nutritional_info: {
     type: DataTypes.JSON,
     allowNull: true
   },
   // Expiry and manufacturing
-  expiryDate: {
+  expiry_date: {
     type: DataTypes.DATE,
     allowNull: true
   },
-  manufacturingDate: {
+  manufacturing_date: {
     type: DataTypes.DATE,
     allowNull: true
   },
@@ -200,7 +200,7 @@ const Product = sequelize.define('Product', {
     type: DataTypes.JSON,
     allowNull: true
   },
-  dietaryInfo: {
+  dietary_info: {
     type: DataTypes.JSON, // {vegetarian, vegan, glutenFree, etc.}
     allowNull: true
   }
@@ -236,7 +236,7 @@ const Product = sequelize.define('Product', {
 
 // Instance methods
 Product.prototype.getAvailableQuantity = function() {
-  return Math.max(0, this.quantity - this.reservedQuantity);
+  return Math.max(0, this.quantity - this.reserved_quantity);
 };
 
 Product.prototype.canReserve = function(amount) {

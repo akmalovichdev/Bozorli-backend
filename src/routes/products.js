@@ -121,7 +121,7 @@ router.get('/search', optionalAuth, async (req, res) => {
     }
 
     const productWhere = {
-      isActive: true,
+      is_active: true,
       [Op.or]: [
         { name: { [Op.like]: `%${q}%` } },
         { description: { [Op.like]: `%${q}%` } },
@@ -140,7 +140,7 @@ router.get('/search', optionalAuth, async (req, res) => {
     }
 
     if (inStock) {
-      productWhere.inStock = true;
+      productWhere.in_stock = true;
     }
 
     const storeWhere = { status: 'open' };
@@ -171,7 +171,7 @@ router.get('/search', optionalAuth, async (req, res) => {
       offset,
       limit,
       order: [
-        ['isFeatured', 'DESC'],
+        ['is_featured', 'DESC'],
         lat && lng ? [literal('store.distance ASC')] : ['createdAt', 'DESC']
       ]
     });
@@ -187,7 +187,7 @@ router.get('/search', optionalAuth, async (req, res) => {
       images: product.images || [],
       attributes: product.attributes || {},
       category: product.category,
-      inStock: Boolean(product.inStock),
+      inStock: Boolean(product.in_stock),
       store: {
         id: product.store.id,
         name: product.store.name,
@@ -240,7 +240,7 @@ router.get('/categories', async (req, res) => {
   try {
     const categories = await Product.findAll({
       attributes: [[literal('DISTINCT category'), 'category']],
-      where: { isActive: true },
+      where: { is_active: true },
       raw: true
     });
 
@@ -294,7 +294,7 @@ router.get('/:productId', optionalAuth, async (req, res) => {
     const { productId } = req.params;
 
     const product = await Product.findOne({
-      where: { id: productId, isActive: true },
+      where: { id: productId, is_active: true },
       include: [
         {
           model: Store,
@@ -322,7 +322,7 @@ router.get('/:productId', optionalAuth, async (req, res) => {
       images: product.images || [],
       attributes: product.attributes || {},
       category: product.category,
-      inStock: Boolean(product.inStock),
+      inStock: Boolean(product.in_stock),
       store: {
         id: product.store.id,
         name: product.store.name,
@@ -378,8 +378,8 @@ router.get('/featured', async (req, res) => {
 
     const products = await Product.findAll({
       where: { 
-        isActive: true, 
-        isFeatured: true 
+        is_active: true, 
+        is_featured: true 
       },
       include: [
         {
@@ -404,7 +404,7 @@ router.get('/featured', async (req, res) => {
       images: product.images || [],
       attributes: product.attributes || {},
       category: product.category,
-      inStock: Boolean(product.inStock),
+      inStock: Boolean(product.in_stock),
       store: product.store
     }));
 
