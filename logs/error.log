@@ -514,3 +514,1716 @@ Error
 TypeError: Cannot read properties of undefined (reading 'fn')
     at /root/webApp/Bozorli/backend/src/routes/admin.js:93:20
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-08-25 20:03:08 [ERROR]: Route /api/v1/auth/login not found
+Error: Route /api/v1/auth/login not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at Function.handle (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:175:3)
+    at router (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:47:12)
+{
+  "url": "/api/v1/auth/login",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "curl/7.81.0"
+}
+2025-08-25 22:22:21 [ERROR]: Route /api/v1/admin/dashboard/weekly-stats not found
+Error: Route /api/v1/admin/dashboard/weekly-stats not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/weekly-stats",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:22:21 [ERROR]: Route /api/v1/admin/dashboard/monthly-stats not found
+Error: Route /api/v1/admin/dashboard/monthly-stats not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/monthly-stats",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:22:21 [ERROR]: Route /api/v1/admin/dashboard/pending-orders?limit=5 not found
+Error: Route /api/v1/admin/dashboard/pending-orders?limit=5 not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/pending-orders?limit=5",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:22:21 [ERROR]: Route /api/v1/admin/dashboard/top-stores?limit=5 not found
+Error: Route /api/v1/admin/dashboard/top-stores?limit=5 not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/top-stores?limit=5",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:22:21 [ERROR]: Route /api/v1/admin/dashboard/top-couriers?limit=5 not found
+Error: Route /api/v1/admin/dashboard/top-couriers?limit=5 not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/top-couriers?limit=5",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:22:21 [ERROR]: Route /api/v1/admin/dashboard/system-activity?hours=24 not found
+Error: Route /api/v1/admin/dashboard/system-activity?hours=24 not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/system-activity?hours=24",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:22:21 [ERROR]: Route /api/v1/admin/dashboard/weekly-stats not found
+Error: Route /api/v1/admin/dashboard/weekly-stats not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/weekly-stats",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:22:21 [ERROR]: Route /api/v1/admin/dashboard/monthly-stats not found
+Error: Route /api/v1/admin/dashboard/monthly-stats not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/monthly-stats",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:22:21 [ERROR]: Route /api/v1/admin/dashboard/pending-orders?limit=5 not found
+Error: Route /api/v1/admin/dashboard/pending-orders?limit=5 not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/pending-orders?limit=5",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:22:21 [ERROR]: Route /api/v1/admin/dashboard/top-couriers?limit=5 not found
+Error: Route /api/v1/admin/dashboard/top-couriers?limit=5 not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/top-couriers?limit=5",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:22:21 [ERROR]: Route /api/v1/admin/dashboard/top-stores?limit=5 not found
+Error: Route /api/v1/admin/dashboard/top-stores?limit=5 not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/top-stores?limit=5",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:22:21 [ERROR]: Route /api/v1/admin/dashboard/system-activity?hours=24 not found
+Error: Route /api/v1/admin/dashboard/system-activity?hours=24 not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/system-activity?hours=24",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:23:30 [ERROR]: Route /api/v1/admin/dashboard/weekly-stats not found
+Error: Route /api/v1/admin/dashboard/weekly-stats not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/weekly-stats",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:23:30 [ERROR]: Route /api/v1/admin/dashboard/monthly-stats not found
+Error: Route /api/v1/admin/dashboard/monthly-stats not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/monthly-stats",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:23:30 [ERROR]: Route /api/v1/admin/dashboard/top-stores?limit=5 not found
+Error: Route /api/v1/admin/dashboard/top-stores?limit=5 not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/top-stores?limit=5",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:23:30 [ERROR]: Route /api/v1/admin/dashboard/top-couriers?limit=5 not found
+Error: Route /api/v1/admin/dashboard/top-couriers?limit=5 not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/top-couriers?limit=5",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:23:30 [ERROR]: Route /api/v1/admin/dashboard/pending-orders?limit=5 not found
+Error: Route /api/v1/admin/dashboard/pending-orders?limit=5 not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/pending-orders?limit=5",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:23:30 [ERROR]: Route /api/v1/admin/dashboard/system-activity?hours=24 not found
+Error: Route /api/v1/admin/dashboard/system-activity?hours=24 not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/system-activity?hours=24",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:23:30 [ERROR]: Route /api/v1/admin/dashboard/monthly-stats not found
+Error: Route /api/v1/admin/dashboard/monthly-stats not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/monthly-stats",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:23:30 [ERROR]: Route /api/v1/admin/dashboard/weekly-stats not found
+Error: Route /api/v1/admin/dashboard/weekly-stats not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/weekly-stats",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:23:30 [ERROR]: Route /api/v1/admin/dashboard/top-couriers?limit=5 not found
+Error: Route /api/v1/admin/dashboard/top-couriers?limit=5 not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/top-couriers?limit=5",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:23:30 [ERROR]: Route /api/v1/admin/dashboard/pending-orders?limit=5 not found
+Error: Route /api/v1/admin/dashboard/pending-orders?limit=5 not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/pending-orders?limit=5",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:23:31 [ERROR]: Route /api/v1/admin/dashboard/top-stores?limit=5 not found
+Error: Route /api/v1/admin/dashboard/top-stores?limit=5 not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/top-stores?limit=5",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:23:31 [ERROR]: Route /api/v1/admin/dashboard/system-activity?hours=24 not found
+Error: Route /api/v1/admin/dashboard/system-activity?hours=24 not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/system-activity?hours=24",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:23:34 [ERROR]: Route /api/v1/admin/dashboard/weekly-stats not found
+Error: Route /api/v1/admin/dashboard/weekly-stats not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/weekly-stats",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:23:34 [ERROR]: Route /api/v1/admin/dashboard/pending-orders?limit=5 not found
+Error: Route /api/v1/admin/dashboard/pending-orders?limit=5 not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/pending-orders?limit=5",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:23:34 [ERROR]: Route /api/v1/admin/dashboard/monthly-stats not found
+Error: Route /api/v1/admin/dashboard/monthly-stats not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/monthly-stats",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:23:34 [ERROR]: Route /api/v1/admin/dashboard/top-stores?limit=5 not found
+Error: Route /api/v1/admin/dashboard/top-stores?limit=5 not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/top-stores?limit=5",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:23:34 [ERROR]: Route /api/v1/admin/dashboard/top-couriers?limit=5 not found
+Error: Route /api/v1/admin/dashboard/top-couriers?limit=5 not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/top-couriers?limit=5",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:23:34 [ERROR]: Route /api/v1/admin/dashboard/system-activity?hours=24 not found
+Error: Route /api/v1/admin/dashboard/system-activity?hours=24 not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/system-activity?hours=24",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:23:35 [ERROR]: Route /api/v1/admin/dashboard/weekly-stats not found
+Error: Route /api/v1/admin/dashboard/weekly-stats not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/weekly-stats",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:23:35 [ERROR]: Route /api/v1/admin/dashboard/system-activity?hours=24 not found
+Error: Route /api/v1/admin/dashboard/system-activity?hours=24 not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/system-activity?hours=24",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:23:35 [ERROR]: Route /api/v1/admin/dashboard/top-stores?limit=5 not found
+Error: Route /api/v1/admin/dashboard/top-stores?limit=5 not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/top-stores?limit=5",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:23:35 [ERROR]: Route /api/v1/admin/dashboard/monthly-stats not found
+Error: Route /api/v1/admin/dashboard/monthly-stats not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/monthly-stats",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:23:35 [ERROR]: Route /api/v1/admin/dashboard/pending-orders?limit=5 not found
+Error: Route /api/v1/admin/dashboard/pending-orders?limit=5 not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/pending-orders?limit=5",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:23:35 [ERROR]: Route /api/v1/admin/dashboard/top-couriers?limit=5 not found
+Error: Route /api/v1/admin/dashboard/top-couriers?limit=5 not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/top-couriers?limit=5",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:23:36 [ERROR]: Route /api/v1/admin/dashboard/weekly-stats not found
+Error: Route /api/v1/admin/dashboard/weekly-stats not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/weekly-stats",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:23:36 [ERROR]: Route /api/v1/admin/dashboard/monthly-stats not found
+Error: Route /api/v1/admin/dashboard/monthly-stats not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/monthly-stats",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:23:36 [ERROR]: Route /api/v1/admin/dashboard/top-stores?limit=5 not found
+Error: Route /api/v1/admin/dashboard/top-stores?limit=5 not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/top-stores?limit=5",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:23:36 [ERROR]: Route /api/v1/admin/dashboard/top-couriers?limit=5 not found
+Error: Route /api/v1/admin/dashboard/top-couriers?limit=5 not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/top-couriers?limit=5",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:23:36 [ERROR]: Route /api/v1/admin/dashboard/pending-orders?limit=5 not found
+Error: Route /api/v1/admin/dashboard/pending-orders?limit=5 not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/pending-orders?limit=5",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:23:36 [ERROR]: Route /api/v1/admin/dashboard/system-activity?hours=24 not found
+Error: Route /api/v1/admin/dashboard/system-activity?hours=24 not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/system-activity?hours=24",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:23:38 [ERROR]: Route /api/v1/admin/dashboard/monthly-stats not found
+Error: Route /api/v1/admin/dashboard/monthly-stats not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/monthly-stats",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:23:38 [ERROR]: Route /api/v1/admin/dashboard/pending-orders?limit=5 not found
+Error: Route /api/v1/admin/dashboard/pending-orders?limit=5 not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/pending-orders?limit=5",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:23:38 [ERROR]: Route /api/v1/admin/dashboard/weekly-stats not found
+Error: Route /api/v1/admin/dashboard/weekly-stats not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/weekly-stats",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:23:38 [ERROR]: Route /api/v1/admin/dashboard/top-couriers?limit=5 not found
+Error: Route /api/v1/admin/dashboard/top-couriers?limit=5 not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/top-couriers?limit=5",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:23:38 [ERROR]: Route /api/v1/admin/dashboard/top-stores?limit=5 not found
+Error: Route /api/v1/admin/dashboard/top-stores?limit=5 not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/top-stores?limit=5",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:23:38 [ERROR]: Route /api/v1/admin/dashboard/system-activity?hours=24 not found
+Error: Route /api/v1/admin/dashboard/system-activity?hours=24 not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/system-activity?hours=24",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:25:11 [ERROR]: Route /api/v1/admin/dashboard/weekly-stats not found
+Error: Route /api/v1/admin/dashboard/weekly-stats not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/weekly-stats",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:25:11 [ERROR]: Route /api/v1/admin/dashboard/monthly-stats not found
+Error: Route /api/v1/admin/dashboard/monthly-stats not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/monthly-stats",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:25:11 [ERROR]: Route /api/v1/admin/dashboard/top-couriers?limit=5 not found
+Error: Route /api/v1/admin/dashboard/top-couriers?limit=5 not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/top-couriers?limit=5",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:25:11 [ERROR]: Route /api/v1/admin/dashboard/top-stores?limit=5 not found
+Error: Route /api/v1/admin/dashboard/top-stores?limit=5 not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/top-stores?limit=5",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:25:11 [ERROR]: Route /api/v1/admin/dashboard/pending-orders?limit=5 not found
+Error: Route /api/v1/admin/dashboard/pending-orders?limit=5 not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/pending-orders?limit=5",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:25:11 [ERROR]: Route /api/v1/admin/dashboard/system-activity?hours=24 not found
+Error: Route /api/v1/admin/dashboard/system-activity?hours=24 not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/system-activity?hours=24",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:25:12 [ERROR]: Route /api/v1/admin/dashboard/weekly-stats not found
+Error: Route /api/v1/admin/dashboard/weekly-stats not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/weekly-stats",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:25:12 [ERROR]: Route /api/v1/admin/dashboard/monthly-stats not found
+Error: Route /api/v1/admin/dashboard/monthly-stats not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/monthly-stats",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:25:12 [ERROR]: Route /api/v1/admin/dashboard/top-couriers?limit=5 not found
+Error: Route /api/v1/admin/dashboard/top-couriers?limit=5 not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/top-couriers?limit=5",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:25:12 [ERROR]: Route /api/v1/admin/dashboard/top-stores?limit=5 not found
+Error: Route /api/v1/admin/dashboard/top-stores?limit=5 not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/top-stores?limit=5",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:25:12 [ERROR]: Route /api/v1/admin/dashboard/pending-orders?limit=5 not found
+Error: Route /api/v1/admin/dashboard/pending-orders?limit=5 not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/pending-orders?limit=5",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:25:12 [ERROR]: Route /api/v1/admin/dashboard/system-activity?hours=24 not found
+Error: Route /api/v1/admin/dashboard/system-activity?hours=24 not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/system-activity?hours=24",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:25:34 [ERROR]: Route /api/v1/admin/dashboard/weekly-stats not found
+Error: Route /api/v1/admin/dashboard/weekly-stats not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/weekly-stats",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:25:34 [ERROR]: Route /api/v1/admin/dashboard/monthly-stats not found
+Error: Route /api/v1/admin/dashboard/monthly-stats not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/dashboard/monthly-stats",
+  "method": "GET",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:29:06 [ERROR]: Route /api/v1/admin/users/168cb2a2-d0a3-4d42-93dd-d948e5a84a32 not found
+Error: Route /api/v1/admin/users/168cb2a2-d0a3-4d42-93dd-d948e5a84a32 not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/users/168cb2a2-d0a3-4d42-93dd-d948e5a84a32",
+  "method": "PUT",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:31:05 [ERROR]: Authentication error: jwt expired
+TokenExpiredError: jwt expired
+    at /root/webApp/Bozorli/backend/node_modules/jsonwebtoken/verify.js:190:21
+    at getSecret (/root/webApp/Bozorli/backend/node_modules/jsonwebtoken/verify.js:97:14)
+    at module.exports [as verify] (/root/webApp/Bozorli/backend/node_modules/jsonwebtoken/verify.js:101:10)
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:23:25)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/root/webApp/Bozorli/backend/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+{
+  "name": "TokenExpiredError",
+  "expiredAt": "2025-08-25T17:18:26.000Z"
+}
+2025-08-25 22:39:24 [ERROR]: Route /api/v1/admin/users/168cb2a2-d0a3-4d42-93dd-d948e5a84a32 not found
+Error: Route /api/v1/admin/users/168cb2a2-d0a3-4d42-93dd-d948e5a84a32 not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/users/168cb2a2-d0a3-4d42-93dd-d948e5a84a32",
+  "method": "PUT",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:39:25 [ERROR]: Route /api/v1/admin/users/168cb2a2-d0a3-4d42-93dd-d948e5a84a32 not found
+Error: Route /api/v1/admin/users/168cb2a2-d0a3-4d42-93dd-d948e5a84a32 not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/users/168cb2a2-d0a3-4d42-93dd-d948e5a84a32",
+  "method": "PUT",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 22:51:23 [ERROR]: Authentication error: jwt malformed
+JsonWebTokenError: jwt malformed
+    at module.exports [as verify] (/root/webApp/Bozorli/backend/node_modules/jsonwebtoken/verify.js:70:17)
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:23:25)
+    at requireOwnerRole (/root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:13:5)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:175:3)
+    at router (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:47:12)
+{
+  "name": "JsonWebTokenError"
+}
+2025-08-25 23:11:11 [ERROR]: Route /api/v1/admin/users/168cb2a2-d0a3-4d42-93dd-d948e5a84a32 not found
+Error: Route /api/v1/admin/users/168cb2a2-d0a3-4d42-93dd-d948e5a84a32 not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/users/168cb2a2-d0a3-4d42-93dd-d948e5a84a32",
+  "method": "PUT",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 23:16:59 [ERROR]: Route /api/v1/admin/users/168cb2a2-d0a3-4d42-93dd-d948e5a84a32 not found
+Error: Route /api/v1/admin/users/168cb2a2-d0a3-4d42-93dd-d948e5a84a32 not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/users/168cb2a2-d0a3-4d42-93dd-d948e5a84a32",
+  "method": "PUT",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 23:18:55 [ERROR]: Route /api/v1/admin/stores not found
+Error: Route /api/v1/admin/stores not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/stores",
+  "method": "POST",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 23:19:04 [ERROR]: Route /api/v1/admin/stores not found
+Error: Route /api/v1/admin/stores not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/stores",
+  "method": "POST",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 23:27:37 [ERROR]: Route /api/v1/admin/stores/cb9f2923-7d1d-49fd-b0a4-d58f751a94a1 not found
+Error: Route /api/v1/admin/stores/cb9f2923-7d1d-49fd-b0a4-d58f751a94a1 not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/stores/cb9f2923-7d1d-49fd-b0a4-d58f751a94a1",
+  "method": "PUT",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 23:29:12 [ERROR]: Route / not found
+Error: Route / not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:807:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /root/webApp/Bozorli/backend/node_modules/express-rate-limit/dist/index.cjs:691:5
+{
+  "url": "/",
+  "method": "GET",
+  "ip": "198.235.24.244",
+  "userAgent": "Hello from Palo Alto Networks, find out more about our scans in https://docs-cortex.paloaltonetworks.com/r/1/Cortex-Xpanse/Scanning-activity"
+}
+2025-08-25 23:30:54 [ERROR]: Route /api/v1/admin/users/168cb2a2-d0a3-4d42-93dd-d948e5a84a32/status not found
+Error: Route /api/v1/admin/users/168cb2a2-d0a3-4d42-93dd-d948e5a84a32/status not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/users/168cb2a2-d0a3-4d42-93dd-d948e5a84a32/status",
+  "method": "PATCH",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 23:30:58 [ERROR]: Route /api/v1/admin/users/168cb2a2-d0a3-4d42-93dd-d948e5a84a32/status not found
+Error: Route /api/v1/admin/users/168cb2a2-d0a3-4d42-93dd-d948e5a84a32/status not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/users/168cb2a2-d0a3-4d42-93dd-d948e5a84a32/status",
+  "method": "PATCH",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 23:30:58 [ERROR]: Route /api/v1/admin/users/5dae7f61-8f69-495f-8c6d-09adb5eb2b18/status not found
+Error: Route /api/v1/admin/users/5dae7f61-8f69-495f-8c6d-09adb5eb2b18/status not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/users/5dae7f61-8f69-495f-8c6d-09adb5eb2b18/status",
+  "method": "PATCH",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 23:47:18 [ERROR]: Route /api/v1/admin/users/168cb2a2-d0a3-4d42-93dd-d948e5a84a32/status not found
+Error: Route /api/v1/admin/users/168cb2a2-d0a3-4d42-93dd-d948e5a84a32/status not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/users/168cb2a2-d0a3-4d42-93dd-d948e5a84a32/status",
+  "method": "PATCH",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-25 23:51:22 [ERROR]: Неподдерживаемый тип файла
+Error: Неподдерживаемый тип файла
+    at fileFilter (/root/webApp/Bozorli/backend/src/routes/admin.js:44:10)
+    at wrappedFileFilter (/root/webApp/Bozorli/backend/node_modules/multer/index.js:44:7)
+    at Multipart.<anonymous> (/root/webApp/Bozorli/backend/node_modules/multer/lib/make-middleware.js:109:7)
+    at Multipart.emit (node:events:518:28)
+    at HeaderParser.cb (/root/webApp/Bozorli/backend/node_modules/busboy/lib/types/multipart.js:358:14)
+    at HeaderParser.push (/root/webApp/Bozorli/backend/node_modules/busboy/lib/types/multipart.js:162:20)
+    at SBMH.ssCb [as _cb] (/root/webApp/Bozorli/backend/node_modules/busboy/lib/types/multipart.js:394:37)
+    at feed (/root/webApp/Bozorli/backend/node_modules/streamsearch/lib/sbmh.js:200:10)
+    at SBMH.push (/root/webApp/Bozorli/backend/node_modules/streamsearch/lib/sbmh.js:104:16)
+    at Multipart._write (/root/webApp/Bozorli/backend/node_modules/busboy/lib/types/multipart.js:567:19)
+{
+  "url": "/api/v1/admin/stores",
+  "method": "POST",
+  "ip": "127.0.0.1",
+  "userAgent": "axios/1.11.0"
+}
+2025-08-25 23:51:45 [ERROR]: Неподдерживаемый тип файла
+Error: Неподдерживаемый тип файла
+    at fileFilter (/root/webApp/Bozorli/backend/src/routes/admin.js:44:10)
+    at wrappedFileFilter (/root/webApp/Bozorli/backend/node_modules/multer/index.js:44:7)
+    at Multipart.<anonymous> (/root/webApp/Bozorli/backend/node_modules/multer/lib/make-middleware.js:109:7)
+    at Multipart.emit (node:events:518:28)
+    at HeaderParser.cb (/root/webApp/Bozorli/backend/node_modules/busboy/lib/types/multipart.js:358:14)
+    at HeaderParser.push (/root/webApp/Bozorli/backend/node_modules/busboy/lib/types/multipart.js:162:20)
+    at SBMH.ssCb [as _cb] (/root/webApp/Bozorli/backend/node_modules/busboy/lib/types/multipart.js:394:37)
+    at feed (/root/webApp/Bozorli/backend/node_modules/streamsearch/lib/sbmh.js:200:10)
+    at SBMH.push (/root/webApp/Bozorli/backend/node_modules/streamsearch/lib/sbmh.js:104:16)
+    at Multipart._write (/root/webApp/Bozorli/backend/node_modules/busboy/lib/types/multipart.js:567:19)
+{
+  "url": "/api/v1/admin/stores",
+  "method": "POST",
+  "ip": "127.0.0.1",
+  "userAgent": "axios/1.11.0"
+}
+2025-08-26 00:28:53 [ERROR]: Route /api/v1/admin/stores/23a15243-961c-40c9-861d-9ae4e4276220 not found
+Error: Route /api/v1/admin/stores/23a15243-961c-40c9-861d-9ae4e4276220 not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/stores/23a15243-961c-40c9-861d-9ae4e4276220",
+  "method": "DELETE",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-26 00:38:02 [ERROR]: Route /api/v1/admin/stores/23a15243-961c-40c9-861d-9ae4e4276220 not found
+Error: Route /api/v1/admin/stores/23a15243-961c-40c9-861d-9ae4e4276220 not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/stores/23a15243-961c-40c9-861d-9ae4e4276220",
+  "method": "PUT",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-26 00:38:28 [ERROR]: Route /api/v1/admin/stores/23a15243-961c-40c9-861d-9ae4e4276220 not found
+Error: Route /api/v1/admin/stores/23a15243-961c-40c9-861d-9ae4e4276220 not found
+    at notFoundHandler (/root/webApp/Bozorli/backend/src/middleware/notFoundHandler.js:2:17)
+    at Layer.handle [as handle_request] (/root/webApp/Bozorli/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:328:13)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:280:10)
+    at /root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:646:15
+    at next (/root/webApp/Bozorli/backend/node_modules/express/lib/router/index.js:265:14)
+    at /root/webApp/Bozorli/backend/src/middleware/ownerAuth.js:35:7
+    at authenticateToken (/root/webApp/Bozorli/backend/src/middleware/auth.js:40:5)
+{
+  "url": "/api/v1/admin/stores/23a15243-961c-40c9-861d-9ae4e4276220",
+  "method": "PUT",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+}
+2025-08-26 00:39:32 [ERROR]: Update store error: Invalid GIS data provided to function st_geomfromtext.
+Error
+    at Query.run (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/dialects/mysql/query.js:52:25)
+    at /root/webApp/Bozorli/backend/node_modules/sequelize/lib/sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async MySQLQueryInterface.update (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/dialects/abstract/query-interface.js:355:12)
+    at async model.save (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:2490:35)
+    at async model.update (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:2598:12)
+    at async /root/webApp/Bozorli/backend/src/routes/admin.js:974:5
+{
+  "name": "SequelizeDatabaseError",
+  "parent": {
+    "code": "ER_GIS_INVALID_DATA",
+    "errno": 3037,
+    "sqlState": "22023",
+    "sqlMessage": "Invalid GIS data provided to function st_geomfromtext.",
+    "sql": "UPDATE `stores` SET `location`=ST_GeomFromText('POINT(undefined undefined)'),`rating`=?,`open_hours`=?,`minimum_order_amount`=?,`commission_rate`=?,`updated_at`=? WHERE `id` = ?",
+    "parameters": [
+      0,
+      "{\"friday\":{\"open\":\"00:00\",\"close\":\"23:59\"},\"monday\":{\"open\":\"00:00\",\"close\":\"04:59\"},\"sunday\":{\"open\":\"00:00\",\"close\":\"23:59\"},\"tuesday\":{\"open\":\"00:00\",\"close\":\"23:59\"},\"saturday\":{\"open\":\"00:00\",\"close\":\"23:59\"},\"thursday\":{\"open\":\"00:00\",\"close\":\"23:59\"},\"wednesday\":{\"open\":\"00:00\",\"close\":\"23:59\"}}",
+      0,
+      10,
+      "2025-08-25 21:39:32",
+      "23a15243-961c-40c9-861d-9ae4e4276220"
+    ]
+  },
+  "original": {
+    "code": "ER_GIS_INVALID_DATA",
+    "errno": 3037,
+    "sqlState": "22023",
+    "sqlMessage": "Invalid GIS data provided to function st_geomfromtext.",
+    "sql": "UPDATE `stores` SET `location`=ST_GeomFromText('POINT(undefined undefined)'),`rating`=?,`open_hours`=?,`minimum_order_amount`=?,`commission_rate`=?,`updated_at`=? WHERE `id` = ?",
+    "parameters": [
+      0,
+      "{\"friday\":{\"open\":\"00:00\",\"close\":\"23:59\"},\"monday\":{\"open\":\"00:00\",\"close\":\"04:59\"},\"sunday\":{\"open\":\"00:00\",\"close\":\"23:59\"},\"tuesday\":{\"open\":\"00:00\",\"close\":\"23:59\"},\"saturday\":{\"open\":\"00:00\",\"close\":\"23:59\"},\"thursday\":{\"open\":\"00:00\",\"close\":\"23:59\"},\"wednesday\":{\"open\":\"00:00\",\"close\":\"23:59\"}}",
+      0,
+      10,
+      "2025-08-25 21:39:32",
+      "23a15243-961c-40c9-861d-9ae4e4276220"
+    ]
+  },
+  "sql": "UPDATE `stores` SET `location`=ST_GeomFromText('POINT(undefined undefined)'),`rating`=?,`open_hours`=?,`minimum_order_amount`=?,`commission_rate`=?,`updated_at`=? WHERE `id` = ?",
+  "parameters": [
+    0,
+    "{\"friday\":{\"open\":\"00:00\",\"close\":\"23:59\"},\"monday\":{\"open\":\"00:00\",\"close\":\"04:59\"},\"sunday\":{\"open\":\"00:00\",\"close\":\"23:59\"},\"tuesday\":{\"open\":\"00:00\",\"close\":\"23:59\"},\"saturday\":{\"open\":\"00:00\",\"close\":\"23:59\"},\"thursday\":{\"open\":\"00:00\",\"close\":\"23:59\"},\"wednesday\":{\"open\":\"00:00\",\"close\":\"23:59\"}}",
+    0,
+    10,
+    "2025-08-25 21:39:32",
+    "23a15243-961c-40c9-861d-9ae4e4276220"
+  ]
+}
+2025-08-26 00:44:36 [ERROR]: Update store error: Unknown column 'NaN' in 'where clause'
+Error
+    at Query.run (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/dialects/mysql/query.js:52:25)
+    at /root/webApp/Bozorli/backend/node_modules/sequelize/lib/sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async MySQLQueryInterface.select (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/dialects/abstract/query-interface.js:407:12)
+    at async Store.findAll (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:1140:21)
+    at async Store.findOne (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:1240:12)
+    at async Store.findByPk (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:1221:12)
+    at async /root/webApp/Bozorli/backend/src/routes/admin.js:896:27
+{
+  "name": "SequelizeDatabaseError",
+  "parent": {
+    "code": "ER_BAD_FIELD_ERROR",
+    "errno": 1054,
+    "sqlState": "42S22",
+    "sqlMessage": "Unknown column 'NaN' in 'where clause'",
+    "sql": "SELECT `id`, `name`, `description`, `address`, `location`, `owner_id`, `status`, `rating`, `total_ratings`, `open_hours`, `minimum_order_amount`, `delivery_radius`, `preparation_time`, `commission_rate`, `logo`, `banner`, `contact_phone`, `contact_email`, `business_license`, `tax_id`, `bank_account`, `auto_accept_orders`, `notifications_enabled`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `stores` AS `Store` WHERE `Store`.`id` = NaN;"
+  },
+  "original": {
+    "code": "ER_BAD_FIELD_ERROR",
+    "errno": 1054,
+    "sqlState": "42S22",
+    "sqlMessage": "Unknown column 'NaN' in 'where clause'",
+    "sql": "SELECT `id`, `name`, `description`, `address`, `location`, `owner_id`, `status`, `rating`, `total_ratings`, `open_hours`, `minimum_order_amount`, `delivery_radius`, `preparation_time`, `commission_rate`, `logo`, `banner`, `contact_phone`, `contact_email`, `business_license`, `tax_id`, `bank_account`, `auto_accept_orders`, `notifications_enabled`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `stores` AS `Store` WHERE `Store`.`id` = NaN;"
+  },
+  "sql": "SELECT `id`, `name`, `description`, `address`, `location`, `owner_id`, `status`, `rating`, `total_ratings`, `open_hours`, `minimum_order_amount`, `delivery_radius`, `preparation_time`, `commission_rate`, `logo`, `banner`, `contact_phone`, `contact_email`, `business_license`, `tax_id`, `bank_account`, `auto_accept_orders`, `notifications_enabled`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `stores` AS `Store` WHERE `Store`.`id` = NaN;",
+  "parameters": {}
+}
+2025-08-26 00:45:46 [ERROR]: Update store error: Unknown column 'NaN' in 'where clause'
+Error
+    at Query.run (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/dialects/mysql/query.js:52:25)
+    at /root/webApp/Bozorli/backend/node_modules/sequelize/lib/sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async MySQLQueryInterface.select (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/dialects/abstract/query-interface.js:407:12)
+    at async Store.findAll (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:1140:21)
+    at async Store.findOne (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:1240:12)
+    at async Store.findByPk (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:1221:12)
+    at async /root/webApp/Bozorli/backend/src/routes/admin.js:896:27
+{
+  "name": "SequelizeDatabaseError",
+  "parent": {
+    "code": "ER_BAD_FIELD_ERROR",
+    "errno": 1054,
+    "sqlState": "42S22",
+    "sqlMessage": "Unknown column 'NaN' in 'where clause'",
+    "sql": "SELECT `id`, `name`, `description`, `address`, `location`, `owner_id`, `status`, `rating`, `total_ratings`, `open_hours`, `minimum_order_amount`, `delivery_radius`, `preparation_time`, `commission_rate`, `logo`, `banner`, `contact_phone`, `contact_email`, `business_license`, `tax_id`, `bank_account`, `auto_accept_orders`, `notifications_enabled`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `stores` AS `Store` WHERE `Store`.`id` = NaN;"
+  },
+  "original": {
+    "code": "ER_BAD_FIELD_ERROR",
+    "errno": 1054,
+    "sqlState": "42S22",
+    "sqlMessage": "Unknown column 'NaN' in 'where clause'",
+    "sql": "SELECT `id`, `name`, `description`, `address`, `location`, `owner_id`, `status`, `rating`, `total_ratings`, `open_hours`, `minimum_order_amount`, `delivery_radius`, `preparation_time`, `commission_rate`, `logo`, `banner`, `contact_phone`, `contact_email`, `business_license`, `tax_id`, `bank_account`, `auto_accept_orders`, `notifications_enabled`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `stores` AS `Store` WHERE `Store`.`id` = NaN;"
+  },
+  "sql": "SELECT `id`, `name`, `description`, `address`, `location`, `owner_id`, `status`, `rating`, `total_ratings`, `open_hours`, `minimum_order_amount`, `delivery_radius`, `preparation_time`, `commission_rate`, `logo`, `banner`, `contact_phone`, `contact_email`, `business_license`, `tax_id`, `bank_account`, `auto_accept_orders`, `notifications_enabled`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `stores` AS `Store` WHERE `Store`.`id` = NaN;",
+  "parameters": {}
+}
+2025-08-26 00:46:01 [ERROR]: Update store error: Unknown column 'NaN' in 'where clause'
+Error
+    at Query.run (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/dialects/mysql/query.js:52:25)
+    at /root/webApp/Bozorli/backend/node_modules/sequelize/lib/sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async MySQLQueryInterface.select (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/dialects/abstract/query-interface.js:407:12)
+    at async Store.findAll (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:1140:21)
+    at async Store.findOne (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:1240:12)
+    at async Store.findByPk (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:1221:12)
+    at async /root/webApp/Bozorli/backend/src/routes/admin.js:896:27
+{
+  "name": "SequelizeDatabaseError",
+  "parent": {
+    "code": "ER_BAD_FIELD_ERROR",
+    "errno": 1054,
+    "sqlState": "42S22",
+    "sqlMessage": "Unknown column 'NaN' in 'where clause'",
+    "sql": "SELECT `id`, `name`, `description`, `address`, `location`, `owner_id`, `status`, `rating`, `total_ratings`, `open_hours`, `minimum_order_amount`, `delivery_radius`, `preparation_time`, `commission_rate`, `logo`, `banner`, `contact_phone`, `contact_email`, `business_license`, `tax_id`, `bank_account`, `auto_accept_orders`, `notifications_enabled`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `stores` AS `Store` WHERE `Store`.`id` = NaN;"
+  },
+  "original": {
+    "code": "ER_BAD_FIELD_ERROR",
+    "errno": 1054,
+    "sqlState": "42S22",
+    "sqlMessage": "Unknown column 'NaN' in 'where clause'",
+    "sql": "SELECT `id`, `name`, `description`, `address`, `location`, `owner_id`, `status`, `rating`, `total_ratings`, `open_hours`, `minimum_order_amount`, `delivery_radius`, `preparation_time`, `commission_rate`, `logo`, `banner`, `contact_phone`, `contact_email`, `business_license`, `tax_id`, `bank_account`, `auto_accept_orders`, `notifications_enabled`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `stores` AS `Store` WHERE `Store`.`id` = NaN;"
+  },
+  "sql": "SELECT `id`, `name`, `description`, `address`, `location`, `owner_id`, `status`, `rating`, `total_ratings`, `open_hours`, `minimum_order_amount`, `delivery_radius`, `preparation_time`, `commission_rate`, `logo`, `banner`, `contact_phone`, `contact_email`, `business_license`, `tax_id`, `bank_account`, `auto_accept_orders`, `notifications_enabled`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `stores` AS `Store` WHERE `Store`.`id` = NaN;",
+  "parameters": {}
+}
+2025-08-26 00:46:02 [ERROR]: Update store error: Unknown column 'NaN' in 'where clause'
+Error
+    at Query.run (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/dialects/mysql/query.js:52:25)
+    at /root/webApp/Bozorli/backend/node_modules/sequelize/lib/sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async MySQLQueryInterface.select (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/dialects/abstract/query-interface.js:407:12)
+    at async Store.findAll (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:1140:21)
+    at async Store.findOne (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:1240:12)
+    at async Store.findByPk (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:1221:12)
+    at async /root/webApp/Bozorli/backend/src/routes/admin.js:896:27
+{
+  "name": "SequelizeDatabaseError",
+  "parent": {
+    "code": "ER_BAD_FIELD_ERROR",
+    "errno": 1054,
+    "sqlState": "42S22",
+    "sqlMessage": "Unknown column 'NaN' in 'where clause'",
+    "sql": "SELECT `id`, `name`, `description`, `address`, `location`, `owner_id`, `status`, `rating`, `total_ratings`, `open_hours`, `minimum_order_amount`, `delivery_radius`, `preparation_time`, `commission_rate`, `logo`, `banner`, `contact_phone`, `contact_email`, `business_license`, `tax_id`, `bank_account`, `auto_accept_orders`, `notifications_enabled`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `stores` AS `Store` WHERE `Store`.`id` = NaN;"
+  },
+  "original": {
+    "code": "ER_BAD_FIELD_ERROR",
+    "errno": 1054,
+    "sqlState": "42S22",
+    "sqlMessage": "Unknown column 'NaN' in 'where clause'",
+    "sql": "SELECT `id`, `name`, `description`, `address`, `location`, `owner_id`, `status`, `rating`, `total_ratings`, `open_hours`, `minimum_order_amount`, `delivery_radius`, `preparation_time`, `commission_rate`, `logo`, `banner`, `contact_phone`, `contact_email`, `business_license`, `tax_id`, `bank_account`, `auto_accept_orders`, `notifications_enabled`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `stores` AS `Store` WHERE `Store`.`id` = NaN;"
+  },
+  "sql": "SELECT `id`, `name`, `description`, `address`, `location`, `owner_id`, `status`, `rating`, `total_ratings`, `open_hours`, `minimum_order_amount`, `delivery_radius`, `preparation_time`, `commission_rate`, `logo`, `banner`, `contact_phone`, `contact_email`, `business_license`, `tax_id`, `bank_account`, `auto_accept_orders`, `notifications_enabled`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `stores` AS `Store` WHERE `Store`.`id` = NaN;",
+  "parameters": {}
+}
+2025-08-26 00:46:03 [ERROR]: Update store error: Unknown column 'NaN' in 'where clause'
+Error
+    at Query.run (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/dialects/mysql/query.js:52:25)
+    at /root/webApp/Bozorli/backend/node_modules/sequelize/lib/sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async MySQLQueryInterface.select (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/dialects/abstract/query-interface.js:407:12)
+    at async Store.findAll (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:1140:21)
+    at async Store.findOne (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:1240:12)
+    at async Store.findByPk (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:1221:12)
+    at async /root/webApp/Bozorli/backend/src/routes/admin.js:896:27
+{
+  "name": "SequelizeDatabaseError",
+  "parent": {
+    "code": "ER_BAD_FIELD_ERROR",
+    "errno": 1054,
+    "sqlState": "42S22",
+    "sqlMessage": "Unknown column 'NaN' in 'where clause'",
+    "sql": "SELECT `id`, `name`, `description`, `address`, `location`, `owner_id`, `status`, `rating`, `total_ratings`, `open_hours`, `minimum_order_amount`, `delivery_radius`, `preparation_time`, `commission_rate`, `logo`, `banner`, `contact_phone`, `contact_email`, `business_license`, `tax_id`, `bank_account`, `auto_accept_orders`, `notifications_enabled`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `stores` AS `Store` WHERE `Store`.`id` = NaN;"
+  },
+  "original": {
+    "code": "ER_BAD_FIELD_ERROR",
+    "errno": 1054,
+    "sqlState": "42S22",
+    "sqlMessage": "Unknown column 'NaN' in 'where clause'",
+    "sql": "SELECT `id`, `name`, `description`, `address`, `location`, `owner_id`, `status`, `rating`, `total_ratings`, `open_hours`, `minimum_order_amount`, `delivery_radius`, `preparation_time`, `commission_rate`, `logo`, `banner`, `contact_phone`, `contact_email`, `business_license`, `tax_id`, `bank_account`, `auto_accept_orders`, `notifications_enabled`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `stores` AS `Store` WHERE `Store`.`id` = NaN;"
+  },
+  "sql": "SELECT `id`, `name`, `description`, `address`, `location`, `owner_id`, `status`, `rating`, `total_ratings`, `open_hours`, `minimum_order_amount`, `delivery_radius`, `preparation_time`, `commission_rate`, `logo`, `banner`, `contact_phone`, `contact_email`, `business_license`, `tax_id`, `bank_account`, `auto_accept_orders`, `notifications_enabled`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `stores` AS `Store` WHERE `Store`.`id` = NaN;",
+  "parameters": {}
+}
+2025-08-26 00:46:03 [ERROR]: Update store error: Unknown column 'NaN' in 'where clause'
+Error
+    at Query.run (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/dialects/mysql/query.js:52:25)
+    at /root/webApp/Bozorli/backend/node_modules/sequelize/lib/sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async MySQLQueryInterface.select (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/dialects/abstract/query-interface.js:407:12)
+    at async Store.findAll (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:1140:21)
+    at async Store.findOne (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:1240:12)
+    at async Store.findByPk (/root/webApp/Bozorli/backend/node_modules/sequelize/lib/model.js:1221:12)
+    at async /root/webApp/Bozorli/backend/src/routes/admin.js:896:27
+{
+  "name": "SequelizeDatabaseError",
+  "parent": {
+    "code": "ER_BAD_FIELD_ERROR",
+    "errno": 1054,
+    "sqlState": "42S22",
+    "sqlMessage": "Unknown column 'NaN' in 'where clause'",
+    "sql": "SELECT `id`, `name`, `description`, `address`, `location`, `owner_id`, `status`, `rating`, `total_ratings`, `open_hours`, `minimum_order_amount`, `delivery_radius`, `preparation_time`, `commission_rate`, `logo`, `banner`, `contact_phone`, `contact_email`, `business_license`, `tax_id`, `bank_account`, `auto_accept_orders`, `notifications_enabled`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `stores` AS `Store` WHERE `Store`.`id` = NaN;"
+  },
+  "original": {
+    "code": "ER_BAD_FIELD_ERROR",
+    "errno": 1054,
+    "sqlState": "42S22",
+    "sqlMessage": "Unknown column 'NaN' in 'where clause'",
+    "sql": "SELECT `id`, `name`, `description`, `address`, `location`, `owner_id`, `status`, `rating`, `total_ratings`, `open_hours`, `minimum_order_amount`, `delivery_radius`, `preparation_time`, `commission_rate`, `logo`, `banner`, `contact_phone`, `contact_email`, `business_license`, `tax_id`, `bank_account`, `auto_accept_orders`, `notifications_enabled`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `stores` AS `Store` WHERE `Store`.`id` = NaN;"
+  },
+  "sql": "SELECT `id`, `name`, `description`, `address`, `location`, `owner_id`, `status`, `rating`, `total_ratings`, `open_hours`, `minimum_order_amount`, `delivery_radius`, `preparation_time`, `commission_rate`, `logo`, `banner`, `contact_phone`, `contact_email`, `business_license`, `tax_id`, `bank_account`, `auto_accept_orders`, `notifications_enabled`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `stores` AS `Store` WHERE `Store`.`id` = NaN;",
+  "parameters": {}
+}

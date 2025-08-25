@@ -222,3 +222,559 @@ Error: EIO: i/o error, write
     }
   ]
 }
+2025-08-25 08:51:06 [ERROR]: uncaughtException: write EIO
+Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:159:15)
+    at writeGeneric (node:internal/stream_base_commons:150:3)
+    at Socket._writeGeneric (node:net:966:11)
+    at Socket._write (node:net:978:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/root/webApp/Bozorli/backend/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/root/webApp/Bozorli/backend/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/root/webApp/Bozorli/backend/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:159:15)
+    at writeGeneric (node:internal/stream_base_commons:150:3)
+    at Socket._writeGeneric (node:net:966:11)
+    at Socket._write (node:net:978:8)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at Console.log (/root/webApp/Bozorli/backend/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/root/webApp/Bozorli/backend/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/root/webApp/Bozorli/backend/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+{
+  "error": {
+    "errno": -5,
+    "code": "EIO",
+    "syscall": "write"
+  },
+  "exception": true,
+  "date": "Mon Aug 25 2025 08:51:06 GMT+0300 (Moscow Standard Time)",
+  "process": {
+    "pid": 208073,
+    "uid": 0,
+    "gid": 0,
+    "cwd": "/root/webApp/Bozorli/backend",
+    "execPath": "/root/.nvm/versions/node/v22.18.0/bin/node",
+    "version": "v22.18.0",
+    "argv": [
+      "/root/.nvm/versions/node/v22.18.0/bin/node",
+      "/root/webApp/Bozorli/backend/src/index.js"
+    ],
+    "memoryUsage": {
+      "rss": 93184000,
+      "heapTotal": 34119680,
+      "heapUsed": 27695176,
+      "external": 2362593,
+      "arrayBuffers": 27805
+    }
+  },
+  "os": {
+    "loadavg": [
+      20.36,
+      20.26,
+      20.21
+    ],
+    "uptime": 126360.59
+  },
+  "trace": [
+    {
+      "column": 15,
+      "file": "node:internal/stream_base_commons",
+      "function": "afterWriteDispatched",
+      "line": 159,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 3,
+      "file": "node:internal/stream_base_commons",
+      "function": "writeGeneric",
+      "line": 150,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 11,
+      "file": "node:net",
+      "function": "Socket._writeGeneric",
+      "line": 966,
+      "method": "_writeGeneric",
+      "native": false
+    },
+    {
+      "column": 8,
+      "file": "node:net",
+      "function": "Socket._write",
+      "line": 978,
+      "method": "_write",
+      "native": false
+    },
+    {
+      "column": 12,
+      "file": "node:internal/streams/writable",
+      "function": "writeOrBuffer",
+      "line": 572,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 10,
+      "file": "node:internal/streams/writable",
+      "function": "_write",
+      "line": 501,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 10,
+      "file": "node:internal/streams/writable",
+      "function": "Writable.write",
+      "line": 510,
+      "method": "write",
+      "native": false
+    },
+    {
+      "column": 23,
+      "file": "/root/webApp/Bozorli/backend/node_modules/winston/lib/winston/transports/console.js",
+      "function": "Console.log",
+      "line": 87,
+      "method": "log",
+      "native": false
+    },
+    {
+      "column": 17,
+      "file": "/root/webApp/Bozorli/backend/node_modules/winston-transport/modern.js",
+      "function": "Console._write",
+      "line": 103,
+      "method": "_write",
+      "native": false
+    },
+    {
+      "column": 139,
+      "file": "/root/webApp/Bozorli/backend/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js",
+      "function": "doWrite",
+      "line": 390,
+      "method": null,
+      "native": false
+    }
+  ]
+}
+2025-08-25 21:56:35 [ERROR]: uncaughtException: listen EADDRINUSE: address already in use 0.0.0.0:3000
+Error: listen EADDRINUSE: address already in use 0.0.0.0:3000
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at node:net:2206:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+Error: listen EADDRINUSE: address already in use 0.0.0.0:3000
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at node:net:2206:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+{
+  "error": {
+    "code": "EADDRINUSE",
+    "errno": -98,
+    "syscall": "listen",
+    "address": "0.0.0.0",
+    "port": 3000
+  },
+  "exception": true,
+  "date": "Mon Aug 25 2025 21:56:35 GMT+0300 (Moscow Standard Time)",
+  "process": {
+    "pid": 464865,
+    "uid": 0,
+    "gid": 0,
+    "cwd": "/root/webApp/Bozorli/backend",
+    "execPath": "/root/.nvm/versions/node/v22.18.0/bin/node",
+    "version": "v22.18.0",
+    "argv": [
+      "/root/.nvm/versions/node/v22.18.0/bin/node",
+      "/root/webApp/Bozorli/backend/src/index.js"
+    ],
+    "memoryUsage": {
+      "rss": 126971904,
+      "heapTotal": 68669440,
+      "heapUsed": 46990328,
+      "external": 2466743,
+      "arrayBuffers": 131955
+    }
+  },
+  "os": {
+    "loadavg": [
+      22.27,
+      21,
+      20.48
+    ],
+    "uptime": 173489.76
+  },
+  "trace": [
+    {
+      "column": 16,
+      "file": "node:net",
+      "function": "Server.setupListenHandle [as _listen2]",
+      "line": 1940,
+      "method": "setupListenHandle [as _listen2]",
+      "native": false
+    },
+    {
+      "column": 12,
+      "file": "node:net",
+      "function": "listenInCluster",
+      "line": 1997,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 7,
+      "file": "node:net",
+      "function": null,
+      "line": 2206,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 21,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 90,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2025-08-25 22:59:50 [ERROR]: uncaughtException: listen EADDRINUSE: address already in use 0.0.0.0:3000
+Error: listen EADDRINUSE: address already in use 0.0.0.0:3000
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at node:net:2206:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+Error: listen EADDRINUSE: address already in use 0.0.0.0:3000
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at node:net:2206:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+{
+  "error": {
+    "code": "EADDRINUSE",
+    "errno": -98,
+    "syscall": "listen",
+    "address": "0.0.0.0",
+    "port": 3000
+  },
+  "exception": true,
+  "date": "Mon Aug 25 2025 22:59:50 GMT+0300 (Moscow Standard Time)",
+  "process": {
+    "pid": 491315,
+    "uid": 0,
+    "gid": 0,
+    "cwd": "/root/webApp/Bozorli/backend",
+    "execPath": "/root/.nvm/versions/node/v22.18.0/bin/node",
+    "version": "v22.18.0",
+    "argv": [
+      "/root/.nvm/versions/node/v22.18.0/bin/node",
+      "/root/webApp/Bozorli/backend/src/index.js"
+    ],
+    "memoryUsage": {
+      "rss": 119066624,
+      "heapTotal": 63741952,
+      "heapUsed": 39879456,
+      "external": 2363174,
+      "arrayBuffers": 53702
+    }
+  },
+  "os": {
+    "loadavg": [
+      26.2,
+      25.47,
+      24.27
+    ],
+    "uptime": 177284.5
+  },
+  "trace": [
+    {
+      "column": 16,
+      "file": "node:net",
+      "function": "Server.setupListenHandle [as _listen2]",
+      "line": 1940,
+      "method": "setupListenHandle [as _listen2]",
+      "native": false
+    },
+    {
+      "column": 12,
+      "file": "node:net",
+      "function": "listenInCluster",
+      "line": 1997,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 7,
+      "file": "node:net",
+      "function": null,
+      "line": 2206,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 21,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 90,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2025-08-25 23:16:33 [ERROR]: uncaughtException: listen EADDRINUSE: address already in use 0.0.0.0:3000
+Error: listen EADDRINUSE: address already in use 0.0.0.0:3000
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at node:net:2206:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+Error: listen EADDRINUSE: address already in use 0.0.0.0:3000
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at node:net:2206:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+{
+  "error": {
+    "code": "EADDRINUSE",
+    "errno": -98,
+    "syscall": "listen",
+    "address": "0.0.0.0",
+    "port": 3000
+  },
+  "exception": true,
+  "date": "Mon Aug 25 2025 23:16:33 GMT+0300 (Moscow Standard Time)",
+  "process": {
+    "pid": 498434,
+    "uid": 0,
+    "gid": 0,
+    "cwd": "/root/webApp/Bozorli/backend",
+    "execPath": "/root/.nvm/versions/node/v22.18.0/bin/node",
+    "version": "v22.18.0",
+    "argv": [
+      "/root/.nvm/versions/node/v22.18.0/bin/node",
+      "/root/webApp/Bozorli/backend/src/index.js"
+    ],
+    "memoryUsage": {
+      "rss": 122142720,
+      "heapTotal": 63741952,
+      "heapUsed": 39991368,
+      "external": 2363174,
+      "arrayBuffers": 53702
+    }
+  },
+  "os": {
+    "loadavg": [
+      26.87,
+      25.92,
+      25.31
+    ],
+    "uptime": 178287.89
+  },
+  "trace": [
+    {
+      "column": 16,
+      "file": "node:net",
+      "function": "Server.setupListenHandle [as _listen2]",
+      "line": 1940,
+      "method": "setupListenHandle [as _listen2]",
+      "native": false
+    },
+    {
+      "column": 12,
+      "file": "node:net",
+      "function": "listenInCluster",
+      "line": 1997,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 7,
+      "file": "node:net",
+      "function": null,
+      "line": 2206,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 21,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 90,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2025-08-25 23:49:39 [ERROR]: uncaughtException: listen EADDRINUSE: address already in use 0.0.0.0:3000
+Error: listen EADDRINUSE: address already in use 0.0.0.0:3000
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at node:net:2206:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+Error: listen EADDRINUSE: address already in use 0.0.0.0:3000
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at node:net:2206:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+{
+  "error": {
+    "code": "EADDRINUSE",
+    "errno": -98,
+    "syscall": "listen",
+    "address": "0.0.0.0",
+    "port": 3000
+  },
+  "exception": true,
+  "date": "Mon Aug 25 2025 23:49:39 GMT+0300 (Moscow Standard Time)",
+  "process": {
+    "pid": 511576,
+    "uid": 0,
+    "gid": 0,
+    "cwd": "/root/webApp/Bozorli/backend",
+    "execPath": "/root/.nvm/versions/node/v22.18.0/bin/node",
+    "version": "v22.18.0",
+    "argv": [
+      "/root/.nvm/versions/node/v22.18.0/bin/node",
+      "/root/webApp/Bozorli/backend/src/index.js"
+    ],
+    "memoryUsage": {
+      "rss": 123949056,
+      "heapTotal": 63930368,
+      "heapUsed": 41870248,
+      "external": 2363174,
+      "arrayBuffers": 53702
+    }
+  },
+  "os": {
+    "loadavg": [
+      29.52,
+      29.11,
+      28.26
+    ],
+    "uptime": 180273.97
+  },
+  "trace": [
+    {
+      "column": 16,
+      "file": "node:net",
+      "function": "Server.setupListenHandle [as _listen2]",
+      "line": 1940,
+      "method": "setupListenHandle [as _listen2]",
+      "native": false
+    },
+    {
+      "column": 12,
+      "file": "node:net",
+      "function": "listenInCluster",
+      "line": 1997,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 7,
+      "file": "node:net",
+      "function": null,
+      "line": 2206,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 21,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 90,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2025-08-26 00:33:58 [ERROR]: uncaughtException: listen EADDRINUSE: address already in use 0.0.0.0:3000
+Error: listen EADDRINUSE: address already in use 0.0.0.0:3000
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at node:net:2206:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+Error: listen EADDRINUSE: address already in use 0.0.0.0:3000
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at node:net:2206:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+{
+  "error": {
+    "code": "EADDRINUSE",
+    "errno": -98,
+    "syscall": "listen",
+    "address": "0.0.0.0",
+    "port": 3000
+  },
+  "exception": true,
+  "date": "Tue Aug 26 2025 00:33:58 GMT+0300 (Moscow Standard Time)",
+  "process": {
+    "pid": 526302,
+    "uid": 0,
+    "gid": 0,
+    "cwd": "/root/webApp/Bozorli/backend",
+    "execPath": "/root/.nvm/versions/node/v22.18.0/bin/node",
+    "version": "v22.18.0",
+    "argv": [
+      "/root/.nvm/versions/node/v22.18.0/bin/node",
+      "/root/webApp/Bozorli/backend/src/index.js"
+    ],
+    "memoryUsage": {
+      "rss": 122220544,
+      "heapTotal": 64208896,
+      "heapUsed": 42554608,
+      "external": 2363174,
+      "arrayBuffers": 53702
+    }
+  },
+  "os": {
+    "loadavg": [
+      32.49,
+      31.67,
+      31.25
+    ],
+    "uptime": 182932.73
+  },
+  "trace": [
+    {
+      "column": 16,
+      "file": "node:net",
+      "function": "Server.setupListenHandle [as _listen2]",
+      "line": 1940,
+      "method": "setupListenHandle [as _listen2]",
+      "native": false
+    },
+    {
+      "column": 12,
+      "file": "node:net",
+      "function": "listenInCluster",
+      "line": 1997,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 7,
+      "file": "node:net",
+      "function": null,
+      "line": 2206,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 21,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 90,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}

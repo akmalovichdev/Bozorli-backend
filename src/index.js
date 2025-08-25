@@ -43,6 +43,7 @@ const io = new Server(server, {
           'http://localhost:3000',
           'http://localhost:19006', 
           'http://localhost:8081',
+          'http://localhost:52711',
           'https://89.110.74.24:8081',
           'http://192.168.32.1:3000',
           'http://172.17.0.1:3000'
@@ -112,6 +113,7 @@ app.use(cors({
         'http://localhost:3000',
         'http://localhost:19006', 
         'http://localhost:8081',
+        'http://localhost:52711',
         'https://89.110.74.24:8081',
         'http://192.168.32.1:3000',
         'http://172.17.0.1:3000'
